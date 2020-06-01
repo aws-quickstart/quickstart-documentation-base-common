@@ -1,0 +1,76 @@
+:imagesdir: images
+:includedir: common
+:specificdir: specific
+:generateddir: generated
+:icons: font
+:toc2: left
+// :toc-title: Quick Start Reference Deployment
+:toclevels: 2
+:stylesheet: css/quickstart.css
+:template_services_ec2:
+include::{specificdir}/_settings.adoc[]
+
+[.text-center]
+[discrete]
+== _{partner-product-name}_ on the AWS Cloud
+:!toc:
+[.text-left]
+include::{includedir}/introduction.adoc[]
+
+== Overview
+include::{includedir}/overview.adoc[]
+
+
+== _{partner-product-name}_ on AWS
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_]
+include::{specificdir}/product_description.adoc[]
+
+== Cost
+include::{includedir}/cost.adoc[]
+
+== Software Licenses
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_]
+include::{specificdir}/licenses.adoc[]
+
+== Architecture
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_]
+
+include::{specificdir}/architecture.adoc[]
+
+== Planning the deployment
+
+=== Specialized knowledge
+include::{includedir}/planning_deployment.adoc[]
+
+== Deployment Steps
+include::{includedir}/deployment_steps.adoc[]
+
+== Parameters
+include::{generateddir}/parameters/index.adoc[]
+
+// additional_info.adoc contains 3 sections: Best Practice, Security & Other information
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_]
+include::{specificdir}/additional_info.adoc[]
+
+== FAQ
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/faq.adoc`**_]
+include::{specificdir}/faq.adoc[]
+
+== Troubleshooting
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/troubleshooting.adoc`**_]
+include::{specificdir}/troubleshooting.adoc[]
+
+== Send us feedback
+
+To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for this Quick Start. If you’d like to submit code, please review the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide].
+
+== Quick Start reference deployments
+
+* AWS Quick Start home page +
+https://aws.amazon.com/quickstart/
+
+== GitHub Repository
+
+You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] to download
+the templates and scripts for this Quick Start, to post your comments,
+and to share your customizations with others.
