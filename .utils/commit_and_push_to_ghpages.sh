@@ -18,5 +18,9 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 git remote add ${remote_name} ${repo_uri}
-git fetch ${remote_name}
-git push ${remote_name} ${target_branch}
+git remote -v
+exit 1
+
+# git remote update
+# git fetch
+# git push ${remote_name} ${target_branch}
