@@ -17,5 +17,5 @@ if [ $? -ne 0 ]; then
     echo "nothing to commit"
     exit 0
 fi
-git remote add "${remote_name}" "${repo_uri}"
-git push "${remote_name}" "${target_branch}"
+git remote add ${remote_name} ${repo_uri}
+git push ${remote_name} ${target_branch}
