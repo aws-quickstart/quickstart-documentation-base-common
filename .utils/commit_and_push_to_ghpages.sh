@@ -18,7 +18,5 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
-git remote add ${remote_name} ${repo_uri}
-git remote update
-git fetch
-git push ${remote_name} ${target_branch}
+git remote set-url origin ${repo_uri}
+git push origin HEAD:${target_branch} --force

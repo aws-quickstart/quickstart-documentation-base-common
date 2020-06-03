@@ -1,8 +1,10 @@
 [.text-center]
 == Quick Start Reference Deployment
+ifndef::in_repo[====]
 *{doc-month}, {doc-year}* +
 _{partner-contributors} - {partner-company-name}_ +
 _{quickstart-contributors}_
+ifndef::in_repo[====]
 [.text-left]
 ifndef::in_repo[_**The above information is configured within `{specificdir}/_settings.adoc`**_]
 
