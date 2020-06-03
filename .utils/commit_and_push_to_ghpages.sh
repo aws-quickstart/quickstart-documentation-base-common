@@ -20,8 +20,3 @@ fi
 
 git remote set-url origin ${repo_uri}
 git push origin HEAD:${target_branch} --force
-
-#git remote add ${remote_name} ${repo_uri}
-#git remote update
-#git fetch
-#git push ${remote_name} ${target_branch}
