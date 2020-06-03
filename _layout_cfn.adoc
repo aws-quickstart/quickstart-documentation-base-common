@@ -4,7 +4,7 @@
 == _{partner-product-name}_ on the AWS Cloud
 :!toc:
 [.text-left]
-ifdef::foo[include::../{includedir}/introduction.adoc[]]
+include::../{includedir}/introduction.adoc[]
 
 == Overview
 include::../{includedir}/overview.adoc[]
@@ -39,24 +39,20 @@ include::../{includedir}/planning_deployment.adoc[]
 == Deployment Steps
 include::../{includedir}/deployment_steps.adoc[]
 
-== Parameters
-include::../{generateddir}/parameters/index.adoc[]
+// == Parameters
+// include::../{generateddir}/parameters/index.adoc[]
 
 // additional_info.adoc contains 3 sections: Best Practice, Security & Other information
 ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_]
 ifndef::in_repo[====]
 include::../{specificdir}/additional_info.adoc[]
 ifndef::in_repo[====]
-== FAQ
+
 ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/faq.adoc`**_]
 ifndef::in_repo[====]
-include::../{specificdir}/faq.adoc[]
+include::../{specificdir}/faq_troubleshooting.adoc[]
 ifndef::in_repo[====]
-== Troubleshooting
-ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/troubleshooting.adoc`**_]
-ifndef::in_repo[====]
-include::../{specificdir}/troubleshooting.adoc[]
-ifndef::in_repo[====]
+
 == Send us feedback
 
 To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for this Quick Start. If you’d like to submit code, please review the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide].
