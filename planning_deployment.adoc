@@ -44,7 +44,10 @@ endif::template_not_all_regions[]
 
 The following regions are currently supported by this Quick Start Reference Architecture.
 
-include::../{generateddir}/regions/index.adoc[]
+ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_]
+ifndef::in_repo[====]
+include::../{specificdir}/regions.adoc[]
+ifndef::in_repo[====]
 
 TIP: Certain regions are available on an opt-in basis. Please refer to the AWS Documentaiton on https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing Regions] for more information.
 
