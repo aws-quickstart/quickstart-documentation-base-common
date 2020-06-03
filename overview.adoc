@@ -4,7 +4,9 @@ This Quick Start reference deployment guide provides step-by-step
 instructions for deploying _{partner-product-name}_ on the AWS Cloud.
 
 ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/target_and_usage`**_]
+ifndef::in_repo[====]
 include::../{specificdir}/target_and_usage.adoc[]
+ifndef::in_repo[====]
 
 NOTE: Please know that we may share who uses AWS
 Quick Starts with the AWS Partner Network (APN) Partner that
