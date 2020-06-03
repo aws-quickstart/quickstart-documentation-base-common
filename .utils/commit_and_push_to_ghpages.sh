@@ -19,7 +19,7 @@ if [ $? -ne 0 ]; then
 fi
 
 git remote set-url origin ${repo_uri}
-git push origin HEAD:${target_branch}
+git push origin HEAD:${target_branch} --force
 
 #git remote add ${remote_name} ${repo_uri}
 #git remote update
