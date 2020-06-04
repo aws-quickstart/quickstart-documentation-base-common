@@ -29,9 +29,9 @@ def just_pass():
     template_entrypoints = {}
     for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         print(f"Working on {yaml_cfn_file}")
+        template = get_cfn(Path(yaml_cfn_file))
         if not template:
             raise Exception(f"cfn-lint failed to load {yaml_cfn_file} without errors. Failure")
-        template = get_cfn(Path(yaml_cfn_file))
         entrypoint = template.get('Metadata', {}).get('Documentation', {}).get('EntrypointName')
         if not entrypoint:
             print(f"- No documentation entrypoint found. Continuing.")
