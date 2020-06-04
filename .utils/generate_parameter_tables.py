@@ -31,8 +31,7 @@ def just_pass():
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
         if not template:
-            print("cfn-lint failed to load {yaml_cfn_file} without errors. Failure")
-            raise
+            raise Exception(f"cfn-lint failed to load {yaml_cfn_file} without errors. Failure")
 
         _pf = Path(yaml_cfn_file).stem + ".adoc"
         p_file = f"docs/generated/parameters/{_pf}"
