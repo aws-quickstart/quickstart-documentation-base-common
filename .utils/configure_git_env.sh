@@ -1,5 +1,6 @@
 git checkout --track origin/gh-pages
 git rm -rf .
+git touch .gitmodules
 git restore -s master docs
 git rm -r docs/common -r
 git restore -s master templates
