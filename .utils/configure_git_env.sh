@@ -1,4 +1,4 @@
-git checkout --track origin/gh-pages
+git checkout gh-pages
 git rm -rf .
 git touch .gitmodules
 git restore -s master docs
