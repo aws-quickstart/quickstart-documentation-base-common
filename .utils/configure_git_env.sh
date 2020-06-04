@@ -1,4 +1,6 @@
-git checkout gh-pages
+git remote update
+git fetch
+git checkout --track origin/gh-pages
 git rm -rf .
 git touch .gitmodules
 git restore -s master docs
