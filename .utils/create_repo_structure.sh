@@ -18,5 +18,11 @@ rsync -avP docs/common/.specific/ docs/specific/
 # enabling workflow.
 cp docs/common/.actions/master-docs-build.yml .github/workflows/
 
+
+# creating placeholders.
+echo "// placeholder" > docs/generated/parameters/index.adoc
+echo "// placeholder" > docs/generated/regions/index.adoc
+echo "// placeholder" > docs/generated/services/index.adoc
+
 # Create a symlink for easy preview.
 ln -s docs/common/index.adoc docs/index.adoc
