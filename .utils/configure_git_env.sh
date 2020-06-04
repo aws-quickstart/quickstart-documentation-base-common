@@ -1,7 +1,5 @@
-git remote update
-git fetch
 git checkout --track origin/gh-pages
-rm -rf docs/*
+git rm -rf .
 git restore -s master docs
 git rm -r docs/common -r
 git restore -s master templates
