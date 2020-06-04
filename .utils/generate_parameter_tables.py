@@ -33,7 +33,7 @@ def just_pass():
         _pf = Path(yaml_cfn_file).stem + ".adoc"
         p_file = f"docs/generated/parameters/{_pf}"
 
-        entrypoint = template['Metadata'].get('Documentation',{}).get('EntrypointName')
+        entrypoint = template.get('Metadata',{}).get('Documentation',{}).get('EntrypointName')
         if entrypoint:
             template_entrypoints[p_file.split('/')[-1]] = entrypoint
 
