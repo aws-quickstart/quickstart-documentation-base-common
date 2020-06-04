@@ -30,6 +30,9 @@ def just_pass():
     for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
+        if not template:
+            raise("cfn-lint failed to load {} without errors. Failure".format(yaml_cfn_file))
+
         _pf = Path(yaml_cfn_file).stem + ".adoc"
         p_file = f"docs/generated/parameters/{_pf}"
 
