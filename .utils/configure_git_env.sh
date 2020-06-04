@@ -2,7 +2,7 @@ git remote update
 git fetch
 git checkout --track origin/gh-pages
 git rm -rf .
-git touch .gitmodules
+touch .gitmodules
 git restore -s master docs
 git rm -r docs/common -r
 git restore -s master templates
