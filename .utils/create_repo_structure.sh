@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Work in progress.
-exit 1
+# # Work in progress.
+# exit 1
 
 # Creating directories.
 mkdir -p docs/generated/parameters
