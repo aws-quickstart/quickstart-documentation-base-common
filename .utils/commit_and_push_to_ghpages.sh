@@ -13,6 +13,7 @@ git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
 git add -A
 git add images
+git add index.html
 git commit -a -m "Updating documentation"
 if [ $? -ne 0 ]; then
     echo "nothing to commit"
