@@ -29,16 +29,16 @@ def just_pass():
     template_entrypoints = {}
     for yaml_cfn_file in Path('./templates').glob('*.yaml'):
         print(f"Working on {yaml_cfn_file}")
-        template = get_cfn(Path(yaml_cfn_file))
         if not template:
             raise Exception(f"cfn-lint failed to load {yaml_cfn_file} without errors. Failure")
-
+        template = get_cfn(Path(yaml_cfn_file))
+        entrypoint = template.get('Metadata', {}).get('Documentation', {}).get('EntrypointName')
+        if not entrypoint:
+            print(f"- No documentation entrypoint found. Continuing.")
+            continue
         _pf = Path(yaml_cfn_file).stem + ".adoc"
         p_file = f"docs/generated/parameters/{_pf}"
-
-        entrypoint = template.get('Metadata',{}).get('Documentation',{}).get('EntrypointName')
-        if entrypoint:
-            template_entrypoints[p_file.split('/')[-1]] = entrypoint
+        template_entrypoints[p_file.split('/')[-1]] = entrypoint
 
         label_mappings = {}
         reverse_label_mappings = {}
@@ -86,6 +86,8 @@ def just_pass():
         with open (p_file, 'w') as p:
             p.write(adoc_data)
 
+    if not template_entrypoints:
+        raise Exception("No documentation entrypoints were found. Unable to build documentation. Exiting.")
     with open('docs/generated/parameters/index.adoc', 'w') as f:
         for template_file, cosmetic_name in template_entrypoints.items():
             f.write(f"\n=== {cosmetic_name}\n")
