@@ -23,6 +23,7 @@ cp docs/common/.actions/master-docs-build.yml .github/workflows/
 echo "// placeholder" > docs/generated/parameters/index.adoc
 echo "// placeholder" > docs/generated/regions/index.adoc
 echo "// placeholder" > docs/generated/services/index.adoc
+echo "// placeholder" > docs/generated/services/metadata.adoc
 
 # Create a symlink for easy preview.
 ln -s docs/common/index.adoc docs/index.adoc
