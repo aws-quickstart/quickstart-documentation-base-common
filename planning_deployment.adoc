@@ -10,10 +10,10 @@ website]. These sites provide materials for learning how to design,
 deploy, and operate your infrastructure and applications on the AWS
 Cloud.
 
-ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/specialized_knowledge.adoc`**_]
-ifndef::in_repo[====]
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/specialized_knowledge.adoc`**_]
+ifndef::production_build[====]
 include::../{specificdir}/specialized_knowledge.adoc[]
-ifndef::in_repo[====]
+ifndef::production_build[====]
 
 === AWS account
 
@@ -30,9 +30,9 @@ Before you launch the Quick Start, your account must be configured as specified 
 If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases] for the following resources. You might need to do this if an existing deployment uses these resources, and you might exceed the default quotas with this deployment. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console] displays your usage and quotas for some aspects of some services. For more information, see the https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[AWS documentation].
 // If we are checking used services, can we pull them in below automatically?
 // - Yes.
-ifndef::in_repo[====]
+ifndef::production_build[====]
 include::../{specificdir}/service_limits.adoc[]
-ifndef::in_repo[====]
+ifndef::production_build[====]
 include::../{generateddir}/services/metadata.adoc[]
 
 // We can also pull in regions automatically.
@@ -44,18 +44,18 @@ endif::template_not_all_regions[]
 
 The following regions are currently supported by this Quick Start Reference Architecture.
 
-ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_]
-ifndef::in_repo[====]
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_]
+ifndef::production_build[====]
 include::../{specificdir}/regions.adoc[]
-ifndef::in_repo[====]
+ifndef::production_build[====]
 
 TIP: Certain regions are available on an opt-in basis. Please refer to the AWS Documentaiton on https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing Regions] for more information.
 
 ifdef::template_services_ec2[]
 ==== EC2 Key Pairs
-ifndef::in_repo[====]
-ifndef::in_repo[_This section is conditional on EC2 instances being used in the Cloudformation Templates_]
-ifndef::in_repo[====]
+ifndef::production_build[====]
+ifndef::production_build[_This section is conditional on EC2 instances being used in the Cloudformation Templates_]
+ifndef::production_build[====]
 Make sure that at least one https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pair] exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, follow the https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[instructions in the AWS documentation].
 
 For testing or proof-of-concept purposes, we recommend creating a new key pair instead of using one that’s already being used by a production instance.
@@ -68,6 +68,6 @@ Before launching the Quick Start, you must log in to the AWS Management Console 
 The _AdministratorAccess_ managed policy within IAM provides sufficient permissions, although your organization may choose to use a custom policy with more restrictions.
 
 ==== Deployment options
-ifndef::in_repo[====]
+ifndef::production_build[====]
 include::../{specificdir}/deployment_options.adoc[]
-ifndef::in_repo[====]
+ifndef::production_build[====]

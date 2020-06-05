@@ -25,10 +25,10 @@ endif::marketplace_subscription[]
 
 . Sign in to your AWS account, and choose one of the following options to launch the AWS CloudFormation template. For help with choosing an option, see link:#_Automated_Deployment[deployment options] earlier in this guide.
 
-ifndef::in_repo[_**This portion of the deployment guide is located at `docs/{specificdir}/_qs_deploy_links.adoc`**_]
-ifndef::in_repo[====]
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/_qs_deploy_links.adoc`**_]
+ifndef::production_build[====]
 include::../{specificdir}/_qs_deploy_links.adoc[]
-ifndef::in_repo[====]
+ifndef::production_build[====]
 
 *Important:* If you’re deploying {partner-product-name} into an existing VPC, make sure that your VPC has two private subnets in different Availability Zones for the workload instances, and that the subnets aren’t shared. This Quick Start doesn’t support https://docs.aws.amazon.com/vpc/latest/userguide/vpc-sharing.html[shared subnets]. These subnets require https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html[NAT gateways] in their route tables, to allow the instances to download packages and software without exposing them to the internet.
 

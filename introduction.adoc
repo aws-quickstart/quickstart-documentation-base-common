@@ -1,12 +1,12 @@
 [.text-center]
 == Quick Start Reference Deployment
-ifndef::in_repo[====]
+ifndef::production_build[====]
 *{doc-month}, {doc-year}* +
 _{partner-contributors} - {partner-company-name}_ +
 _{quickstart-contributors}_
-ifndef::in_repo[====]
+ifndef::production_build[====]
 [.text-left]
-ifndef::in_repo[_**The above information is configured within `{specificdir}/_settings.adoc`**_]
+ifndef::production_build[_**The above information is configured within `{specificdir}/_settings.adoc`**_]
 
 TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for source files and to post feedback,
 report bugs, or submit feature ideas for this Quick Start.
