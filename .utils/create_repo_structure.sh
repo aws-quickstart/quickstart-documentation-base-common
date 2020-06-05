@@ -25,8 +25,5 @@ echo "// placeholder" > docs/generated/regions/index.adoc
 echo "// placeholder" > docs/generated/services/index.adoc
 echo "// placeholder" > docs/generated/services/metadata.adoc
 
-# Create a symlink for easy preview.
-ln -s docs/common/index.adoc docs/index.adoc
-
 git add -A docs/
 git add .github/
