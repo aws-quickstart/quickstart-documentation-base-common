@@ -65,9 +65,9 @@ include::../{generateddir}/parameters/index.adoc[]
 . Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} cluster is ready.
 . Use the URLs displayed in the *Outputs* tab for the stack, as shown in Figure 2, to view the resources that were created.
 
-image:../images/cfn_outputs.png[image,width=648,height=439]
-
-Figure 2: {partner-product-name} outputs after successful deployment
+[#cfn_outputs]
+.{partner-product-name} outputs after successful deployment
+image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
 
 === Test the deployment
 include::../{specificdir}/test_deployment.adoc[]
