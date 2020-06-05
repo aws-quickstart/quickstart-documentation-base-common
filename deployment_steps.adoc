@@ -1,25 +1,25 @@
 :specificdir: specific
 :generateddir: generated
-
 // We need to work around Step numbers here if we are going to potentially exclude the AMI subscription
-=== Step 1. Sign in to your AWS account
+=== Sign in to your AWS account
 
 . Sign in to your AWS account at https://aws.amazon.com with an IAM user role that has the necessary permissions. For details, see link:#planning-the-deployment[Planning the deployment] earlier in this guide.
 . Make sure that your AWS account is configured correctly, as discussed in the link:#technical-requirements[Technical requirements] section.
 
 // TODO: Make this an optional
-=== Step 2. Subscribe to the {partner-product-name} AMI
+ifdef::marketplace_subscription[]
+=== Subscribe to the {partner-product-name} AMI
 
 This Quick Start requires a subscription to the AMI for {partner-product-name} in AWS Marketplace.
 
 . Sign in to your AWS account.
-. Open the page for the {partner-product-name} AMI in AWS Marketplace, and then choose *Continue to Subscribe*.
+. {marketplace_listing_url}[Open the page for the {partner-product-name} AMI in AWS Marketplace], and then choose *Continue to Subscribe*.
 . Review the terms and conditions for software usage, and then choose *Accept Terms*. +
   A confirmation page loads, and an email confirmation is sent to the account owner. For detailed subscription instructions, see the https://aws.amazon.com/marketplace/help/200799470[AWS Marketplace documentation].
 
 . When the subscription process is complete, exit out of AWS Marketplace without further action. *Do not* provision the software from AWS Marketplace—the Quick Start deploys the AMI for you.
-
-=== Step 3. Launch the Quick Start
+endif::marketplace_subscription[]
+=== Launch the Quick Start
 
 *Note:* You are responsible for the cost of the AWS services used while running this Quick Start reference deployment. There is no additional cost for using this Quick Start. For full details, see the pricing pages for each AWS service used by this Quick Start. Prices are subject to change.
 
@@ -69,5 +69,5 @@ image:../images/cfn_outputs.png[image,width=648,height=439]
 
 Figure 2: {partner-product-name} outputs after successful deployment
 
-=== Step 4. Test the deployment
+=== Test the deployment
 include::../{specificdir}/test_deployment.adoc[]
