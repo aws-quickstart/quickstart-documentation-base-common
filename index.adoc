@@ -1,6 +1,6 @@
 :imagesdir: images
-:includedir: common
-:specificdir: specific
+:includedir: boilerplate
+:specificdir: partner_editable
 :generateddir: generated
 :icons: font
 :toc2: left
