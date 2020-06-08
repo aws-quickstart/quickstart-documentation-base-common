@@ -32,7 +32,7 @@ def just_pass():
         template = get_cfn(Path(yaml_cfn_file))
         if not template:
             raise Exception(f"cfn-lint failed to load {yaml_cfn_file} without errors. Failure")
-        entrypoint = template.get('Metadata', {}).get('Documentation', {}).get('EntrypointName')
+        entrypoint = template.get('Metadata', {}).get('QuickStartDocumentation', {}).get('EntrypointName')
         if not entrypoint:
             print(f"- No documentation entrypoint found. Continuing.")
             continue
@@ -47,7 +47,7 @@ def just_pass():
         no_groups = {}
 
         def determine_optional_value(param):
-            optional = template['Metadata'].get('Documentation', {}).get('OptionalParameters')
+            optional = template['Metadata'].get('QuickStartDocumentation', {}).get('OptionalParameters')
             if optional and (param in optional):
                 return '__Optional__'
             return '**__Requires Input__**'
