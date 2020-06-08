@@ -1,8 +1,8 @@
 [.text-center]
-[.discrete]
+[discrete]
 == Quick Start Reference Deployment
 ifndef::production_build[]
-[.discrete]
+[discrete]
 === DRAFT DOCUMENT / UNOFFICIAL GUIDANCE
 ====
 endif::production_build[]
