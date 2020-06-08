@@ -2,7 +2,7 @@
 git remote update
 git fetch
 set +e 
-git rev-parse --verify gh-pages
+git rev-parse --verify refs/heads/gh-pages
 CHECK_BRANCH=$?
 set -e
 if [[  $CHECK_BRANCH -ne 0 ]];then
