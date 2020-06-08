@@ -1,8 +1,9 @@
 #!/bin/bash -e
+set -x
 git remote update
 git fetch
 set +e 
-git rev-parse --verify refs/heads/gh-pages
+git rev-parse --verify origin/gh-pages
 CHECK_BRANCH=$?
 set -e
 if [[  $CHECK_BRANCH -ne 0 ]];then
@@ -13,10 +14,10 @@ else
 fi
 git rm -rf .
 touch .gitmodules
-git restore -s master docs
+git restore -s origin/master docs
 git rm -r docs/boilerplate -r
 rm -rf docs/boilerplate
-git restore -s master templates
+git restore -s origin/master templates
 git submodule add https://github.com/aws-quickstart/quickstart-documentation-base-common.git docs/boilerplate
 rm configure_git_env.sh
 mv docs/images images
