@@ -10,4 +10,5 @@
 :project_cfn:
 :template_services_ec2:
 include::{specificdir}/_settings.adoc[]
+:title: {partner-product-name} on the AWS Cloud
 ifdef::project_cfn[include::{includedir}/_layout_cfn.adoc[]]

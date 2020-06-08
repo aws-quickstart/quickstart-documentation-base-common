@@ -2,6 +2,7 @@
 [discrete]
 == Quick Start Reference Deployment
 ifndef::production_build[]
+[.text-center]
 [discrete]
 === DRAFT DOCUMENT / UNOFFICIAL GUIDANCE
 ====
