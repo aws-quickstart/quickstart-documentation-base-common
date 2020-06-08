@@ -67,6 +67,11 @@ Before launching the Quick Start, you must log in to the AWS Management Console 
 
 The _AdministratorAccess_ managed policy within IAM provides sufficient permissions, although your organization may choose to use a custom policy with more restrictions.
 
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_]
+ifndef::production_build[====]
+include::../{specificdir}/pre-reqs.adoc[]
+ifndef::production_build[====]
+
 ==== Deployment options
 ifndef::production_build[====]
 include::../{specificdir}/deployment_options.adoc[]

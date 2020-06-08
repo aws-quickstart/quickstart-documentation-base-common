@@ -67,3 +67,6 @@ https://aws.amazon.com/quickstart/
 You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] to download
 the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.
+
+'''
+include::../{includedir}/disclaimer.adoc[]
