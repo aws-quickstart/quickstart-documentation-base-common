@@ -23,3 +23,4 @@ git restore -s origin/master templates
 git submodule add https://github.com/aws-quickstart/quickstart-documentation-base-common.git docs/boilerplate
 rm configure_git_env.sh
 mv docs/images images
+cp docs/boilerplate/.css/AWS-Logo.svg images/

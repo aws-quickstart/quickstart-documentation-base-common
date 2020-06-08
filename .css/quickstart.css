@@ -196,7 +196,7 @@ body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9
 #toc.toc2{width:20em}
 #toc.toc2 #toctitle{
   font-size:1.375em;
-  background-image: url('docs/common/.css/AWS-Logo.svg');
+  background-image: url('images/AWS-Logo.svg');
   background-repeat: no-repeat;
   background-size: 160.8px 136.483px;
   background-position: center;
