@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 set -e
 git remote update
 git fetch
