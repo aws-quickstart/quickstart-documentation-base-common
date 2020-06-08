@@ -1,8 +1,15 @@
-#!/usr/bin/env bash
-set -e
+#!/usr/bin/env bash -e
 git remote update
 git fetch
-git checkout --track origin/gh-pages
+set +e 
+git rev-parse --verify gh-pages
+CHECK_BRANCH=$?
+set -e
+if [[  $CHECK_BRANCH -ne 0 ]];then
+  git checkout -b gh-pages
+else
+    git checkout --track origin/gh-pages
+fi
 git rm -rf .
 touch .gitmodules
 git restore -s master docs
