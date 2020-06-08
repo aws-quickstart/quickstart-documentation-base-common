@@ -1,4 +1,4 @@
-:specificdir: specific
+:specificdir: partner_editable
 :generateddir: generated
 // We need to work around Step numbers here if we are going to potentially exclude the AMI subscription
 === Sign in to your AWS account

@@ -1,5 +1,5 @@
 
-:specificdir: specific
+:specificdir: partner_editable
 :generateddir: generated
 
 This deployment guide requires a moderate level of familiarity with
