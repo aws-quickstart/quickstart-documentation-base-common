@@ -28,5 +28,8 @@ echo "// placeholder" > ${GENERATED_DIR}/regions/index.adoc
 echo "// placeholder" > ${GENERATED_DIR}/services/index.adoc
 echo "// placeholder" > ${GENERATED_DIR}/services/metadata.adoc
 
+touch .nojekyll
+
 git add -A docs/
 git add .github/
+git add .nojekyll
