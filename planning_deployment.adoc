@@ -1,6 +1,6 @@
 
-:specificdir: specific
-:generateddir: generated
+//:specificdir: specific
+//:generateddir: generated
 
 This deployment guide requires a moderate level of familiarity with
 AWS services. If you’re new to AWS, visit the
