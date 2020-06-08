@@ -1,7 +1,4 @@
 
-:specificdir: partner_editable
-:generateddir: generated
-
 This deployment guide requires a moderate level of familiarity with
 AWS services. If you’re new to AWS, visit the
 https://aws.amazon.com/getting-started/[Getting Started Resource Center]

@@ -1,4 +1,3 @@
-:specificdir: partner_editable
 
 This Quick Start reference deployment guide provides step-by-step
 instructions for deploying _{partner-product-name}_ on the AWS Cloud.
