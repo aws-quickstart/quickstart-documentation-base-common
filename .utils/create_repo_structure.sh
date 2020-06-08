@@ -3,27 +3,30 @@
 # # Work in progress.
 # exit 1
 
+BOILERPLATE_DIR="docs/boilerplate"
+GENERATED_DIR="docs/generated"
+SPECIFIC_DIR="docs/partner_editable"
 # Creating directories.
-mkdir -p docs/generated/parameters
-mkdir -p docs/generated/regions
-mkdir -p docs/generated/services
-mkdir -p docs/partner_editable
+mkdir -p ${GENERATED_DIR}/parameters
+mkdir -p ${GENERATED_DIR}/regions
+mkdir -p ${GENERATED_DIR}/services
+mkdir -p ${SPECIFIC_DIR}
 mkdir -p docs/images
 mkdir -p .github/workflows
 
 # Copying content.
-rsync -avP docs/boilerplate/.images/ docs/images/
-rsync -avP docs/boilerplate/.specific/ docs/partner_editable
+rsync -avP ${BOILERPLATE_DIR}/.images/ docs/images/
+rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR}
 
 # enabling workflow.
-cp docs/common/.actions/master-docs-build.yml .github/workflows/
+cp ${BOILERPLATE_DIR}/.actions/master-docs-build.yml .github/workflows/
 
 
 # creating placeholders.
-echo "// placeholder" > docs/generated/parameters/index.adoc
-echo "// placeholder" > docs/generated/regions/index.adoc
-echo "// placeholder" > docs/generated/services/index.adoc
-echo "// placeholder" > docs/generated/services/metadata.adoc
+echo "// placeholder" > ${GENERATED_DIR}/parameters/index.adoc
+echo "// placeholder" > ${GENERATED_DIR}/regions/index.adoc
+echo "// placeholder" > ${GENERATED_DIR}/services/index.adoc
+echo "// placeholder" > ${GENERATED_DIR}/services/metadata.adoc
 
 git add -A docs/
 git add .github/
