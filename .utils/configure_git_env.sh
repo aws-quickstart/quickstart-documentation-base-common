@@ -15,8 +15,10 @@ fi
 git rm -rf .
 touch .gitmodules
 git restore -s origin/master docs
+set +e
 git rm -r docs/boilerplate -r
 rm -rf docs/boilerplate
+set -e
 git restore -s origin/master templates
 git submodule add https://github.com/aws-quickstart/quickstart-documentation-base-common.git docs/boilerplate
 rm configure_git_env.sh
