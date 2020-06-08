@@ -1,3 +1,4 @@
+set -e
 git remote update
 git fetch
 git checkout --track origin/gh-pages

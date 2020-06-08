@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 # # Work in progress.
 # exit 1
 

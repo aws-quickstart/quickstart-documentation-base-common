@@ -1,5 +1,6 @@
 #!/bin/bash
 # Wrapper to generate parameter tables within asciidoc workflow.
+set -e
 sudo apt-get install pandoc -y
 pip3 install -r docs/boilerplate/.utils/requirements.txt;
 echo "Gen tables"

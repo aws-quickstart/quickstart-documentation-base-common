@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 ASCIIDOC_ATTRIBUTES=""
 GITHUB_REPO_OWNER=$(echo ${GITHUB_REPOSITORY} | cut -d '/' -f 1)
 if [ "${GITHUB_REPO_OWNER}" == "aws-quickstart" ]; then
