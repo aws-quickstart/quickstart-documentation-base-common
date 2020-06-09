@@ -1,6 +1,8 @@
 // Replace the <n> in each row to specify the number of resources used in this deployment. Remove the rows for resources that aren’t used.
 |===
 |Resource |This deployment uses
+
+// Space needed to maintain table headers
 |VPCs |<n>
 |Elastic IP addresses |<n>
 |AWS Identity and Access Management (IAM) security groups |<n>
