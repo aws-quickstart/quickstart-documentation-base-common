@@ -8,6 +8,7 @@ CHECK_BRANCH=$?
 set -e
 if [[  $CHECK_BRANCH -ne 0 ]];then
   git checkout -b gh-pages
+  git push origin gh-pages
 else
   git checkout gh-pages
 #    git checkout --track origin/gh-pages
