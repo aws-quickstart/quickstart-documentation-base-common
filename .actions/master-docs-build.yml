@@ -32,3 +32,7 @@ jobs:
       run: ./docs/boilerplate/.utils/commit_and_push_to_ghpages.sh
       env:
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    - name: Configure gh-pages source and trigger build if necessary.
+      run: ./docs/boilerplate/.utils/config_and_trigger_gh-pages.sh
+      env:
+        GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
