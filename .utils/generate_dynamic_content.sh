@@ -5,3 +5,5 @@ sudo apt-get install pandoc -y
 pip3 install -r docs/boilerplate/.utils/requirements.txt;
 echo "Gen tables"
 python docs/boilerplate/.utils/generate_parameter_tables.py
+echo "Gen metadata"
+python docs/boilplate/.utils/generate_metadata_attributes.py

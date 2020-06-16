@@ -27,7 +27,7 @@ def _generate_per_label_table_entry(label, param, default, description):
 
 def just_pass():
     template_entrypoints = {}
-    for yaml_cfn_file in Path('./templates').glob('*.yaml'):
+    for yaml_cfn_file in Path('./templates').glob('*.template*'):
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
         if not template:
