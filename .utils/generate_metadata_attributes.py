@@ -9,18 +9,18 @@ def get_cfn(filename):
     return _decoded
 
 def fetch_metadata():
-    metadata_attributes = []
+    metadata_attributes = set()
     for yaml_cfn_file in Path('./templates').glob('*.template*'):
         template = get_cfn(Path(yaml_cfn_file))
         if not template:
             raise Exception(f"cfn-lint failed to load {yaml_cfn_file} without errors. Failure")
         _resources = template['Resources']
-        for _resource in _resources:
+        for _resource in _resources.values():
             _type = _resource['Type'].lower()
-            metadata_attributes.append(_type.split('::')[1])
-            metadata_attributes.append(_type.replace('::','_'))
+            metadata_attributes.add(_type.split('::')[1])
+            metadata_attributes.add(_type.replace('::','_'))
     with open('docs/generated/services/metadata.adoc', 'w') as f:
-        for attr in metadata_attributes:
+        for attr in sorted(metadata_attributes):
             f.write(f":template_{attr}:")
 
 if __name__ == '__main__':
