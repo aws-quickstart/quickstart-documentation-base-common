@@ -683,6 +683,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
   background: #FAE2E2;
 }
 
+#content {
+  max-width: 100rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 body {
   font-family: "Amazon Ember Regular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 }
@@ -696,11 +702,14 @@ h5,
 h6 {
   margin        : 0.85rem 0 1.7rem 0;
   text-rendering: optimizeLegibility;
+  color: #ec7211;
 }
 
 p {
   margin: 1rem 0;
 }
+
+/* QS Table of Contents */
 
 #toc {
   overflow-x: hidden !important;
@@ -731,4 +740,16 @@ p {
 
 #toc.toc2 #toctitle{
   background-image: url('images/AWS-Logo.svg');
+}
+
+/* QS Tables */
+
+table.tableblock .title,
+.imageblock .title {
+  font-family  : "Amazon Ember Light", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-size: 1.1rem;
+  color: #34478c;
+}
+table p {
+  margin: 0rem;
 }
