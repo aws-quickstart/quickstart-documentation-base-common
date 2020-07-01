@@ -27,7 +27,9 @@ def _generate_per_label_table_entry(label, param, default, description):
 
 def just_pass():
     template_entrypoints = {}
+    found_files_with_glob_pattern=False
     for yaml_cfn_file in Path('./templates').glob('*.template*'):
+        found_files_with_glob_pattern=True
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
         if not template:
@@ -85,7 +87,8 @@ def just_pass():
         print(f"- Generating: {p_file}")
         with open (p_file, 'w') as p:
             p.write(adoc_data)
-
+    if not found_files_with_glob_pattern:
+        raise Exception("No files matching templates/*.template.(json|yaml|yml) were found. Unable to build documentation. Exiting.")
     if not template_entrypoints:
         raise Exception("No documentation entrypoints (Metadata => QuickStartDocumentation => EntrypointName)  were found. Unable to build documentation. Exiting.")
     with open('docs/generated/parameters/index.adoc', 'w') as f:
