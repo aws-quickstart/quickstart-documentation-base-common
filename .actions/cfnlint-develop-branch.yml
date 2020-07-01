@@ -11,10 +11,12 @@ jobs:
     steps:
     - name: Checkout (develop)
       uses: actions/checkout@v2
-      path: checked_out_repo
+      with:
+        path: checked_out_repo
     - name: Checkout (custom rules)
       uses: actions/checkout@v2
-      path: team_custom_rules 
+      with:
+        path: team_custom_rules 
     - name: Run local actions
       id: cfnlint_custom
       uses: ./docs/boilerplate/.actions/cfnlint-action
