@@ -14,5 +14,6 @@ else
 
 fi
 
-cfn-lint ${CFNLINT_ARGS} -i W --templates templates/* --format json > /cfnlint_output.json
+cfn-lint ${CFNLINT_ARGS} -i W --templates templates/* --format json | tee /cfnlint_output.json
+echo "foo"
 python docs/boilerplate/.utils/pretty_cfnlint_output.py /cfnlint_output.json
