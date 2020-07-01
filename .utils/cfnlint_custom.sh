@@ -8,4 +8,8 @@ else
 
 fi
 
-cfn-lint --ignore-checks W ${CFNLINT_ARGS} --templates templates/*
+cfn-lint --version
+echo;
+cfn-lint --help
+echo;
+cfn-lint ${CFNLINT_ARGS} -i W --templates templates/*
