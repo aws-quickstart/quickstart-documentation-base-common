@@ -28,6 +28,7 @@ Before you launch the Quick Start, your account must be configured as specified 
 If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases] for the following resources. You might need to do this if an existing deployment uses these resources, and you might exceed the default quotas with this deployment. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console] displays your usage and quotas for some aspects of some services. For more information, see the https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[AWS documentation].
 // If we are checking used services, can we pull them in below automatically?
 // - Yes.
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/service_limits.adoc`**_]
 ifndef::production_build[====]
 include::../{specificdir}/service_limits.adoc[]
 ifndef::production_build[====]
@@ -71,6 +72,7 @@ include::../{specificdir}/pre-reqs.adoc[]
 ifndef::production_build[====]
 
 ==== Deployment options
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/deployment_options.adoc`**_]
 ifndef::production_build[====]
 include::../{specificdir}/deployment_options.adoc[]
 ifndef::production_build[====]

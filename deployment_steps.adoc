@@ -61,11 +61,12 @@ include::../{generateddir}/parameters/index.adoc[]
 . On the *Review* page, review and confirm the template settings. Under *Capabilities*, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.
 . Choose *Create stack* to deploy the stack.
 . Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} cluster is ready.
-. Use the URLs displayed in the *Outputs* tab for the stack, as shown in Figure 2, to view the resources that were created.
+. Use the values displayed in the *Outputs* tab for the stack, as shown in Figure 2, to view the resources that were created.
 
 [#cfn_outputs]
 .{partner-product-name} outputs after successful deployment
 image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
 
 === Test the deployment
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/test_deployment.adoc`**_]
 include::../{specificdir}/test_deployment.adoc[]
