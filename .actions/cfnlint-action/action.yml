@@ -9,13 +9,11 @@ inputs:
   program:
     description: "cfnlint"
     required: true
-    default: 'cfn-lint -a team_custom_rules checked_out_repo/templates/*'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.program }}
-
 outputs:
   time:
     description: 'Action Completed'
