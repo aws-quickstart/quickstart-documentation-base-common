@@ -67,6 +67,5 @@ include::../{generateddir}/parameters/index.adoc[]
 .{partner-product-name} outputs after successful deployment
 image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
 
-=== Test the deployment
 ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/test_deployment.adoc`**_]
 include::../{specificdir}/test_deployment.adoc[]
