@@ -14,6 +14,10 @@ else
 
 fi
 
-cfn-lint ${CFNLINT_ARGS} -i W --templates templates/* --format json | tee /cfnlint_output.json
-echo "foo"
-python docs/boilerplate/.utils/pretty_cfnlint_output.py /cfnlint_output.json
+CFNLINT_JSON_OUT=$(mktemp)
+set +e
+cfn-lint ${CFNLINT_ARGS} -i W --templates templates/* --format json > ${CFNLINT_JSON_OUT}
+CFNLINT_EXIT_CODE=$?
+set -e
+python docs/boilerplate/.utils/pretty_cfnlint_output.py ${CFNLINT_JSON_OUT}
+exit ${CFNLINT_EXIT_CODE}
