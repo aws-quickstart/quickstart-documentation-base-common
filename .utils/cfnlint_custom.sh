@@ -1,8 +1,12 @@
 #!/bin/bash
 set -e
 if [[ -d "${GITHUB_WORKSPACE}/team_custom_rules" ]]; then
-  pip install -r ${GITHUB_WORKSPACE}/team_custom_rules/requirements.txt
-  python ${GITHUB_WORKSPACE}/team_custom_rules/setup.py install
+  # Install requirements for custom rules, plus the rules themselves.
+  cd ${GITHUB_WORKSPACE}/team_custom_rules
+  pip install -r requirements.txt
+  python setup.py install
+  cd ${GITHUB_WORKSPACE}
+  # back to normal
   CFNLINT_ARGS="-a ${GITHUB_WORKSPACE}/team_custom_rules/qs_cfn_lint_rules"
   echo "Using custom ruleset"
 else
