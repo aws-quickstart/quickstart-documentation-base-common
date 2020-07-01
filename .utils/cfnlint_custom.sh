@@ -14,4 +14,6 @@ else
 
 fi
 
-cfn-lint ${CFNLINT_ARGS} -i W --templates templates/*
+CFNLINT_JSON_OUT=$(mktemp)
+cfn-lint ${CFNLINT_ARGS} -i W --templates templates/* --format json > ${CFNLINT_JSON_OUT}
+python pretty_cfnlint_output.py ${CFNLINT_JSON_OUT}
