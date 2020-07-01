@@ -49,7 +49,7 @@ ifndef::production_build[====]
 include::../{specificdir}/additional_info.adoc[]
 ifndef::production_build[====]
 
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/faq.adoc`**_]
+ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_]
 ifndef::production_build[====]
 include::../{specificdir}/faq_troubleshooting.adoc[]
 ifndef::production_build[====]
