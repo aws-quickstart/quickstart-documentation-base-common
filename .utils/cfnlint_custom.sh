@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 if [[ -d "${GITHUB_WORKSPACE}/team_custom_rules" ]]; then
   CFNLINT_ARGS="-a team_custom_rules"
