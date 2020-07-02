@@ -34,7 +34,6 @@ ifndef::production_build[====]
 
 == Planning the deployment
 
-=== Specialized knowledge
 include::../{includedir}/planning_deployment.adoc[]
 
 == Deployment Steps
