@@ -9,7 +9,7 @@ ifndef::production_build[]
 endif::production_build[]
 [.text-center]
 *{doc-month}, {doc-year}* +
-_{partner-contributors} - {partner-company-name}_ +
+_{partner-contributors}_ +
 _{quickstart-contributors}_
 [.text-left]
 ifndef::production_build[]
