@@ -4,7 +4,7 @@
 :generateddir: generated
 :icons: font
 :toc2: left
-// :toc-title: Quick Start Reference Deployment
+:toc-title: 
 :toclevels: 2
 :stylesheet: {includedir}/.css/quickstart.css
 :project_cfn:
