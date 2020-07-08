@@ -17,7 +17,7 @@ ifndef::production_build[]
 _**The above information is configured within `{specificdir}/_settings.adoc`**_
 endif::production_build[]
 
-TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for source files and to post feedback,
+TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository]^ for source files and to post feedback,
 report bugs, or submit feature ideas for this Quick Start.
 [.text-left]
-This Quick Start was created by _{partner-company-name}_ in collaboration with Amazon Web Services (AWS). http://aws.amazon.com/quickstart/[Quick Starts] are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.
+This Quick Start was created by _{partner-company-name}_ in collaboration with Amazon Web Services (AWS). http://aws.amazon.com/quickstart/[Quick Starts^] are automated reference deployments that use AWS CloudFormation templates to deploy key technologies on AWS, following AWS best practices.
