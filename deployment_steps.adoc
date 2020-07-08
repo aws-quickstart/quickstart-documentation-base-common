@@ -16,7 +16,7 @@ include::../{generateddir}/parameters/index.adoc[]
 . On the options page, you can https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html[specify tags] (key-value pairs) for resources in your stack and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html[set advanced options]. When you’re done, choose *Next*.
 . On the *Review* page, review and confirm the template settings. Under *Capabilities*, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.
 . Choose *Create stack* to deploy the stack.
-. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} cluster is ready.
+. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.
 . Use the values displayed in the *Outputs* tab for the stack, as shown in Figure 2, to view the resources that were created.
 
 [#cfn_outputs]
