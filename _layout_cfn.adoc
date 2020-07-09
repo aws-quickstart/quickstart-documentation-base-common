@@ -34,7 +34,6 @@ ifndef::production_build[====]
 
 == Planning the deployment
 
-=== Specialized knowledge
 include::../{includedir}/planning_deployment.adoc[]
 
 == Deployment Steps
@@ -56,7 +55,7 @@ ifndef::production_build[====]
 
 == Send us feedback
 
-To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] for this Quick Start. If you’d like to submit code, please review the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide].
+To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for this Quick Start. If you’d like to submit code, please review the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide^].
 
 == Quick Start reference deployments
 
@@ -65,7 +64,7 @@ https://aws.amazon.com/quickstart/
 
 == GitHub Repository
 
-You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository] to download
+You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
 the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.
 
