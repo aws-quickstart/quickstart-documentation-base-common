@@ -20,6 +20,7 @@ def fetch_metadata():
             metadata_attributes.add(_type.split('::')[1])
             metadata_attributes.add(_type.replace('::','_'))
     with open('docs/generated/services/metadata.adoc', 'w') as f:
+        f.write('\n')
         for attr in sorted(metadata_attributes):
             f.write(f":template_{attr}:\n")
 
