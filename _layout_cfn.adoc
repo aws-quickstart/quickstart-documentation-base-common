@@ -1,7 +1,7 @@
 
 [.text-center]
 [discrete]
-== _{partner-product-name}_ on the AWS Cloud
+== {partner-product-name} on the AWS Cloud
 :doctitle: {partner-product-name} on the AWS Cloud
 :!toc:
 [.text-left]
