@@ -1,6 +1,10 @@
 [.text-center]
 [discrete]
 == Quick Start Reference Deployment
+
+[.text-center]
+image::https://aws-quickstart.s3.amazonaws.com/{quickstart-project-name}/docs/images/aws-quickstart-graphic.png[QS,80,80]
+
 ifndef::production_build[]
 [.text-center]
 [discrete]
