@@ -64,10 +64,12 @@ def just_pass():
         for label_name, label_data in template['Metadata']['AWS::CloudFormation::Interface']['ParameterLabels'].items():
             parameter_labels[label_name] = label_data.get('default')
 
-        for label_name, label_data in template['Parameters'].items():
-            parameter_mappings[label_name] = label_data
-            if not reverse_label_mappings.get(label_name):
-                no_groups[label_name] = label_data
+        for param_name, param_data in template['Parameters'].items():
+            if param_data.get('Default') == '':
+                del param_data['Default']
+            parameter_mappings[param_name] = param_data
+            if not reverse_label_mappings.get(param_name):
+                no_groups[param_name] = param_data
 
         adoc_data = ""
         for label_name, label_params in label_mappings.items():
@@ -75,6 +77,7 @@ def just_pass():
             adoc_data += header
 
             for lparam in label_params:
+
                 param_data = _generate_per_label_table_entry(
                         parameter_labels.get(lparam, ''),
                         lparam,
