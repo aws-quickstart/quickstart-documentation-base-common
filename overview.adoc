@@ -1,7 +1,5 @@
 
 
-This Quick Start reference deployment guide provides step-by-step
-instructions for deploying {partner-product-name} on the AWS Cloud.
 
 ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/overview_target_and_usage`**_]
 ifndef::production_build[====]

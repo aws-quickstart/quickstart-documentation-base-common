@@ -11,7 +11,7 @@ include::../{includedir}/introduction.adoc[]
 include::../{includedir}/overview.adoc[]
 
 
-== _{partner-product-name}_ on AWS
+== {partner-product-name} on AWS
 ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_]
 ifndef::production_build[====]
 include::../{specificdir}/product_description.adoc[]
@@ -20,7 +20,7 @@ ifndef::production_build[====]
 == Cost
 include::../{includedir}/cost.adoc[]
 
-== Software Licenses
+== Software licenses
 ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_]
 ifndef::production_build[====]
 include::../{specificdir}/licenses.adoc[]
@@ -36,7 +36,7 @@ ifndef::production_build[====]
 
 include::../{includedir}/planning_deployment.adoc[]
 
-== Deployment Steps
+== Deployment steps
 include::../{includedir}/deployment_steps.adoc[]
 
 // == Parameters
@@ -59,10 +59,10 @@ To post feedback, submit feature ideas, or report bugs, use the *Issues* section
 
 == Quick Start reference deployments
 
-* AWS Quick Start home page +
-https://aws.amazon.com/quickstart/
+See the https://aws.amazon.com/quickstart/[AWS Quick Start home page].
 
-== GitHub Repository
+
+== GitHub repository
 
 You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
 the templates and scripts for this Quick Start, to post your comments,
