@@ -1,0 +1,79 @@
+// Before a new Quick Start is submitted to the technical writers for review, please ensure that every item on this list has been addressed. Replace [ ] with [x] to check a box, or render the document in an AsciiDoc viewer and check the boxes interactively.
+
+= Checklist
+
+== Prepare your code
+[%interactive]
+* [ ] You’ve followed Quick Start https://aws-quickstart.github.io/naming-parms.html[parameter labeling standards] (for example, for Boolean parameters—true/false or yes/no settings—start your description with the word Choose and explain what happens if people change the default).
+
+* [ ] Your code meets the https://aws-quickstart.github.io/reqs.html#exit[exit criteria] and is approved and frozen.
+
+* [ ] You have ParameterGroups and ParameterLabels in the template metadata, and parameters are arranged in a logical order.
+
+* [ ] Your templates meet the architectural requirements.
+
+* [ ] Your templates pass taskcat tests consistently in all supported Regions.
+
+* [ ] Your templates have unique QS IDs (generated https://portal.quickstart.aws.a2z.com/#/generate_ids[here]).
+
+== Prepare your content
+[%interactive]
+* [ ] You’ve followed the instructions in the Contributor’s Guide under https://aws-quickstart.github.io/content.html[Providing content for the Quick Start].
+
+* [ ] You’ve eliminated marketingspeak—including superlatives like unique, best-in-class, perfect, easy—and you’ve otherwise followed the https://legal.amazon.com/sites/AWS-Collab/agreementresources/Sherpa/SitePages/MarketingPR/MarketingDosDonts/MarketingDosAndDonts.aspx[marketing dos and don'ts] from the AWS Marketing Legal team.
+
+* [ ] You’ve used the approved names for all AWS services and resources, abbreviating them only as allowed, throughout the draft in accordance with the https://w.amazon.com/bin/view/AWSDocs/editing/service-names[service-names] wiki page. 
+
+* [ ] You’ve ensured all image URLs are accurate and all images are numbered sequentially (Figure 1, Figure 2, etc.)
+
+== Prepare your architecture diagram
+[%interactive]
+* [ ] You've followed the instructions in the Contributor's Guide under https://aws-quickstart.github.io/content.html#arch-diagram[Creating an architecture diagram].
+
+* [ ] You've built the diagram from the Quick Start team's latest https://github.com/aws-quickstart/quickstart-examples/tree/master/doc[single-slide .pptx template]—not an old .pptx deck or draw.io file. A https://www.office.com/launch/powerpoint[free online version of PowerPoint] is available.
+
+* [ ] The diagram follows all the guidelines in the PowerPoint toolkit deck (downloadable from the AWS architecture icons page). Examples:
+[%interactive]
+** [ ] All elements, including arrows and other shapes, are copy-pasted from the toolkit deck; there no generic PowerPoint shapes.
+
+** [ ] All arrows and lines are either horizontal or vertical; there are no diagonal or curved arrows or lines.
+
+** [ ] All fonts and text sizes are consistent.
+
+** [ ] Group and icon labels are copied directly from the toolkit deck and are not modified (exceptions: For service icons, if necessary for space reasons, you may abbreviate in accordance with the https://w.amazon.com/bin/view/AWSDocs/editing/service-names[service-names] wiki page. For resource icons, you may modify labels for clarity).
+
+** [ ] Got labels and callouts, the first work and proper nouns are the only capitalized words.
+
+** [ ] Every element is labeled, including load balancers and Internet gateways.
+
+** [ ] To separate tiers, public/private subnets, or other distinct areas of the diagrams, use the background shading provided in the toolkit deck.
+
+** [ ] Don't break a line after AWS or Amazon in the icon labels.
+
+** [ ] There are no overlapping icons
+
+* [ ] The diagram represents all significant functional elements of the Quick Start. Optional items, assumed items (i.e. Internet gateways), and items that don’t help clarify the solution’s architecture (i.e. IAM policies and roles) can be excluded.
+
+* [ ] The diagram conveys relationships instantly: elements are logically grouped, crisply aligned, intentionally distributed, and connected by arrows where appropriate.
+
+* [ ] The flow has a clear beginning and end, and it’s as linear as possible (top¬-bottom or left-right).
+
+* [ ] The diagram uses callouts or labels as necessary to identify workloads, tiers, and other elements and functions of the Quick Start.
+
+* [ ] The diagram zooms in where detail adds value.
+
+* [ ] The diagram does not show company logos inside subnets.
+
+* [ ] The diagram and the bulleted list in the description match: every item in the bulleted list is reflected in the diagram, and every item in the diagram is reflected in the bulleted list.
+
+* [ ] The diagram is as simple as it can be and no simpler.
+
+* [ ] The spacing is tight enough for maximum legibility without being cramped.
+
+See some https://amazon.awsapps.com/workdocs/index.html#/document/7b56f94ee829d75c1b4b625f1f57760c34773b9fedd91e4bf51b13cd72fd31e9[before-and-after diagrams] and a Chime meeting recording of our 6-10-2020 lunch and learn on this topic in the Quick Start team's https://amazon.awsapps.com/workdocs/index.html#/folder/06ec9c8a19806764703786a4eaa99e40afc1cf0c73b2debe5e4f0ed0d897f879[WorkDocs folder].
+
+== Verify your generated deployment guide
+[%interactive]
+* [ ] Navigate to https://aws-quickstart.github.io/<quickstart-repository-name> and verify that the deployment guide has been generated.
+
+* [ ] Read through the entire deployment guide to ensure all content is included and no content is duplicated.
