@@ -6,6 +6,6 @@ ifndef::production_build[====]
 include::../{specificdir}/overview_target_and_usage.adoc[]
 ifndef::production_build[====]
 
-NOTE: Please know that we may share who uses AWS
+NOTE: Amazon may share who uses AWS
 Quick Starts with the AWS Partner Network (APN) Partner that
 collaborated with AWS on the content of the Quick Start.
