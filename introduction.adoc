@@ -13,7 +13,9 @@ ifndef::production_build[]
 endif::production_build[]
 [.text-center]
 *{doc-month}, {doc-year}* +
+ifdef::partner-contributors[]
 _{partner-contributors}_ +
+endif::partner-contributors[]
 _{quickstart-contributors}_
 [.text-left]
 ifndef::production_build[]
