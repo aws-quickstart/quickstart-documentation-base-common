@@ -14,7 +14,7 @@ def _generate_table_name_and_header(label_name):
     data.append(f"\n.{label_name}")
     data.append('[width="100%",cols="16%,11%,73%",options="header",]')
     data.append("|===")
-    data.append("|Parameter label (name) |Default Value|Description")
+    data.append("|Parameter label (name) |Default value|Description")
     return "\n".join(data)
 
 def _generate_per_label_table_entry(label, param, default, description):
@@ -52,7 +52,7 @@ def just_pass():
             optional = template['Metadata'].get('QuickStartDocumentation', {}).get('OptionalParameters')
             if optional and (param in optional):
                 return '__Optional__'
-            return '**__Requires Input__**'
+            return '**__Requires input__**'
 
         for label in template['Metadata']['AWS::CloudFormation::Interface']['ParameterGroups']:
             label_name = label['Label']['default']

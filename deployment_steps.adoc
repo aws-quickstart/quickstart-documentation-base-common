@@ -6,8 +6,8 @@ ifndef::production_build[====]
 
 In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
 
-NOTE: We recommend keeping the default settings for the three parameters labled 'Quick Start S3 bucket name', 'Quick Start S3 bucket
-Region', and 'Quick Start S3 key prefix', unless you are customizing the Quick Start templates for your own deployment projects. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For additional details, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
+Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
 // Parameter tables linked in here
 include::../{generateddir}/parameters/index.adoc[]
@@ -17,7 +17,7 @@ include::../{generateddir}/parameters/index.adoc[]
 . On the *Review* page, review and confirm the template settings. Under *Capabilities*, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.
 . Choose *Create stack* to deploy the stack.
 . Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.
-. Use the values displayed in the *Outputs* tab for the stack, as shown in Figure 2, to view the resources that were created.
+. Use the values displayed in the *Outputs* tab for the stack, as shown in figure 2, to view the created resources.
 
 [#cfn_outputs]
 .{partner-product-name} outputs after successful deployment

@@ -20,7 +20,7 @@ _{quickstart-contributors}_
 [.text-left]
 ifndef::production_build[]
 ====
-_**The above information is configured within `{specificdir}/_settings.adoc`**_
+_**The previous information is configured within `{specificdir}/_settings.adoc`**_
 endif::production_build[]
 
 TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for source files and to post feedback,
