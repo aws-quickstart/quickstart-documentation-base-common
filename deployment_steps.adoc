@@ -19,6 +19,7 @@ include::../{generateddir}/parameters/index.adoc[]
 . Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.
 . Use the values displayed in the *Outputs* tab for the stack, as shown in <<cfn_outputs>>, to view the created resources.
 
+:xrefstyle: short
 [#cfn_outputs]
 .{partner-product-name} outputs after successful deployment
 image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
