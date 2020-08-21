@@ -34,7 +34,7 @@ ifndef::production_build[====]
 include::../{generateddir}/services/metadata.adoc[]
 
 // We can also pull in regions automatically.
-==== Supported regions
+==== Supported Regions
 
 ifdef::template_not_all_regions[]
 This deployment includes <service>, which isn’t currently supported in https://aws.amazon.com/about-aws/global-infrastructure/[all AWS Regions^].

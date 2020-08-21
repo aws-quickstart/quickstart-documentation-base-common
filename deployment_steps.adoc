@@ -22,6 +22,7 @@ include::../{generateddir}/parameters/index.adoc[]
 :xrefstyle: short
 [#cfn_outputs]
 .{partner-product-name} outputs after successful deployment
+[link=images/cfn_outputs.png]
 image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
 
 // ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/post_and_test_deployment.adoc`**_]
