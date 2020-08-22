@@ -33,21 +33,21 @@ include::../{specificdir}/service_limits.adoc[]
 ifndef::production_build[====]
 include::../{generateddir}/services/metadata.adoc[]
 
-// We can also pull in regions automatically.
-==== Supported regions
+// We can also pull in Regions automatically.
+==== Supported AWS Regions
 
 ifdef::template_not_all_regions[]
 This deployment includes <service>, which isn’t currently supported in https://aws.amazon.com/about-aws/global-infrastructure/[all AWS Regions^].
 endif::template_not_all_regions[]
 
-The following regions are currently supported by this Quick Start.
+The following Regions are currently supported by this Quick Start.
 
 ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_]
 ifndef::production_build[====]
 include::../{specificdir}/regions.adoc[]
 ifndef::production_build[====]
 
-TIP: Certain regions are available on an opt-in basis. Refer to the AWS Documentation on https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing Regions^] for more information.
+TIP: Certain Regions are available on an opt-in basis. Refer to the AWS documentation on https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing Regions^] for more information.
 
 ifdef::template_ec2[]
 ==== EC2 key pairs
