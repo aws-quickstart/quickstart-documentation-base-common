@@ -19,9 +19,10 @@
 #        Bucket to upload the generated content to.
 #   - DOCBUILD_DESTINATION_S3_KEY
 #        S3 Key prefix for the generated content
-#   - DOCBUILD_FOR_PROJECT
+#   - GITHUB_REPOSITORY
 #        Easy identifier of the project that documentation is being built for.
 #         - EX: jim-jimmerson/foobar
+#       
 #
 #
 # Structure
@@ -40,4 +41,4 @@ cd ${WORKING_DIR}
 ./docs/boilerplate/.utils/generate_dynamic_content.sh
 ./docs/boilerplate/.utils/build_docs.sh
 
-aws s3 sync ${WORKING_DIR} s3://${DOCBUILD_PREVIEW_BUCKET}/${DOCBUILD_PREVIEW_KEY_PREFIX}/ --cache-control max-age=0,no-cache,no-store,must-revalidate --acl public-read
+aws s3 sync ${WORKING_DIR} s3://${DOCBUILD_DESTINATION_S3_BUCKET}/${DOCBUILD_DESTINATION_S3_KEY}/ --cache-control max-age=0,no-cache,no-store,must-revalidate --acl public-read
