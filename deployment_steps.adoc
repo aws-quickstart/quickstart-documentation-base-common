@@ -1,8 +1,13 @@
 
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/deploy_steps_.adoc`**_]
-ifndef::production_build[====]
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/deploy_steps.adoc`**_
+[#preview_mode]
+--
+endif::production_build[]
 include::../{specificdir}/deploy_steps.adoc[]
-ifndef::production_build[====]
+ifndef::production_build[]
+--
+endif::production_build[]
 
 In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
 
@@ -27,7 +32,3 @@ ifdef::partner-product-short-name[.{partner-product-short-name} outputs after su
 [link=images/cfn_outputs.png]
 image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
 
-// ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/post_and_test_deployment.adoc`**_]
-// ifndef::production_build[====]
-// include::../{specificdir}/post_and_test_deployment.adoc[]
-// ifndef::production_build[====]
