@@ -12,25 +12,46 @@ include::../{includedir}/overview.adoc[]
 
 
 == {partner-product-name} on AWS
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_]
-ifndef::production_build[====]
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_
+[id="preview_mode"]
+|===
+a|
+endif::production_build[]
 include::../{specificdir}/product_description.adoc[]
-ifndef::production_build[====]
+ifndef::production_build[]
+|
+|===
+endif::production_build[]
 
 == Cost
 include::../{includedir}/cost.adoc[]
 
 == Software licenses
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_]
-ifndef::production_build[====]
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_
+[id="preview_mode"]
+|===
+a|
+endif::production_build[]
 include::../{specificdir}/licenses.adoc[]
-ifndef::production_build[====]
+ifndef::production_build[]
+|
+|===
+endif::production_build[]
 
 == Architecture
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_]
-ifndef::production_build[====]
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_
+[id="preview_mode"]
+|===
+a|
+endif::production_build[]
 include::../{specificdir}/architecture.adoc[]
-ifndef::production_build[====]
+ifndef::production_build[]
+|
+|===
+endif::production_build[]
 
 == Planning the deployment
 
@@ -43,15 +64,31 @@ include::../{includedir}/deployment_steps.adoc[]
 // include::../{generateddir}/parameters/index.adoc[]
 
 // additional_info.adoc contains 3 sections: Best Practice, Security & Other information
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_]
-ifndef::production_build[====]
-include::../{specificdir}/additional_info.adoc[]
-ifndef::production_build[====]
 
-ifndef::production_build[_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_]
-ifndef::production_build[====]
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_
+[#preview_mode]
+|===
+a|
+endif::production_build[]
+include::../{specificdir}/additional_info.adoc[]
+ifndef::production_build[]
+|
+|===
+endif::production_build[]
+
+
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_
+[#preview_mode]
+|===
+a|
+endif::production_build[]
 include::../{specificdir}/faq_troubleshooting.adoc[]
-ifndef::production_build[====]
+ifndef::production_build[]
+|
+|===
+endif::production_build[]
 
 == Send us feedback
 

@@ -9,7 +9,10 @@ ifndef::production_build[]
 [.text-center]
 [discrete]
 === DRAFT DOCUMENT / UNOFFICIAL GUIDANCE
-====
+_**This portion of the deployment guide is located at `docs/{specificdir}/__settings_.adoc`**_
+[id="preview_mode"]
+|===
+a|
 endif::production_build[]
 [.text-center]
 *{doc-month}, {doc-year}* +
@@ -18,9 +21,10 @@ _{partner-contributors}_ +
 endif::partner-contributors[]
 _{quickstart-contributors}_
 [.text-left]
+
 ifndef::production_build[]
-====
-_**The previous information is configured within `{specificdir}/_settings.adoc`**_
+|
+|===
 endif::production_build[]
 
 TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for source files and to post feedback,
