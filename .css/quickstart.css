@@ -760,9 +760,12 @@ a img {
 }
 
 #preview_mode {
-  background-color: rgb(230, 238, 161);
+	border-color:#e0e0dc;
+	-webkit-box-shadow:0 1px 4px #e0e0dc;
+	box-shadow:0 1px 4px #e0e0dc;
+  background:#ffffb3;
+  padding-bottom: 2rem;
 }
-
 #preview_mode .tableblock {
-  background-color: rgb(230, 238, 161);
+  background:#ffffb3;
 }

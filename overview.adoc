@@ -8,7 +8,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/overview_target_and_usage.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 

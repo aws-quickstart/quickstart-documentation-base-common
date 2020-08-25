@@ -20,7 +20,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/product_description.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 
@@ -36,7 +35,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/licenses.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 
@@ -49,7 +47,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/architecture.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 
@@ -73,7 +70,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/additional_info.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 
@@ -86,7 +82,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/faq_troubleshooting.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 

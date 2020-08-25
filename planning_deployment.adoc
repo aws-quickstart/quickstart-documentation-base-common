@@ -16,7 +16,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/specialized_knowledge.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 
@@ -103,7 +102,6 @@ a|
 endif::production_build[]
 include::../{specificdir}/pre-reqs.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
 
@@ -116,6 +114,5 @@ a|
 endif::production_build[]
 include::../{specificdir}/deployment_options.adoc[]
 ifndef::production_build[]
-|
 |===
 endif::production_build[]
