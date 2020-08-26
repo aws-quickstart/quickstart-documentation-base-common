@@ -1,2 +1,2 @@
-*       @aws-quickstart/aws_quickstart_team/sa
-/.specific/* @aws-quickstart/aws_quickstart_team/tw @aws-quickstart/aws_quickstart_team/sa
+*       @aws-quickstart/sa
+/.specific/* @aws-quickstart/tw @aws-quickstart/sa
