@@ -95,7 +95,7 @@ def just_pass():
     if not template_entrypoints:
         raise Exception("No documentation entrypoints (Metadata => QuickStartDocumentation => EntrypointName)  were found. Unable to build documentation. Exiting.")
     with open('docs/generated/parameters/index.adoc', 'w') as f:
-        for template_file, cosmetic_name in template_entrypoints.items():
+        for template_file, cosmetic_name in sorted(template_entrypoints.items(), key=lambda x: x[1]):
             f.write(f"\n=== {cosmetic_name}\n")
             f.write(f"include::{template_file}[]\n")
 
