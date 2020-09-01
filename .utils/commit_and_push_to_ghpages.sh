@@ -5,7 +5,7 @@ set -eu
 repo_uri="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 
 remote_name="doc-upstream"
-main_branch="master"
+main_branch=$(basename "$(git symbolic-ref --short refs/remotes/origin/HEAD)")
 target_branch="gh-pages"
 
 cd "$GITHUB_WORKSPACE"
