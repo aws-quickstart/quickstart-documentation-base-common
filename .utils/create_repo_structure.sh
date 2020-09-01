@@ -18,7 +18,7 @@ rsync -avP ${BOILERPLATE_DIR}/.images/ docs/images/
 rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR}
 
 # enabling workflow.
-cp ${BOILERPLATE_DIR}/.actions/master-docs-build.yml .github/workflows/
+cp ${BOILERPLATE_DIR}/.actions/main-docs-build.yml .github/workflows/
 
 
 # creating placeholders.

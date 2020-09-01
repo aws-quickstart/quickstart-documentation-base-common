@@ -2,7 +2,8 @@
 set -x
 git remote update
 git fetch
-set +e 
+set +e
+default_branch=$(basename "$(git symbolic-ref --short refs/remotes/origin/HEAD)")
 git rev-parse --verify origin/gh-pages
 CHECK_BRANCH=$?
 set -e
@@ -15,12 +16,12 @@ else
 fi
 git rm -rf .
 touch .gitmodules
-git restore -s origin/master docs
+git restore -s origin/${default_branch} docs
 set +e
 git rm -r docs/boilerplate -r
 rm -rf docs/boilerplate
 set -e
-git restore -s origin/master templates
+git restore -s origin/${default_branch} templates
 git submodule add https://github.com/aws-quickstart/quickstart-documentation-base-common.git docs/boilerplate
 rm configure_git_env.sh
 mv docs/images images
