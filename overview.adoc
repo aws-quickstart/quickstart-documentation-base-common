@@ -2,7 +2,7 @@
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/overview_target_and_usage.adoc`**_
-[id="preview_mode"]
+[.preview_mode]
 |===
 a|
 endif::production_build[]
@@ -11,6 +11,8 @@ ifndef::production_build[]
 |===
 endif::production_build[]
 
+ifdef::partner-company-name[]
 NOTE: Amazon may share who uses AWS
 Quick Starts with the AWS Partner Network (APN) Partner that
 collaborated with AWS on the content of the Quick Start.
+endif::partner-company-name[]

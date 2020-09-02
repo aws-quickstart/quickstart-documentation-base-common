@@ -7,7 +7,7 @@ if [ -d docs/images ]; then
 fi
 if [ "${GITHUB_REPO_OWNER}" == "aws-quickstart" ]; then
   cp docs/boilerplate/.css/AWS-Logo.svg images/
-  if [ "${GITHUB_REF}" == "refs/heads/master" || "${GITHUB_REF}" == "refs/heads/main" ]; then
+  if [ "${GITHUB_REF}" == "refs/heads/master" ] || [ "${GITHUB_REF}" == "refs/heads/main" ]; then
     ASCIIDOC_ATTRIBUTES="-a production_build"
   fi
 fi

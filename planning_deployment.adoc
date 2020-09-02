@@ -10,7 +10,7 @@ Cloud.
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/specialized_knowledge.adoc`**_
-[id="preview_mode"]
+[.preview_mode]
 |===
 a|
 endif::production_build[]
@@ -25,9 +25,11 @@ If you don’t already have an AWS account, create one at https://aws.amazon.com
 
 Your AWS account is automatically signed up for all AWS services. You are charged only for the services you use.
 
+ifndef::disable_requirements[]
 === Technical requirements
 
 Before you launch the Quick Start, your account must be configured as specified in the following table. Otherwise, deployment might fail.
+endif::disable_requirements[]
 
 ==== Resource limits
 // http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html[Resources] a|
@@ -36,7 +38,7 @@ If necessary, request https://console.aws.amazon.com/servicequotas/home?region=u
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/service_limits.adoc`**_
 ++++
-<div id="preview_mode">
+<div class="preview_mode">
 ++++
 endif::production_build[]
 include::../{specificdir}/service_limits.adoc[]
@@ -47,6 +49,7 @@ ifndef::production_build[]
 endif::production_build[]
 include::../{generateddir}/services/metadata.adoc[]
 
+ifndef::disable_regions[]
 // We can also pull in regions automatically.
 ==== Supported Regions
 
@@ -78,6 +81,7 @@ endif::auto_populate_regions[]
 
 TIP: Certain Regions are available on an opt-in basis. Refer to the AWS Documentation on https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing Regions^] for more information.
 
+endif::disable_regions[]
 ifdef::template_ec2[]
 ==== EC2 key pairs
 ifndef::production_build[====]
@@ -96,7 +100,7 @@ The _AdministratorAccess_ managed policy within IAM provides sufficient permissi
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/pre-reqs.adoc`**_
-[id="preview_mode"]
+[.preview_mode]
 |===
 a|
 endif::production_build[]
@@ -108,7 +112,7 @@ endif::production_build[]
 ==== Deployment options
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/deployment_options.adoc`**_
-[id="preview_mode"]
+[.preview_mode]
 |===
 a|
 endif::production_build[]

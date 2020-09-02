@@ -3,14 +3,14 @@
 == Quick Start Reference Deployment
 
 [.text-center]
-image::https://aws-quickstart.s3.amazonaws.com/{quickstart-project-name}/docs/boilerplate/.images/aws-quickstart-graphic.png[QS,80,80]
+image::../images/aws-quickstart-graphic.png[QS,80,80]
 
 ifndef::production_build[]
 [.text-center]
 [discrete]
 === DRAFT DOCUMENT / UNOFFICIAL GUIDANCE
 _**This portion of the deployment guide is located at `docs/{specificdir}/__settings_.adoc`**_
-[id="preview_mode"]
+[.preview_mode]
 |===
 a|
 endif::production_build[]
