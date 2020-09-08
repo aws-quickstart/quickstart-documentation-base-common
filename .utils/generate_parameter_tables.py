@@ -71,6 +71,8 @@ def just_pass():
             parameter_labels[label_name] = label_data.get('default')
 
         for param_name, param_data in template['Parameters'].items():
+            if param_data.get('Default') == '':
+                param_data['Default'] = '**__Blank string__**'
             parameter_mappings[param_name] = param_data
             if not reverse_label_mappings.get(param_name):
                 no_groups[param_name] = param_data
