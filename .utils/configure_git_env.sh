@@ -3,6 +3,7 @@ set -x
 git remote update
 git fetch
 set +e
+git remote set-head origin --auto
 default_branch=$(basename "$(git symbolic-ref --short refs/remotes/origin/HEAD)")
 git rev-parse --verify origin/gh-pages
 CHECK_BRANCH=$?
