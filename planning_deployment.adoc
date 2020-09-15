@@ -33,7 +33,7 @@ endif::disable_requirements[]
 
 ==== Resource limits
 // http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html[Resources] a|
-If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases^] for the following resources. You might need to request increases if your existing deployment currently uses these resources, and this Quick Start deployment could result in exceeding the default quotas. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console^] displays your usage and quotas for some aspects of some services. For more information, see the https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[AWS documentation^].
+If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases^] for the following resources. You might need to request increases if your existing deployment currently uses these resources, and this Quick Start deployment could result in exceeding the default quotas. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console^] displays your usage and quotas for some aspects of some services. For more information, see https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[What is Service Quotas?^]
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/service_limits.adoc`**_
@@ -87,7 +87,7 @@ ifdef::template_ec2[]
 ifndef::production_build[====]
 ifndef::production_build[_This section is conditional on EC2 instances being used in the Cloudformation Templates_]
 ifndef::production_build[====]
-Make sure that at least one https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pair^] exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, follow the https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[instructions in the AWS documentation^].
+Make sure that at least one https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pair^] exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pairs and Linux instances^].
 
 For testing or proof-of-concept purposes, we recommend creating a new key pair instead of using one that’s already being used by a production instance.
 endif::template_ec2[]
