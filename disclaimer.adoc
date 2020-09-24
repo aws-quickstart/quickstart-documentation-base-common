@@ -1,4 +1,3 @@
-© 2020, Amazon Web Services Inc., or its affiliates, and {partner-company-name}. All rights reserved.
 
 == Notices
 
