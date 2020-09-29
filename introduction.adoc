@@ -2,6 +2,7 @@
 [discrete]
 == Quick Start Reference Deployment
 
+# Do not change the URL below. The aws-quickstart-graphic.png icon needs to come from the aws-quickstart S3 bucket.
 [.text-center]
 image::https://aws-quickstart.s3.amazonaws.com/{quickstart-project-name}/docs/boilerplate/.images/aws-quickstart-graphic.png[QS,80,80]
 
