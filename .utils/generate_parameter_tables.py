@@ -27,6 +27,7 @@ def _generate_per_label_table_entry(label, param, default, description):
 
 def just_pass():
     template_entrypoints = {}
+    template_order = {}
     found_files_with_glob_pattern=False
     for yaml_cfn_file in Path('./templates').glob('*.template*'):
         found_files_with_glob_pattern=True
@@ -38,9 +39,14 @@ def just_pass():
         if not entrypoint:
             print(f"- No documentation entrypoint found. Continuing.")
             continue
+        order = template.get('Metadata',{}).get('QuickStartDocumentation',{}).get('Order')
+        if not order:
+            print(f"- No documentation order found. Assigning x.")
+            order = 'x'
         _pf = Path(yaml_cfn_file).stem + ".adoc"
         p_file = f"docs/generated/parameters/{_pf}"
         template_entrypoints[p_file.split('/')[-1]] = entrypoint
+        template_order[p_file.split('/')[-1]] = str(order)
 
         label_mappings = {}
         reverse_label_mappings = {}
@@ -66,7 +72,7 @@ def just_pass():
 
         for param_name, param_data in template['Parameters'].items():
             if param_data.get('Default') == '':
-                del param_data['Default']
+                param_data['Default'] = '**__Blank string__**'
             parameter_mappings[param_name] = param_data
             if not reverse_label_mappings.get(param_name):
                 no_groups[param_name] = param_data
@@ -95,8 +101,9 @@ def just_pass():
     if not template_entrypoints:
         raise Exception("No documentation entrypoints (Metadata => QuickStartDocumentation => EntrypointName)  were found. Unable to build documentation. Exiting.")
     with open('docs/generated/parameters/index.adoc', 'w') as f:
-        for template_file, cosmetic_name in template_entrypoints.items():
-            f.write(f"\n=== {cosmetic_name}\n")
+        for template_file, order in sorted(template_order.items(), key=lambda x: x[1]):
+            print (f"Index - {order} - {template_entrypoints.get(template_file)} - {template_file}")
+            f.write(f"\n=== {template_entrypoints.get(template_file)}\n")
             f.write(f"include::{template_file}[]\n")
 
 if __name__ == '__main__':

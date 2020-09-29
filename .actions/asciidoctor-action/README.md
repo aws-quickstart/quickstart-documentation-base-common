@@ -1,6 +1,6 @@
 # Asciidoctor GitHub Action
 
-To use this action add the below config to  **.github/workflows/adocs-build.yml**
+To use this action add the below config to  **.github/workflows/adocs-build.yml** 
 
 ```
 name: build adocs
@@ -9,6 +9,7 @@ on:
   push:
     branches:
     - master
+    - main
 jobs:
   adoc_build:
     runs-on: ubuntu-18.04
