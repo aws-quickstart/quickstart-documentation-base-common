@@ -3,7 +3,7 @@
 == Quick Start Reference Deployment
 
 [.text-center]
-image::../images/aws-quickstart-graphic.png[QS,80,80]
+image::https://aws-quickstart.s3.amazonaws.com/{quickstart-project-name}/docs/boilerplate/.images/aws-quickstart-graphic.png[QS,80,80]
 
 ifndef::production_build[]
 [.text-center]
