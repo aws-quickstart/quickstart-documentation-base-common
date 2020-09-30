@@ -14,7 +14,7 @@ git config --local user.name "GitHub Action"
 git add -A
 git add images
 git add index.html
-git rm -r templates
+git rm -r --force templates
 git commit -a -m "Updating documentation"
 if [ $? -ne 0 ]; then
     echo "nothing to commit"
