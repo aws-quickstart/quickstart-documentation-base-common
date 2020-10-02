@@ -50,7 +50,7 @@ endif::production_build[]
 include::../{generateddir}/services/metadata.adoc[]
 
 ifndef::disable_regions[]
-// We can also pull in regions automatically.
+// We can also pull in Regions automatically.
 ==== Supported Regions
 
 ifdef::template_not_all_regions[]
@@ -79,13 +79,13 @@ endif::production_build[]
 
 endif::auto_populate_regions[]
 
-TIP: Certain Regions are available on an opt-in basis. Refer to the AWS Documentation on https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing Regions^] for more information.
+TIP: Certain Regions are available on an opt-in basis. See https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
 
 endif::disable_regions[]
 ifdef::template_ec2[]
 ==== EC2 key pairs
 ifndef::production_build[====]
-ifndef::production_build[_This section is conditional on EC2 instances being used in the Cloudformation Templates_]
+ifndef::production_build[_This section applies only if the Cloudformation templates include EC2 instances._]
 ifndef::production_build[====]
 Make sure that at least one https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pair^] exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, follow the https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[instructions in the AWS documentation^].
 
