@@ -94,7 +94,7 @@ endif::template_ec2[]
 
 ==== IAM permissions
 //todo: scope of least-privilege
-Before launching the Quick Start, you must log in to the AWS Management Console with https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html[IAM permissions^] for the resources that the templates deploy.
+Before launching the Quick Start, you must sign in to the AWS Management Console with https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html[IAM permissions^] for the resources that the templates deploy.
 
 The _AdministratorAccess_ managed policy within IAM provides sufficient permissions, although your organization may choose to use a custom policy with more restrictions.
 
