@@ -24,7 +24,7 @@ git rm -r docs/boilerplate -r
 rm -rf docs/boilerplate
 set -e
 git restore -s origin/${default_branch} templates
-git submodule add https://github.com/aws-quickstart/quickstart-documentation-base-common.git docs/boilerplate
+git submodule add https://github.com/andrew-glenn/quickstart-documentation-base-common.git docs/boilerplate
 cd docs/boilerplate
 git checkout "${doc_commit_id}"
 cd ../../
