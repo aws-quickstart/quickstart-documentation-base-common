@@ -28,6 +28,16 @@
 # Structure
 # <project repo> --- Content repo is unzipped.
 #     docs/boilerplate   -- Boilerplate repo is unzipped here.
+
+function upload_preview_content(){
+  aws s3 sync ${WORKING_DIR} s3://${DOCBUILD_DESTINATION_S3_BUCKET}/${DOCBUILD_DESTINATION_S3_KEY}/ --cache-control max-age=0,no-cache,no-store,must-revalidate --acl public-read
+}
+
+function create_upload_ghpages_branch_archive(){
+  zip ${DL_DIR}/gh-pages.zip -r .
+  aws s3 cp ${DL_DIR}/gh-pages.zip s3://${DOCBUILD_DESTINATION_S3_BUCKET}/${DOCBUILD_DESTINATION_S3_KEY}
+}
+
 DL_DIR=$(mktemp -d)
 WORKING_DIR=$(mktemp -d)
 aws s3 cp s3://${DOCBUILD_BOILERPLATE_S3_BUCKET}/${DOCBUILD_BOILERPLATE_S3_KEY} ${DL_DIR}/boilerplate.zip
@@ -41,4 +51,8 @@ cd ${WORKING_DIR}
 ./docs/boilerplate/.utils/generate_dynamic_content.sh
 ./docs/boilerplate/.utils/build_docs.sh
 
-aws s3 sync ${WORKING_DIR} s3://${DOCBUILD_DESTINATION_S3_BUCKET}/${DOCBUILD_DESTINATION_S3_KEY}/ --cache-control max-age=0,no-cache,no-store,must-revalidate --acl public-read
+if [ "${DOCBUILD_PROD}" == "true" ]; then
+  create_upload_ghpages_branch_archive
+else
+  upload_preview_content
+fi
