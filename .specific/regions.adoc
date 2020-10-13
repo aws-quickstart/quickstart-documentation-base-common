@@ -1,4 +1,4 @@
-The following Regions are currently supported by this Quick Start.
+This Quick Start supports the following Regions:
 
-- _us-east-1 (N. Virginia)_ (EXAMPLE)
-- _us-east-2 (Ohio)_ (EXAMPLE)
+* us-east-1, US East (N. Virginia) (EXAMPLE)
+* us-east-2, US East (Ohio) (EXAMPLE)
