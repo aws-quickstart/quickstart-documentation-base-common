@@ -9,6 +9,9 @@ main_branch=$(basename "$(git symbolic-ref --short refs/remotes/origin/HEAD)")
 target_branch="gh-pages"
 
 cd "$GITHUB_WORKSPACE"
+
+ls -lah
+
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
 git add -A
