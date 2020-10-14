@@ -31,13 +31,13 @@ NOTE: You are responsible for the cost of the AWS services used while running th
 
 [cols=3*]
 |===
-^|http://qs_launch_link[Deploy into a new VPC and new EKS cluster^]
-^|http://qs_launch_link[Deploy into a new EKS cluster in an existing VPC^]
-^|http://qs_launch_link[Deploy into an existing EKS cluster^]
+^|{launch_new_vpc}[Deploy into a new VPC and new EKS cluster^]
+^|{launch_existing_vpc}[Deploy into a new EKS cluster in an existing VPC^]
+^|{launch_existing_cluster}[Deploy into an existing EKS cluster^]
 
-^|http://qs_template_link[View template^]
-^|http://qs_template_link[View template^]
-^|http://qs_template_link[View template^]
+^|{template_new_vpc}[View template^]
+^|{template_existing_vpc}[View template^]
+^|{template_existing_cluster}[View template^]
 |===
 New cluster deployments can take up to 90 minutes to complete. Existing cluster deployments take around 10 minutes.
 
