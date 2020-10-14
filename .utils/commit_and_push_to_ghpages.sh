@@ -24,4 +24,4 @@ git status -v
 git branch -v
 git remote -v
 git remote set-url origin ${repo_uri}
-git push origin HEAD:${target_branch} --force
+git status | grep "Your branch is up to date" || git push origin HEAD:${target_branch} --force
