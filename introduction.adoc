@@ -16,7 +16,7 @@ _**This portion of the deployment guide is located at `docs/{specificdir}/__sett
 a|
 endif::production_build[]
 [.text-center]
-*{doc-month}, {doc-year}* +
+*{doc-month} {doc-year}* +
 ifdef::partner-contributors[]
 _{partner-contributors}_ +
 endif::partner-contributors[]
