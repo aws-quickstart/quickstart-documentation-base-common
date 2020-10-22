@@ -12,7 +12,5 @@ ifndef::production_build[]
 endif::production_build[]
 
 ifdef::partner-company-name[]
-NOTE: Amazon may share who uses AWS
-Quick Starts with the AWS Partner Network (APN) Partner that
-collaborated with AWS on the content of the Quick Start.
+NOTE: Amazon may share user-deployment information with the AWS Partner that collaborated with AWS on the Quick Start.
 endif::partner-company-name[]
