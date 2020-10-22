@@ -26,7 +26,7 @@ include::../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
 
 [start=5]
-. On the options page, you can https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html[specify tags^] (key-value pairs) for resources in your stack and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html[set advanced options^]. When you’re done, choose *Next*.
+. On the options page, you can https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html[specify tags^] (key-value pairs) for resources in your stack and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html[set advanced options^]. When you’re finished, choose *Next*.
 . On the *Review* page, review and confirm the template settings. Under *Capabilities*, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.
 . Choose *Create stack* to deploy the stack.
 ifndef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.]
