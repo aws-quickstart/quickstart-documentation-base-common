@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 ASCIIDOC_ATTRIBUTES=""
 GITHUB_REPO_OWNER=$(echo ${GITHUB_REPOSITORY} | cut -d '/' -f 1)
 if [ -d docs/images ]; then
@@ -18,3 +18,4 @@ fi
 #fi
 asciidoctor --base-dir docs/ --backend=html5 -o ../index.html -w --failure-level ERROR --doctype=book -a toc2 ${ASCIIDOC_ATTRIBUTES} docs/boilerplate/index.adoc
 
+set +x
