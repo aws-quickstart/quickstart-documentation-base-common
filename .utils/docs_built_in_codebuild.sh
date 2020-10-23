@@ -49,7 +49,9 @@ unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate
 
 cd ${WORKING_DIR}
 ./docs/boilerplate/.utils/generate_dynamic_content.sh
+set -x
 ./docs/boilerplate/.utils/build_docs.sh
+set +x
 
 if [ "${DOCBUILD_PROD}" == "true" ]; then
   create_upload_ghpages_branch_archive
