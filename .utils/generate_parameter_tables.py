@@ -2,11 +2,15 @@
 import io
 import cfnlint
 import datetime
+import sys
 from pathlib import Path
 
 
 def get_cfn(filename):
-    _decoded = cfnlint.decode.decode(filename, False)[0]
+    _decoded, _issues = cfnlint.decode.decode(filename)
+    if not _decoded:
+        print(f"Template: {filename} has an error. Run cfn-lint to determine the issue")
+        sys.exit(1)
     return _decoded
 
 def _generate_table_name_and_header(label_name):
