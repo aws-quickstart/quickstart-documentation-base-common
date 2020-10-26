@@ -3,9 +3,11 @@ import io
 import cfnlint
 from pathlib import Path
 
-
 def get_cfn(filename):
-    _decoded = cfnlint.decode.decode(filename, False)[0]
+    _decoded, _issues = cfnlint.decode.decode(filename)
+    if not _decoded:
+        print(f"Template: {filename} has an error. Run cfn-lint to determine the issue")
+        sys.exit(1)
     return _decoded
 
 def fetch_metadata():
