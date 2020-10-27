@@ -14,7 +14,8 @@ FROM asciidoctor/docker-asciidoctor
 RUN apk add --no-cache \
     py3-pip \
     python3 \
-    zip
+    zip \
+    rsync
 RUN wget https://raw.githubusercontent.com/REPO/BRANCH/.utils/requirements.txt -O /tmp/req.txt
 RUN ln -sf /usr/bin/pip3 /usr/bin/pip
 RUN ln -sf /usr/bin/python3 /usr/bin/python
