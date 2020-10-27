@@ -90,6 +90,9 @@ endif::production_build[]
 ifdef::parameters_as_appendix[]
 == Parameter reference
 
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
+Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+
 include::../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
 
