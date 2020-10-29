@@ -1,15 +1,12 @@
 === Specialized knowledge
 
 This deployment guide requires a moderate level of familiarity with
-AWS services. If you’re new to AWS, visit the
-https://aws.amazon.com/getting-started/[Getting Started Resource Center^]
-and the https://aws.amazon.com/training/[AWS Training and Certification
-website]. These sites provide materials for learning how to design,
-deploy, and operate your infrastructure and applications on the AWS
-Cloud.
+AWS services. If you’re new to AWS, see https://aws.amazon.com/getting-started/[Getting Started Resource Center^]
+and https://aws.amazon.com/training/[AWS Training and Certification]. These sites provide materials for learning how to design,
+deploy, and operate your infrastructure and applications on the AWS Cloud.
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/specialized_knowledge.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/specialized_knowledge.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -21,21 +18,21 @@ endif::production_build[]
 
 === AWS account
 
-If you don’t already have an AWS account, create one at https://aws.amazon.com/[https://aws.amazon.com^] by following the on-screen instructions. Part of the sign-up process involves receiving a phone call and entering a PIN using the phone keypad.
+If you don’t already have an AWS account, create one at https://aws.amazon.com/[https://aws.amazon.com^] by following the on-screen instructions. Part of the sign-up process involves receiving a phone call and entering a PIN using your phone's keypad.
 
 Your AWS account is automatically signed up for all AWS services. You are charged only for the services you use.
 
 ifndef::disable_requirements[]
 === Technical requirements
 
-Before you launch the Quick Start, your account must be configured as specified in the following table. Otherwise, deployment might fail.
+Before you launch the Quick Start, your account must be configured as specified in the following table. Otherwise, the deployment might fail.
 endif::disable_requirements[]
 
 ==== Resource quotas
-If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases^] for the following resources. You might need to request increases if your existing deployment currently uses these resources and if this Quick Start deployment could result in exceeding the default quotas. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console^] displays your usage and quotas for some aspects of some services. For more information, see https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[What is Service Quotas?^] and https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html[AWS service quotas^].
+If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases^] for the following resources. You might need to request increases if your existing deployment uses these resources and you exceed the default quotas. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console^] displays your usage and quotas for some aspects of some services. For more information, see https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[What is Service Quotas?^] and https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html[AWS service quotas^].
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/service_limits.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/service_limits.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -64,7 +61,7 @@ endif::auto_populate_regions[]
 ifndef::auto_populate_regions[]
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/regions.adoc`**_
 ++++
 <div id="preview_mode">
 ++++
@@ -86,7 +83,7 @@ ifdef::template_ec2[]
 ifndef::production_build[====]
 ifndef::production_build[_This section applies only if the Cloudformation templates include EC2 instances._]
 ifndef::production_build[====]
-Make sure that at least one https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pair^] exists in your AWS account in the Region where you plan to deploy the Quick Start. Make note of the key pair name. You need it during deployment. To create a key pair, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pairs and Linux instances^].
+Ensure that at least one https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pair^] exists in your AWS account in the Region where you plan to deploy this Quick Start. Note the key-pair name, which you will need during deployment. To create a key pair, see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html[Amazon EC2 key pairs and Linux instances^].
 
 For testing or proof-of-concept purposes, we recommend creating a new key pair instead of using one that’s already being used by a production instance.
 endif::template_ec2[]
@@ -96,7 +93,7 @@ endif::template_ec2[]
 Before launching the Quick Start, you must sign in to the AWS Management Console with IAM permissions for the resources that the templates deploy. The _AdministratorAccess_ managed policy within IAM provides sufficient permissions, although your organization may choose to use a custom policy with more restrictions. For more information, see https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html[AWS managed policies for job functions^].
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/pre-reqs.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/pre-reqs.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -108,7 +105,7 @@ endif::production_build[]
 
 ==== Deployment options
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/deployment_options.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/deployment_options.adoc`**_
 [.preview_mode]
 |===
 a|

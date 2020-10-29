@@ -10,7 +10,7 @@ ifndef::production_build[]
 [.text-center]
 [discrete]
 === DRAFT DOCUMENT / UNOFFICIAL GUIDANCE
-_**This portion of the deployment guide is located at `docs/{specificdir}/__settings_.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/__settings_.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -27,7 +27,7 @@ ifndef::production_build[]
 |===
 endif::production_build[]
 
-TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for source files and to post feedback,
+TIP: Visit the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for source files and to post feedback,
 report bugs, or submit feature ideas for this Quick Start.
 
 ifdef::partner-company-name[]
