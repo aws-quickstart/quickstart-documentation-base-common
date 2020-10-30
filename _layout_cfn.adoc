@@ -13,7 +13,7 @@ include::../{includedir}/overview.adoc[]
 
 == {partner-product-name} on AWS
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/product_description.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -29,7 +29,7 @@ include::../{includedir}/cost.adoc[]
 ifndef::disable_licenses[]
 == Software licenses
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/licenses.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -42,7 +42,7 @@ endif::disable_licenses[]
 
 == Architecture
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/architecture.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -65,7 +65,7 @@ include::../{includedir}/deployment_steps.adoc[]
 // additional_info.adoc contains 3 sections: Best Practice, Security & Other information
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/additional_info.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -75,7 +75,7 @@ include::../{specificdir}/additional_info.adoc[]
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/faq_troubleshooting.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -99,14 +99,14 @@ To post feedback, submit feature ideas, or report bugs, use the *Issues* section
 
 == Quick Start reference deployments
 
-See the https://aws.amazon.com/quickstart/[AWS Quick Start home page].
+See the https://aws.amazon.com/quickstart/[AWS Quick Start home page^].
 
 
 == GitHub repository
 
-Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
-the templates and scripts for this Quick Start, to post your comments,
-and to share your customizations with others.
+See the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
+the templates and scripts for this Quick Start, post comments,
+and share customizations with others.
 
 '''
 include::../{includedir}/disclaimer.adoc[]

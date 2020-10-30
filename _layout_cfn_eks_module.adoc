@@ -13,7 +13,7 @@ include::../{includedir}/overview.adoc[]
 ifndef::disable_licenses[]
 == Software licenses
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/licenses.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -25,17 +25,18 @@ endif::production_build[]
 endif::disable_licenses[]
 
 == Architecture
-Deploying this Quick Start with default parameters into an existing Amazon EKS cluster builds the following environment. For a diagram of the new VPC and new EKS cluster deployment options, see the https://docs.aws.amazon.com/quickstart/latest/amazon-eks-architecture/architecture.html[Amazon EKS Quick Start documentation].
+Deploying this Quick Start with default parameters into an existing Amazon EKS cluster builds the following environment. For a diagram of the new VPC and Amazon EKS cluster, see the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^].
+//TODO Okay revision to the above link? It was pointing to the old HTML deployment page.
 
 [#architecture1]
 .Quick Start architecture for _{partner-product-name}_
 [link=images/architecture_diagram.png]
 image::../images/architecture_diagram.png[Architecture]
 
-As shown in Figure 1, the Quick Start sets up the following:
+As shown in figure 1, the Quick Start sets up the following:
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/architecture.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -54,7 +55,7 @@ include::../{includedir}/deployment_steps_eks_module.adoc[]
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/additional_info.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -64,7 +65,7 @@ include::../{specificdir}/additional_info.adoc[]
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_
+_**This portion of the deployment guide is located in `docs/{specificdir}/faq_troubleshooting.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -78,31 +79,31 @@ endif::production_build[]
 
 == Parameter reference
 
-=== Deploy into a new VPC and new EKS cluster
+=== Deploy into a new VPC and new Amazon EKS cluster
 
-The full list of parameters for this entrypoint are documented in the https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_a_new_vpc[EKS Quick Start documentation].
+The full list of parameters for this entrypoint are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_a_new_vpc[Amazon EKS on the AWS Cloud^].
 
 
-=== Deploy into a new EKS cluster in an existing VPC
+=== Deploy into a new Amazon EKS cluster in an existing VPC
 
-The full list of parameters for this entrypoint are documented in the https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_an_existing_vpc[EKS Quick Start documentation].
+The full list of parameters for this entrypoint are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_an_existing_vpc[Amazon EKS on the AWS Cloud^].
 
 include::../{generateddir}/parameters/index.adoc[]
 
 == Send us feedback
 
-To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for this Quick Start. If you’d like to submit code, please review the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide^].
+To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for this Quick Start. If you want to submit code, review the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide^].
 
 == Quick Start reference deployments
 
-See the https://aws.amazon.com/quickstart/[AWS Quick Start home page].
+See the https://aws.amazon.com/quickstart/[AWS Quick Start home page^].
 
 
 == GitHub repository
 
-You can visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
-the templates and scripts for this Quick Start, to post your comments,
-and to share your customizations with others.
+See the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
+the templates and scripts for this Quick Start, post comments,
+and share customizations with others.
 
 '''
 include::../{includedir}/disclaimer.adoc[]
