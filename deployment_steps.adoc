@@ -17,10 +17,11 @@ ifndef::parameters_as_appendix[]
 In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
 endif::parameters_as_appendix[]
 
+ifndef::parameters_as_appendix[]
+
 NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
 Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
-ifndef::parameters_as_appendix[]
 // Parameter tables linked in here
 include::../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
