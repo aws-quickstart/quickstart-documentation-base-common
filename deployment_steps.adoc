@@ -39,5 +39,5 @@ ifdef::partner-product-short-name[. Monitor the status of the stack. When the st
 ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
 ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
 [link=images/cfn_outputs.png]
-image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
+image::../images/cfn_outputs.png[cfn_outputs,width=100%,height=100%]
 endif::custom_number_of_deploy_steps[]
