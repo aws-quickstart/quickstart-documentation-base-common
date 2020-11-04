@@ -3,4 +3,8 @@
 
 This Quick Start assumes familiarity with <knowledge expectations>.
 
+This deployment also requires a moderate level of familiarity with the following AWS services:
 
+*	<List services with links>
+
+If you’re new to AWS, visit https://aws.amazon.com/getting-started/[Getting Started with AWS^] and https://aws.amazon.com/training/[Training and Certification^]. These sites provide materials for learning how to design, deploy, and operate your infrastructure and applications on the AWS Cloud.
