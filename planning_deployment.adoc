@@ -1,12 +1,6 @@
 === Specialized knowledge
 
-This deployment guide requires a moderate level of familiarity with
-AWS services. If you’re new to AWS, visit the
-https://aws.amazon.com/getting-started/[Getting Started Resource Center^]
-and the https://aws.amazon.com/training/[AWS Training and Certification
-website]. These sites provide materials for learning how to design,
-deploy, and operate your infrastructure and applications on the AWS
-Cloud.
+This deployment guide requires a moderate level of familiarity with AWS services. If you’re new to AWS, visit https://aws.amazon.com/getting-started/[Getting Started with AWS^] and https://aws.amazon.com/training/[Training and Certification^]. These sites provide materials for learning how to design, deploy, and operate your infrastructure and applications on the AWS Cloud.
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/specialized_knowledge.adoc`**_
