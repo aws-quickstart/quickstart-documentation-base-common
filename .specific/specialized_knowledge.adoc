@@ -1,10 +1,5 @@
 // Replace the content in <>
-// Describe or link to specific knowledge requirements; for example: “familiarity with basic concepts in the areas of networking, database operations, and data encryption” or “familiarity with <software>.”
+// Describe or link to specific knowledge requirements for this Quick Start; for example: “familiarity with basic concepts in the areas of networking, database operations, and data encryption” or “familiarity with <software>.”
+// You don't to list AWS services or point to general info about AWS; the boilerplate already covers this.
 
 This Quick Start assumes familiarity with <knowledge expectations>.
-
-This deployment also requires a moderate level of familiarity with the following AWS services:
-
-*	<List services with links>
-
-If you’re new to AWS, visit https://aws.amazon.com/getting-started/[Getting Started with AWS^] and https://aws.amazon.com/training/[Training and Certification^]. These sites provide materials for learning how to design, deploy, and operate your infrastructure and applications on the AWS Cloud.
