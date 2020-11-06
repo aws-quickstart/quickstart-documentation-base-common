@@ -3,7 +3,7 @@
 . Sign in to your AWS account at https://aws.amazon.com with an IAM user role that has the necessary permissions. For details, see link:#_planning_the_deployment[Planning the deployment], earlier in this guide.
 . Ensure that your AWS account is configured correctly, as discussed in the link:#_technical_requirements[Technical requirements] section.
 
-=== Prepare existing EKS cluster
+=== Prepare an existing EKS cluster
 NOTE: This step is only required if you launch this Quick Start into an existing Amazon EKS cluster that was not created using the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud] deployment. If you want to create a new EKS cluster with your deployment, skip to step 3.
 
 . Sign in to your AWS account, and launch the https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/create/template?stackName=Amazon-EKS&templateURL=https://aws-quickstart.s3.us-east-1.amazonaws.com/quickstart-amazon-eks/templates/amazon-eks-entrypoint-existing-cluster.template.yaml[cluster preparation template].
