@@ -19,8 +19,7 @@ endif::parameters_as_appendix[]
 
 ifndef::parameters_as_appendix[]
 
-NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
-Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
 // Parameter tables linked in here
 include::../{generateddir}/parameters/index.adoc[]
@@ -39,5 +38,5 @@ ifdef::partner-product-short-name[. Monitor the status of the stack. When the st
 ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
 ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
 [link=images/cfn_outputs.png]
-image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
+image::../images/cfn_outputs.png[cfn_outputs,width=100%,height=100%]
 endif::custom_number_of_deploy_steps[]
