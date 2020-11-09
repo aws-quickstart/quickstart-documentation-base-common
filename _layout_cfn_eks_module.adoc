@@ -32,7 +32,7 @@ Deploying this Quick Start with default parameters into an existing Amazon EKS c
 [link=images/architecture_diagram.png]
 image::../images/architecture_diagram.png[Architecture]
 
-As shown in figure 1, the Quick Start sets up the following:
+As shown in Figure 1, the Quick Start sets up the following:
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located in `docs/{specificdir}/architecture.adoc`**_
