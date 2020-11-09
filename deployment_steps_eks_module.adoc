@@ -7,7 +7,7 @@
 NOTE: This step is only required if you launch this Quick Start into an existing Amazon EKS cluster that was not created using the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud] deployment. If you want to create a new EKS cluster with your deployment, skip to step 3.
 
 . Sign in to your AWS account, and launch the https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/create/template?stackName=Amazon-EKS&templateURL=https://aws-quickstart.s3.us-east-1.amazonaws.com/quickstart-amazon-eks/templates/amazon-eks-entrypoint-existing-cluster.template.yaml[cluster preparation template].
-. The template launches in the US East (Ohio) Region by default. To change the Region, choose another Region from list in the upper-right corner of the navigation bar.
+. The template launches in the US East (Ohio) Region by default. To change the Region, choose another Region from the list in the upper-right corner of the navigation bar.
 . On the *Create stack* page, keep the default setting for the template URL, and then choose *Next*.
 . On the *Specify stack details* page, change the stack name if needed. Enter the name of the Amazon EKS cluster you want to deploy to as well as the subnet IDs and security group ID associated with the cluster. These can be obtained from the EKS cluster console.
 . On the *Options* page, specify the key-value pairs for resources in your stack, and set advanced options. When you’re done, choose *Next*.
