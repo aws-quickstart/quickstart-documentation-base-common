@@ -40,8 +40,8 @@ function create_upload_ghpages_branch_archive(){
 
 DL_DIR=$(mktemp -d)
 WORKING_DIR=$(mktemp -d)
-aws s3 cp s3://${DOCBUILD_BOILERPLATE_S3} ${DL_DIR}/boilerplate.zip
-aws s3 cp s3://${DOCBUILD_CONTENT_S3} ${DL_DIR}/content.zip
+aws s3 cp ${DOCBUILD_BOILERPLATE_S3} ${DL_DIR}/boilerplate.zip
+aws s3 cp ${DOCBUILD_CONTENT_S3} ${DL_DIR}/content.zip
 
 unzip ${DL_DIR}/content.zip -d ${WORKING_DIR}
 rm -rf ${WORKING_DIR}/docs/boilerplate
