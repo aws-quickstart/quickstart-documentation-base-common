@@ -7,9 +7,9 @@
 NOTE: This step is only required if you launch this Quick Start into an existing Amazon EKS cluster that was not created using the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud] deployment. If you want to create a new EKS cluster with your deployment, skip to step 3.
 
 . Sign in to your AWS account, and launch the https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/create/template?stackName=Amazon-EKS&templateURL=https://aws-quickstart.s3.us-east-1.amazonaws.com/quickstart-amazon-eks/templates/amazon-eks-entrypoint-existing-cluster.template.yaml[cluster preparation template].
-. The template launches in the US East (Ohio) Region by default. To change the Region, choose another Region from list in the upper-right corner of the navigation bar.
+. The template launches in the US East (Ohio) Region by default. To change the Region, choose another Region from the list in the upper-right corner of the navigation bar.
 . On the *Create stack* page, keep the default setting for the template URL, and then choose *Next*.
-. On the *Specify stack details* page, change the stack name if needed. Enter the name of the Amazon EKS cluster you want to deploy to as well as the subnet IDs and security group ID associated with the cluster. These can be obtained from the EKS cluster console.
+. On the *Specify stack details* page, change the stack name if needed. Enter the name of the Amazon EKS cluster you want to deploy to in addition to the subnet IDs and security group ID associated with the cluster. These can be obtained from the EKS cluster console.
 . On the *Options* page, specify the key-value pairs for resources in your stack, and set advanced options. When you’re done, choose *Next*.
 . On the *Review* page, review and confirm your template settings. Under *Capabilities*, select the two check boxes to acknowledge that the template creates IAM resources and might require the ability to automatically expand macros.
 . Choose *Create stack* to deploy the stack.
@@ -39,7 +39,7 @@ NOTE: You are responsible for the cost of the AWS services used while running th
 ^|{template_existing_vpc}[View template^]
 ^|{template_existing_cluster}[View template^]
 |===
-New cluster deployments take about 90 minutes to complete. Existing-cluster deployments take about 10 minutes to complete.
+New clusters take about 1.5 hours to deploy. Existing clusters take about {deployment_time} to deploy.
 
 WARNING: If you deploy {partner-product-short-name} into an existing VPC, ensure that any private subnets have https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html[NAT gateways^] in their route tables to allow the Quick Start to download packages and software. Also, ensure that the domain name in the DHCP options is configured. For more information, see http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html[DHCP options sets^].
 

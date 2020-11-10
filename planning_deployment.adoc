@@ -1,6 +1,6 @@
 === Specialized knowledge
 
-This deployment guide requires a moderate level of familiarity with
+This deployment requires a moderate level of familiarity with
 AWS services. If you’re new to AWS, see https://aws.amazon.com/getting-started/[Getting Started Resource Center^]
 and https://aws.amazon.com/training/[AWS Training and Certification]. These sites provide materials for learning how to design,
 deploy, and operate your infrastructure and applications on the AWS Cloud.

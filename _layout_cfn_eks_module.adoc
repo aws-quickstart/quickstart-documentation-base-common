@@ -25,15 +25,14 @@ endif::production_build[]
 endif::disable_licenses[]
 
 == Architecture
-Deploying this Quick Start with default parameters into an existing Amazon EKS cluster builds the following environment. For a diagram of the new VPC and Amazon EKS cluster, see the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^].
-//TODO Okay revision to the above link? It was pointing to the old HTML deployment page.
+Deploying this Quick Start with default parameters into an existing Amazon EKS cluster builds the following environment. For a diagram of the new virtual private cloud (VPC) and Amazon EKS cluster, see https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^].
 
 [#architecture1]
 .Quick Start architecture for _{partner-product-name}_
 [link=images/architecture_diagram.png]
 image::../images/architecture_diagram.png[Architecture]
 
-As shown in figure 1, the Quick Start sets up the following:
+As shown in Figure 1, the Quick Start sets up the following:
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located in `docs/{specificdir}/architecture.adoc`**_
