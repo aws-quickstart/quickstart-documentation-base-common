@@ -30,7 +30,7 @@
 #     docs/boilerplate   -- Boilerplate repo is unzipped here.
 
 function upload_preview_content(){
-  aws s3 sync --delete ${WORKING_DIR} ${DOCBUILD_DESTINATION_S3} --cache-control max-age=0,no-cache,no-store,must-revalidate
+  aws s3 sync --delete ${WORKING_DIR} ${DOCBUILD_DESTINATION_S3} --cache-control max-age=0,no-cache,no-store,must-revalidate --acl bucket-owner-full-control
 }
 
 function create_upload_ghpages_branch_archive(){
