@@ -39,7 +39,7 @@ NOTE: You are responsible for the cost of the AWS services used while running th
 ^|{template_existing_vpc}[View template^]
 ^|{template_existing_cluster}[View template^]
 |===
-New clusters take about 1.5 hours to deploy. Existing clusters take about 10 minutes to deploy.
+New clusters take about 1.5 hours to deploy. Existing clusters take about {deployment_time} to deploy.
 
 WARNING: If you deploy {partner-product-short-name} into an existing VPC, ensure that any private subnets have https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html[NAT gateways^] in their route tables to allow the Quick Start to download packages and software. Also, ensure that the domain name in the DHCP options is configured. For more information, see http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html[DHCP options sets^].
 
