@@ -51,6 +51,9 @@ unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate
 
 cd ${WORKING_DIR}
 doc_commit_id=$(git submodule | grep docs/boilerplate | cut -d - -f 2 | cut -f 1 -d " ")
+if [ -z "${doc_commit_id}" ]; then
+  exit 9900
+fi
 cd docs/boilerplate
 echo "Checking out boilerplate at commit ID: ${doc_commit_id}"
 git checkout "${doc_commit_id}"
