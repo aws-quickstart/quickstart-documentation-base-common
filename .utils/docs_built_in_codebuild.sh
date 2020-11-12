@@ -64,6 +64,12 @@ set -x
 ./docs/boilerplate/.utils/build_docs.sh
 set +x
 
+tmpfile=$(mktemp)
+
+echo -e "repo commit:\n$(git -P log -1 | grep 'commit' | awk '{print $2}')\n\nsubmodule config:" >> ${tmpfile}
+git submodule >> ${tmpfile}
+echo -e "\n<\!--\n$(cat /tmp/metadata.txt)\n-->" >> index.html
+
 if [ "${DOCBUILD_PROD}" == "true" ]; then
   create_upload_ghpages_branch_archive
 else
