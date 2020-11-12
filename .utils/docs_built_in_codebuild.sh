@@ -47,7 +47,7 @@ aws s3 cp ${DOCBUILD_CONTENT_S3} ${DL_DIR}/content.zip
 
 unzip ${DL_DIR}/content.zip -d ${WORKING_DIR}
 rm -rf ${WORKING_DIR}/docs/boilerplate
-unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate
+unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate || exit 150
 
 cd ${WORKING_DIR}
 doc_commit_id=$(git submodule | grep docs/boilerplate | cut -d - -f 2 | cut -f 1 -d " ")
