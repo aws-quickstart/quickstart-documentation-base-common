@@ -3,7 +3,7 @@
 This deployment requires a moderate level of familiarity with AWS services. If you’re new to AWS, visit https://aws.amazon.com/getting-started/[Getting Started with AWS^] and https://aws.amazon.com/training/[Training and Certification^]. These sites provide materials for learning how to design, deploy, and operate your infrastructure and applications on the AWS Cloud.
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/specialized_knowledge.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langcode}/{specificdir}/specialized_knowledge.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -29,7 +29,7 @@ endif::disable_requirements[]
 If necessary, request https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[service quota increases^] for the following resources. You might need to request increases if your existing deployment currently uses these resources and if this Quick Start deployment could result in exceeding the default quotas. The https://console.aws.amazon.com/servicequotas/home?region=us-east-2#!/[Service Quotas console^] displays your usage and quotas for some aspects of some services. For more information, see https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[What is Service Quotas?^] and https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html[AWS service quotas^].
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/service_limits.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langcode}/{specificdir}/service_limits.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -58,7 +58,7 @@ endif::auto_populate_regions[]
 ifndef::auto_populate_regions[]
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/regions.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langcode}/{specificdir}/regions.adoc`**_
 ++++
 <div id="preview_mode">
 ++++
@@ -90,7 +90,7 @@ endif::template_ec2[]
 Before launching the Quick Start, you must sign in to the AWS Management Console with IAM permissions for the resources that the templates deploy. The _AdministratorAccess_ managed policy within IAM provides sufficient permissions, although your organization may choose to use a custom policy with more restrictions. For more information, see https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html[AWS managed policies for job functions^].
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/pre-reqs.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langcode}/{specificdir}/pre-reqs.adoc`**_
 [.preview_mode]
 |===
 a|
