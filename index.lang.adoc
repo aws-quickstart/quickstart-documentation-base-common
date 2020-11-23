@@ -23,4 +23,4 @@ ifndef::partner-company-name[:partner-company-footer:]
 :docinfo:
 
 :title: {partner-product-name} on the AWS Cloud
-ifdef::project_cfn[include::${langdir}/docs_layout_cfn.adoc[]]
+ifdef::project_cfn[include::_layout_cfn.adoc[]]
