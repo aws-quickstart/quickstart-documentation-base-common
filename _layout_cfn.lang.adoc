@@ -13,7 +13,7 @@ include::translate-only/overview.adoc[]
 
 == {partner-product-name} on AWS
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/product_description.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -29,7 +29,7 @@ include::translate-only/cost.adoc[]
 ifndef::disable_licenses[]
 == Software licenses
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/licenses.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -42,7 +42,7 @@ endif::disable_licenses[]
 
 == Architecture
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/architecture.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -64,7 +64,7 @@ include::translate-only/deployment_steps.adoc[]
 // additional_info.adoc contains 3 sections: Best Practice, Security & Other information
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/additional_info.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
@@ -74,7 +74,7 @@ include::{specificdir}/additional_info.adoc[]
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/faq_troubleshooting.adoc`**_
 ++++
 <div class="preview_mode">
 ++++

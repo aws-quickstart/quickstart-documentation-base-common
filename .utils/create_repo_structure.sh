@@ -59,6 +59,7 @@ create_repo
 LANG_DIR="docs/languages"
 SPECIFIC_LANG_DIR="docs/languages/docs-${LANG_CODE}"
 TRANSLATE_ONLY="docs/languages/docs-${LANG_CODE}/translate-only"
+LANG_FOLDER="docs-${LANG_CODE}"
 mkdir -p ${LANG_DIR}
 mkdir -p ${SPECIFIC_LANG_DIR}
 mkdir -p ${TRANSLATE_ONLY}
@@ -69,7 +70,7 @@ rsync -avP ${BOILERPLATE_DIR}/index.lang.adoc ${SPECIFIC_LANG_DIR}/index.adoc
 rsync -avP ${BOILERPLATE_DIR}/planning_deployment.lang.adoc ${TRANSLATE_ONLY}/planning_deployment.adoc
 rsync -avP ${BOILERPLATE_DIR}/index-docinfo-footer.html ${TRANSLATE_ONLY}
 rsync -avP ${BOILERPLATE_DIR}/LICENSE ${TRANSLATE_ONLY}
-sed -i "" "s/docs-lang-code/docs-${LANG_CODE}/g" ${SPECIFIC_LANG_DIR}/index.adoc
+sed -i "" "s/docs-lang-code/${LANG_FOLDER}/g" ${SPECIFIC_LANG_DIR}/index.adoc
 }
 
 while true
