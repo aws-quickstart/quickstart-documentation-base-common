@@ -11,7 +11,7 @@ ifdef::marketplace_subscription[]
 This Quick Start requires a subscription to the AMI for {partner-product-short-name} in AWS Marketplace.
 
 . Sign in to your AWS account.
-. {marketplace_listing_url}[Open the page for the {partner-product-short-name} AMI in AWS Marketplace], and then choose *Continue to Subscribe*.
+. Open the page for the {marketplace_listing_url}[{partner-product-short-name} AMI in AWS Marketplace^], and then choose *Continue to Subscribe*.
 . Review the terms and conditions for software usage, and then choose *Accept Terms*. +
   A confirmation page loads, and an email confirmation is sent to the account owner. For detailed subscription instructions, see the https://aws.amazon.com/marketplace/help/200799470[AWS Marketplace documentation^].
 
