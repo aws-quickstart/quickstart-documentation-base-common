@@ -59,10 +59,12 @@ cd docs/boilerplate
 echo "Checking out boilerplate at commit ID: ${doc_commit_id}"
 git checkout "${doc_commit_id}"
 cd ../../
-./docs/boilerplate/.utils/generate_dynamic_content.sh
-set -x
-./docs/boilerplate/.utils/build_docs.sh
-set +x
+if [ -d templates/ ]; then 
+  ./docs/boilerplate/.utils/generate_dynamic_content.sh
+  set -x
+  ./docs/boilerplate/.utils/build_docs.sh
+  set +x
+fi
 
 tmpfile=$(mktemp)
 
