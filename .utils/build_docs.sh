@@ -39,7 +39,7 @@ fi
 
 if [ "${GITHUB_REPO_OWNER}" == "aws-quickstart" ]; then
   cp docs/boilerplate/.css/AWS-Logo.svg images/
-  if [ "${GITHUB_REF}" == "refs/heads/master" ] || [ "${GITHUB_REF}" == "refs/heads/main" ] || [ "${DOCBUILD_PROD}" == "true" ]; then
+  if [ "${GITHUB_REF}" == "refs/heads/master" ] || [ "${GITHUB_REF}" == "refs/heads/main" ];  then
     _set_prod_asciidoc_attributes
   else
     PREVIEW_BUILD="true"
