@@ -12,11 +12,13 @@
 FROM asciidoctor/docker-asciidoctor
 
 RUN apk add --no-cache \
-    aws-cli \
     py3-pip \
-    python3
-RUN wget https://raw.githubusercontent.com/aws-quickstart/quickstart-documentation-base-common/main/.utils/requirements.txt -O /tmp/req.txt
+    python3 \
+    zip \
+    rsync
+RUN wget https://raw.githubusercontent.com/REPO/BRANCH/.utils/requirements.txt -O /tmp/req.txt
 RUN ln -sf /usr/bin/pip3 /usr/bin/pip
 RUN ln -sf /usr/bin/python3 /usr/bin/python
+RUN pip3 install awscli
 RUN pip3 install -r /tmp/req.txt
 ENTRYPOINT ["dockerd-entrypoint.sh"]
