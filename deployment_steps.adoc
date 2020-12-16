@@ -17,6 +17,7 @@ ifndef::parameters_as_appendix[]
 In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
 endif::parameters_as_appendix[]
 
+ifndef::no_parameters[]
 ifndef::parameters_as_appendix[]
 
 NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
@@ -24,6 +25,7 @@ NOTE: Unless you are customizing the Quick Start templates for your own deployme
 // Parameter tables linked in here
 include::../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
+endif::no_parameters[]
 
 [start=5]
 . On the *Configure stack options* page, you can https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html[specify tags^] (key-value pairs) for resources in your stack and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html[set advanced options^]. When you’re finished, choose *Next*.
