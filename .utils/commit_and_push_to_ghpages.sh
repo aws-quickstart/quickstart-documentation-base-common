@@ -29,7 +29,7 @@ function github_actions_prod(){
 #    exit 0
 #fi
 
-if [ "${DOCBUILD_PROD}" == "true" ]; then
+if [ "${DOCBUILD_PROD:-x}" == "true" ]; then
   common_steps
 else
   github_actions_prod
