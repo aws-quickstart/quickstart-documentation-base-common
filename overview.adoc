@@ -1,7 +1,7 @@
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located in `docs/{specificdir}/overview_target_and_usage.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/overview_target_and_usage.adoc`**_
 [.preview_mode]
 |===
 a|
