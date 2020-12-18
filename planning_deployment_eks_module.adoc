@@ -2,7 +2,7 @@
 
 This deployment guide requires a moderate level of familiarity with
 AWS services. If you’re new to AWS, see the https://aws.amazon.com/getting-started/[Getting Started Resource Center^]
-and https://aws.amazon.com/training/[AWS Training and Certification]. These sites provide materials for learning how to design,
+and https://aws.amazon.com/training/[AWS Training and Certification^]. These sites provide materials for learning how to design,
 deploy, and operate your infrastructure and applications on the AWS Cloud.
 
 ifndef::production_build[]
@@ -24,7 +24,7 @@ Your AWS account is automatically signed up for all AWS services. You are charge
 
 === Amazon EKS cluster
 
-If you deploy your cluster into an existing Amazon EKS cluster that was not created by the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud] Quick Start, you must configure your cluster to allow this Quick Start to manage it. For more information, see the link:#_deployment_steps[Deployment steps] section.
+If you deploy your cluster into an existing Amazon EKS cluster that was not created by the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^] Quick Start, you must configure your cluster to allow this Quick Start to manage it. For more information, see the link:#_deployment_steps[Deployment steps] section.
 
 
 === IAM permissions
@@ -39,4 +39,4 @@ This Quick Start provides three deployment options:
 
 * *Deploy {partner-product-short-name} into a new VPC (end-to-end deployment)*. This option builds a new AWS environment consisting of the VPC, subnets, NAT gateways, security groups, bastion hosts, EKS cluster, a node group, and other infrastructure components. It then deploys {partner-product-short-name} into this new EKS cluster.
 * *Deploy {partner-product-short-name} into a new EKS cluster of an existing VPC*. This option builds a new Amazon EKS cluster, node group, and other infrastructure components into an existing VPC. It then deploys {partner-product-short-name} into this new EKS cluster.
-* *Deploy {partner-product-short-name} into an existing EKS cluster*. This option provisions {partner-product-short-name} in your existing AWS infrastructure. Note that when deploying into an EKS cluster that was not created by the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud] Quick Start, you must prepare the cluster as described in the link:#_deployment_steps[Deployment steps] section.
+* *Deploy {partner-product-short-name} into an existing EKS cluster*. This option provisions {partner-product-short-name} in your existing AWS infrastructure. Note that when deploying into an EKS cluster that was not created by the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^] Quick Start, you must prepare the cluster as described in the link:#_deployment_steps[Deployment steps] section.
