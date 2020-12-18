@@ -17,14 +17,15 @@ ifndef::parameters_as_appendix[]
 In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
 endif::parameters_as_appendix[]
 
+ifndef::no_parameters[]
 ifndef::parameters_as_appendix[]
 
-NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
-Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
 // Parameter tables linked in here
 include::../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
+endif::no_parameters[]
 
 [start=5]
 . On the *Configure stack options* page, you can specify https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html[key-value pairs^] for resources in your stack and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html[set advanced options^]. When you’re finished, choose *Next*.
@@ -39,5 +40,5 @@ ifdef::partner-product-short-name[. Monitor the status of the stack. When the st
 ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
 ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
 [link=images/cfn_outputs.png]
-image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
+image::../images/cfn_outputs.png[cfn_outputs,width=100%,height=100%]
 endif::custom_number_of_deploy_steps[]
