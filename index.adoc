@@ -20,5 +20,18 @@ ifndef::partner-company-name[:partner-company-footer:]
 :docinfodir: boilerplate
 :docinfo:
 
+ifndef::custom_title[]
 :title: {partner-product-name} on the AWS Cloud
-ifdef::project_cfn[include::{includedir}/_layout_cfn.adoc[]]
+endif::custom_title[]
+ifdef::custom_title[]
+:title: {custom_title}
+endif::custom_title[]
+
+ifdef::project_cfn[]
+ifndef::eks_addin[]
+include::{includedir}/_layout_cfn.adoc[]
+endif::eks_addin[]
+ifdef::eks_addin[]
+include::{includedir}/_layout_cfn_eks_module.adoc[]
+endif::eks_addin[]
+endif::project_cfn[]
