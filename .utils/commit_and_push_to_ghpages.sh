@@ -34,5 +34,6 @@ if [ "${DOCBUILD_PROD:-x}" == "true" ]; then
 else
   github_actions_prod
 fi
+
 git remote set-url origin ${repo_uri}
 git status | grep "Your branch is up to date" || git push origin HEAD:${target_branch} --force

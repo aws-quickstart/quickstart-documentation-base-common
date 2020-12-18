@@ -3,7 +3,7 @@
 This deployment requires a moderate level of familiarity with AWS services. If you’re new to AWS, visit https://aws.amazon.com/getting-started/[Getting Started with AWS^] and https://aws.amazon.com/training/[Training and Certification^]. These sites provide materials for learning how to design, deploy, and operate your infrastructure and applications on the AWS Cloud.
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located in `docs/{specificdir}/specialized_knowledge.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/specialized_knowledge.adoc`**_
 [.preview_mode]
 |===
 a|
@@ -72,7 +72,7 @@ endif::production_build[]
 
 endif::auto_populate_regions[]
 
-TIP: Certain Regions are available on an opt-in basis. For more information, see https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
+TIP: Certain Regions are available on an opt-in basis. See https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
 
 endif::disable_regions[]
 ifdef::template_ec2[]
