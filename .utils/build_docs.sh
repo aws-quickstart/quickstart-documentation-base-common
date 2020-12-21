@@ -30,7 +30,7 @@ function build_prod_example_docs(){
 ASCIIDOC_ATTRIBUTES=""
 GITHUB_REPO_OWNER=$(echo ${GITHUB_REPOSITORY} | cut -d '/' -f 1)
 if [ -d docs/images ]; then
-  mv docs/images images
+  rsync -avP docs/images/ images/
 fi
 
 if [ -f docs/index.html ]; then
