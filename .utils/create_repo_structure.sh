@@ -71,6 +71,8 @@ rsync -avP ${BOILERPLATE_DIR}/planning_deployment.lang.adoc ${TRANSLATE_ONLY}/pl
 rsync -avP ${BOILERPLATE_DIR}/index-docinfo-footer.html ${TRANSLATE_ONLY}
 rsync -avP ${BOILERPLATE_DIR}/LICENSE ${TRANSLATE_ONLY}
 sed -i "" "s/docs-lang-code/${LANG_FOLDER}/g" ${SPECIFIC_LANG_DIR}/index.adoc
+sed -i "" "s/..\/images/..\/..\/..\/images/g" ${SPECIFIC_LANG_DIR}/partner_editable/architecture.adoc
+sed -i "" "s/..\/images/..\/..\/..\/images/g" ${TRANSLATE_ONLY}/deployment_steps.adoc
 }
 
 while true
