@@ -23,7 +23,7 @@ ifndef::production_build[]
 |===
 endif::production_build[]
 
-== Cost
+== AWS costs
 include::../{includedir}/cost.adoc[]
 
 ifndef::disable_licenses[]
