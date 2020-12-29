@@ -1,6 +1,5 @@
 
-You are responsible for the cost of the AWS services used while running
-this Quick Start. There is no additional cost for
+You are responsible for the cost of the AWS services and any paid third-party licenses used while running this Quick Start. There is no additional cost for
 using the Quick Start.
 
 The AWS CloudFormation templates for Quick Starts include
