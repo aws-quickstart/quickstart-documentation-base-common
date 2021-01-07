@@ -22,7 +22,7 @@ Your AWS account is automatically signed up for all AWS services. You are charge
 ifndef::disable_requirements[]
 === Technical requirements
 
-Before you launch the Quick Start, your account must be configured as specified in the following table. Otherwise, deployment might fail.
+Before you launch the Quick Start, review the following information and ensure that your account is properly configured. Otherwise, deployment might fail.
 endif::disable_requirements[]
 
 ==== Resource quotas
