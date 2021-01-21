@@ -50,7 +50,8 @@ rm -rf ${WORKING_DIR}/docs/boilerplate
 unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate || exit 150
 
 cd ${WORKING_DIR}
-doc_commit_id=$(git submodule | grep docs/boilerplate | cut -d - -f 2 | awk '{print $1}')
+doc_commit_id=$(git submodule | grep docs/boilerplate | awk '{print $1}' | sed -e 's/^+//g' -e 's/^-//g')
+echo "${doc_commit_id}"
 if [ -z "${doc_commit_id}" ]; then
   echo "docs/boilerplate submodule not found. exiting"
   exit 150
