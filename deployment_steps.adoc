@@ -13,12 +13,9 @@ ifndef::production_build[]
 endif::production_build[]
 
 ifndef::custom_number_of_deploy_steps[]
-ifndef::parameters_as_appendix[]
-In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
-endif::parameters_as_appendix[]
-
 ifndef::no_parameters[]
 ifndef::parameters_as_appendix[]
+In the following tables, parameters are listed by category and described separately for the deployment options. When you finish reviewing and customizing the parameters, choose *Next*.
 
 NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
