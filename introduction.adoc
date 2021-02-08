@@ -20,6 +20,9 @@ endif::production_build[]
 ifdef::partner-contributors[]
 _{partner-contributors}_ +
 endif::partner-contributors[]
+ifdef::aws-contributors[]
+_{aws-contributors}_ +
+endif::aws-contributors[]
 _{quickstart-contributors}_
 [.text-left]
 
