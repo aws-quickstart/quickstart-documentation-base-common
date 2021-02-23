@@ -25,3 +25,5 @@
 // Additional content will be generated automatically based on these attributes.
 // :marketplace_subscription:
 // :marketplace_listing_url: https://example.com/
+// Uncomment the following attribute to add a statement about AWS and our stance on compliance-related Quick Starts. 
+// :compliance-statement: Deploying this Quick Start does not guarantee an organization’s compliance with any laws, certifications, policies, or other regulations.  
