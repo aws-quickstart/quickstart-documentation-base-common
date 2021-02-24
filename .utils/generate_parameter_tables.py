@@ -3,7 +3,8 @@ import io
 import cfnlint
 import datetime
 import sys
-from pathlib import Path
+import os
+from pathlib import Path, PosixPath
 
 
 def get_cfn(filename):
@@ -29,11 +30,22 @@ def _generate_per_label_table_entry(label, param, default, description):
     data.append(f"(`{param}`)|`{default}`|{description}")
     return '\n'.join(data)
 
+def _determine_file_list():
+    template_files = set()
+    if os.path.exists('./templates/.filename_standard_exception.txt'):
+        with open('./templates/.filename_standard_exception.txt') as f:
+            data = f.readlines()
+        for fn in data:
+            template_files.add(PosixPath(f"templates/{fn.strip()}"))
+    for yaml_cfn_file in Path('./templates').glob('*.template*'):
+        template_files.add(yaml_cfn_file)
+    return template_files
+
 def just_pass():
     template_entrypoints = {}
     template_order = {}
     found_files_with_glob_pattern=False
-    for yaml_cfn_file in Path('./templates').glob('*.template*'):
+    for yaml_cfn_file in _determine_file_list():
         found_files_with_glob_pattern=True
         print(f"Working on {yaml_cfn_file}")
         template = get_cfn(Path(yaml_cfn_file))
