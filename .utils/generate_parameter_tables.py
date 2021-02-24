@@ -4,7 +4,7 @@ import cfnlint
 import datetime
 import sys
 import os
-from pathlib import Path
+from pathlib import Path, PosixPath
 
 
 def get_cfn(filename):
@@ -36,7 +36,7 @@ def _determine_file_list():
         with open('./templates/.filename_standard_exception.txt') as f:
             data = f.readlines()
         for fn in data:
-            template_files.add(f"templates/{fn.strip()})")
+            template_files.add(PosixPath(f"templates/{fn.strip()})"))
     for yaml_cfn_file in Path('./templates').glob('*.template*'):
         template_files.add(yaml_cfn_file)
     return template_files
