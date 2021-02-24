@@ -3,6 +3,7 @@ import io
 import cfnlint
 import datetime
 import sys
+import os
 from pathlib import Path
 
 
