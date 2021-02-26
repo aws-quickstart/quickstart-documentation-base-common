@@ -57,7 +57,7 @@ endif::production_build[]
 //include::../{includedir}/planning_deployment.adoc[]
 
 == Deployment steps
-//include::../{includedir}/deployment_steps.adoc[]
+include::../{includedir}/deployment_steps.adoc[]
 
 // == Parameters
 // include::../{generateddir}/parameters/index.adoc[]
