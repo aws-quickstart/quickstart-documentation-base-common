@@ -10,5 +10,8 @@ if [ ${EC} -ne 0 ]; then
   echo "Gen tables"
   python docs/boilerplate/.utils/generate_parameter_tables.py
 fi
-echo "Gen metadata"
-python docs/boilerplate/.utils/generate_metadata_attributes.py
+egrep -qi '^:cdk_qs:$' docs/partner_editable/_settings.adoc; CDK=$?
+if [ ${CDK} -ne 0 ]; then
+  echo "Gen metadata"
+  python docs/boilerplate/.utils/generate_metadata_attributes.py
+fi
