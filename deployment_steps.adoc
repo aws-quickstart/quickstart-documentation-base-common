@@ -1,3 +1,4 @@
+:xrefstyle: short
 
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/deploy_steps.adoc`**_
@@ -32,7 +33,6 @@ ifndef::partner-product-short-name[. Monitor the status of the stack. When the s
 ifdef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-short-name} deployment is ready.]
 . Use the values displayed in the *Outputs* tab for the stack, as shown in <<cfn_outputs>>, to view the created resources.
 
-:xrefstyle: short
 [#cfn_outputs]
 ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
 ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
