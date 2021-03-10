@@ -1,3 +1,5 @@
+:xrefstyle: short
+
 === Prepare an existing EKS cluster
 NOTE: This step is only required if you launch this Quick Start into an existing Amazon EKS cluster that was not created using the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^] deployment. If you want to create a new EKS cluster with your deployment, skip to step 3.
 
@@ -51,7 +53,6 @@ ifndef::partner-product-short-name[. Monitor the status of the stack. When the s
 ifdef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-short-name} deployment is ready.]
 . Use the values displayed in the *Outputs* tab for the stack, as shown in the following figure.
 
-:xrefstyle: short
 [#cfn_outputs]
 ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
 ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
