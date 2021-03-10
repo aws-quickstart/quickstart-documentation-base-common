@@ -80,12 +80,12 @@ endif::production_build[]
 
 === Deploy into a new VPC and new Amazon EKS cluster
 
-The full list of parameters for this entrypoint are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_a_new_vpc[Amazon EKS on the AWS Cloud^].
+A list of parameters for this entry point are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_a_new_vpc[Amazon EKS on the AWS Cloud^].
 
 
 === Deploy into a new Amazon EKS cluster in an existing VPC
 
-The full list of parameters for this entrypoint are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_an_existing_vpc[Amazon EKS on the AWS Cloud^].
+A list of parameters for this entry point are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_an_existing_vpc[Amazon EKS on the AWS Cloud^].
 
 include::../{generateddir}/parameters/index.adoc[]
 
