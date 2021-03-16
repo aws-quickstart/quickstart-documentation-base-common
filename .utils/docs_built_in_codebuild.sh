@@ -67,6 +67,10 @@ if [ -d templates/ ]; then
   set +x
 fi
 
+if [ ! -f index.html ]; then
+  exit 1
+fi
+
 tmpfile=$(mktemp)
 
 echo -e "repo commit:\n$(git -P log -1 | grep 'commit' | awk '{print $2}')\n\nsubmodule config:" >> ${tmpfile}
