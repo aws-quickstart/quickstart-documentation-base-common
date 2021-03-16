@@ -56,6 +56,10 @@ endif::production_build[]
 
 //include::../{includedir}/planning_deployment.adoc[]
 
+== Planning the deployment
+
+include::../{includedir}/planning_deployment.adoc[]
+
 == Deployment steps
 include::../{includedir}/deployment_steps_cdk_module.adoc[]
 
