@@ -1,5 +1,5 @@
 :xrefstyle: short
-+
+
 ifndef::production_build[]
 _**This portion of the deployment guide is located at `docs/{specificdir}/deploy_steps.adoc`**_
 ++++
