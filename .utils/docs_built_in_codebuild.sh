@@ -56,7 +56,7 @@ if [ -z "${doc_commit_id}" ]; then
   echo "docs/boilerplate submodule not found. exiting"
   exit 150
 fi
-grep 'index.html' .gitignore && echo "gitignore has index.html. generated doc is unable to be published"; exit 150
+grep 'index.html' .gitignore && echo "gitignore has index.html. generated doc is unable to be published" && exit 150
 cd docs/boilerplate
 echo "Checking out boilerplate at commit ID: ${doc_commit_id}"
 git checkout "${doc_commit_id}"
