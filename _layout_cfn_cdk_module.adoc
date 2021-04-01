@@ -52,12 +52,16 @@ ifndef::production_build[]
 |===
 endif::production_build[]
 
+//== Planning the deployment
+
+//include::../{includedir}/planning_deployment.adoc[]
+
 == Planning the deployment
 
 include::../{includedir}/planning_deployment.adoc[]
 
 == Deployment steps
-include::../{includedir}/deployment_steps.adoc[]
+include::../{includedir}/deployment_steps_cdk_module.adoc[]
 
 // == Parameters
 // include::../{generateddir}/parameters/index.adoc[]
@@ -87,16 +91,17 @@ ifndef::production_build[]
 ++++
 endif::production_build[]
 
-ifndef::no_parameters[]
-ifdef::parameters_as_appendix[]
-== Parameter reference
+//ifndef::no_parameters[]
+//ifdef::parameters_as_appendix[]
 
-NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
-Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+//== Parameter reference
 
-include::../{generateddir}/parameters/index.adoc[]
-endif::parameters_as_appendix[]
-endif::no_parameters[]
+//NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
+//Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+
+//include::../{generateddir}/parameters/index.adoc[]
+//endif::parameters_as_appendix[]
+//endif::no_parameters[]
 
 == Send us feedback
 

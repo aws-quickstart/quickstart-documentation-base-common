@@ -2,11 +2,12 @@
 :includedir: boilerplate
 :specificdir: partner_editable
 :generateddir: generated
+:langdir: docs-lang-code
 :icons: font
 :toc2: left
 :toc-title: 
 :toclevels: 2
-:stylesheet: {includedir}/.css/quickstart.css
+:stylesheet: ../../{includedir}/.css/quickstart.css
 :project_cfn:
 :template_services_ec2:
 include::{specificdir}/_settings.adoc[]
@@ -20,21 +21,5 @@ ifndef::partner-company-name[:partner-company-footer:]
 :docinfodir: boilerplate
 :docinfo:
 
-ifndef::custom_title[]
 :title: {partner-product-name} on the AWS Cloud
-endif::custom_title[]
-ifdef::custom_title[]
-:title: {custom_title}
-endif::custom_title[]
-
-ifdef::project_cfn[]
-ifndef::eks_addin,cdk_qs[]
-include::{includedir}/_layout_cfn.adoc[]
-endif::eks_addin,cdk_qs[]
-ifdef::eks_addin[]
-include::{includedir}/_layout_cfn_eks_module.adoc[]
-endif::eks_addin[]
-ifdef::cdk_qs[]
-include::{includedir}/_layout_cfn_cdk_module.adoc[]
-endif::cdk_qs[]
-endif::project_cfn[]
+ifdef::project_cfn[include::_layout_cfn.adoc[]]

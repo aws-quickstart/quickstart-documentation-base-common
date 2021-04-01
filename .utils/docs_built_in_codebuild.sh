@@ -28,17 +28,58 @@
 # Structure
 # <project repo> --- Content repo is unzipped.
 #     docs/boilerplate   -- Boilerplate repo is unzipped here.
+
+function upload_preview_content(){
+  aws s3 sync --delete ${WORKING_DIR} ${DOCBUILD_DESTINATION_S3} --cache-control max-age=0,no-cache,no-store,must-revalidate --acl bucket-owner-full-control
+}
+
+function create_upload_ghpages_branch_archive(){
+  zip ${DL_DIR}/gh-pages.zip -r .
+  aws s3 cp ${DL_DIR}/gh-pages.zip ${DOCBUILD_DESTINATION_S3}
+}
+
 DL_DIR=$(mktemp -d)
 WORKING_DIR=$(mktemp -d)
-aws s3 cp s3://${DOCBUILD_BOILERPLATE_S3_BUCKET}/${DOCBUILD_BOILERPLATE_S3_KEY} ${DL_DIR}/boilerplate.zip
-aws s3 cp s3://${DOCBUILD_CONTENT_S3_BUCKET}/${DOCBUILD_CONTENT_S3_KEY} ${DL_DIR}/content.zip
+echo "${DOCBUILD_BOILERPLATE_S3}"
+echo "${DOCBUILD_CONTENT_S3}"
+aws s3 cp ${DOCBUILD_BOILERPLATE_S3} ${DL_DIR}/boilerplate.zip
+aws s3 cp ${DOCBUILD_CONTENT_S3} ${DL_DIR}/content.zip
 
 unzip ${DL_DIR}/content.zip -d ${WORKING_DIR}
 rm -rf ${WORKING_DIR}/docs/boilerplate
-unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate
+unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate || exit 150
 
 cd ${WORKING_DIR}
-./docs/boilerplate/.utils/generate_dynamic_content.sh
-./docs/boilerplate/.utils/build_docs.sh
+doc_commit_id=$(git submodule | grep docs/boilerplate | awk '{print $1}' | sed -e 's/^+//g' -e 's/^-//g')
+echo "${doc_commit_id}"
+if [ -z "${doc_commit_id}" ]; then
+  echo "docs/boilerplate submodule not found. exiting"
+  exit 150
+fi
+grep 'index.html' .gitignore && echo "gitignore has index.html. generated doc is unable to be published"; exit 150
+cd docs/boilerplate
+echo "Checking out boilerplate at commit ID: ${doc_commit_id}"
+git checkout "${doc_commit_id}"
+cd ../../
+if [ -d templates/ ]; then 
+  ./docs/boilerplate/.utils/generate_dynamic_content.sh
+  set -x
+  ./docs/boilerplate/.utils/build_docs.sh
+  set +x
+fi
 
-aws s3 sync ${WORKING_DIR} s3://${DOCBUILD_DESTINATION_S3_BUCKET}/${DOCBUILD_DESTINATION_S3_KEY}/ --cache-control max-age=0,no-cache,no-store,must-revalidate --acl public-read
+if [ ! -f index.html ]; then
+  exit 1
+fi
+
+tmpfile=$(mktemp)
+
+echo -e "repo commit:\n$(git -P log -1 | grep 'commit' | awk '{print $2}')\n\nsubmodule config:" >> ${tmpfile}
+git submodule >> ${tmpfile}
+echo -e "\n<!--\n$(cat ${tmpfile})\n-->" >> index.html
+
+if [ "${DOCBUILD_PROD}" == "true" ]; then
+  create_upload_ghpages_branch_archive
+else
+  upload_preview_content
+fi

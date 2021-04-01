@@ -5,36 +5,36 @@
 :doctitle: {partner-product-name} on the AWS Cloud
 :!toc:
 [.text-left]
-include::../{includedir}/introduction.adoc[]
+include::translate-only/introduction.adoc[]
 
 == Overview
-include::../{includedir}/overview.adoc[]
+include::translate-only/overview.adoc[]
 
 
 == {partner-product-name} on AWS
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/product_description.adoc`**_
 [.preview_mode]
 |===
 a|
 endif::production_build[]
-include::../{specificdir}/product_description.adoc[]
+include::{specificdir}/product_description.adoc[]
 ifndef::production_build[]
 |===
 endif::production_build[]
 
-== AWS costs
-include::../{includedir}/cost.adoc[]
+== Cost
+include::translate-only/cost.adoc[]
 
 ifndef::disable_licenses[]
 == Software licenses
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/licenses.adoc`**_
 [.preview_mode]
 |===
 a|
 endif::production_build[]
-include::../{specificdir}/licenses.adoc[]
+include::{specificdir}/licenses.adoc[]
 ifndef::production_build[]
 |===
 endif::production_build[]
@@ -42,22 +42,21 @@ endif::disable_licenses[]
 
 == Architecture
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/architecture.adoc`**_
 [.preview_mode]
 |===
 a|
 endif::production_build[]
-include::../{specificdir}/architecture.adoc[]
+include::{specificdir}/architecture.adoc[]
 ifndef::production_build[]
 |===
 endif::production_build[]
 
 == Planning the deployment
-
-include::../{includedir}/planning_deployment.adoc[]
+include::translate-only/planning_deployment.adoc[]
 
 == Deployment steps
-include::../{includedir}/deployment_steps.adoc[]
+include::translate-only/deployment_steps.adoc[]
 
 // == Parameters
 // include::../{generateddir}/parameters/index.adoc[]
@@ -65,22 +64,22 @@ include::../{includedir}/deployment_steps.adoc[]
 // additional_info.adoc contains 3 sections: Best Practice, Security & Other information
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/additional_info.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
 endif::production_build[]
-include::../{specificdir}/additional_info.adoc[]
+include::{specificdir}/additional_info.adoc[]
 
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_
+_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/faq_troubleshooting.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
 endif::production_build[]
-include::../{specificdir}/faq_troubleshooting.adoc[]
+include::{specificdir}/faq_troubleshooting.adoc[]
 ifndef::production_build[]
 ++++
 </div>
@@ -94,7 +93,7 @@ ifdef::parameters_as_appendix[]
 NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
 Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
-include::../{generateddir}/parameters/index.adoc[]
+include::../../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
 endif::no_parameters[]
 
@@ -114,4 +113,4 @@ the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.
 
 '''
-include::../{includedir}/disclaimer.adoc[]
+include::translate-only/disclaimer.adoc[]
