@@ -2,21 +2,31 @@
 # # Work in progress.
 # exit 1
 
-#Adds Help and Second Language options (-h | -l)
-while getopts hl  option
+#Adds Otions for the following: ((Help/Second Language/CDK/Terraform options) (-h | -l | -c | -t))
+while getopts hlct  option
 do
     case "${option}" in
       h )
           echo "Usage:"
           echo "Run './create_repo_structure.sh' with no options for English langauge only."
           echo "Run './create_repo_structure.sh -l' to add files for second langauge."
+          echo "Run './create_repo_structure.sh -c' for CDK setup."
+          echo "Run './create_repo_structure.sh -t' for Terraform setup."
+          echo "You can also add the '-l' to the '-c' or '-t' flags to get second language support."
+          echo "Ex. './create_repo_structure.sh -t -l'"
           echo " "
           echo "(-h)       Show usage and brief help"
           echo "(-l)       Use to add files for second language for translation"
+          echo "(-c)       Use to configure for a CDK Quick Start"
+          echo "(-t)       Use to configure for a Terraform Quick Start"
           exit 0
           ;;
       l )
           CREATESECONDLANG="create_second_lang";;
+      c )
+          CDKSETUP="setup_cdk";;
+      t )
+          TERRAFORMSETUP="setup_cdk";;
       * )
           echo "this is in an invalid flag. Please see "-h" for help on valid flags"
           exit 0
@@ -55,7 +65,6 @@ echo "// placeholder" > ${GENERATED_DIR}/services/metadata.adoc
 #Creates standard English and second language directory structures to the repo.
 function create_second_lang() {
 read -p "Please enter enter 2 character language code: " LANG_CODE
-create_repo
 LANG_DIR="docs/languages"
 SPECIFIC_LANG_DIR="docs/languages/docs-${LANG_CODE}"
 TRANSLATE_ONLY="docs/languages/docs-${LANG_CODE}/translate-only"
@@ -63,7 +72,7 @@ LANG_FOLDER="docs-${LANG_CODE}"
 mkdir -p ${LANG_DIR}
 mkdir -p ${SPECIFIC_LANG_DIR}
 mkdir -p ${TRANSLATE_ONLY}
-rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_LANG_DIR}/partner_editable
+rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR}/partner_editable
 rsync -avP ${BOILERPLATE_DIR}/*.adoc ${TRANSLATE_ONLY} --exclude *.lang.adoc --exclude index.adoc --exclude _layout_cfn.adoc --exclude planning_deployment.adoc
 rsync -avP ${BOILERPLATE_DIR}/_layout_cfn.lang.adoc ${SPECIFIC_LANG_DIR}/_layout_cfn.adoc
 rsync -avP ${BOILERPLATE_DIR}/index.lang.adoc ${SPECIFIC_LANG_DIR}/index.adoc
@@ -73,13 +82,63 @@ rsync -avP ${BOILERPLATE_DIR}/LICENSE ${TRANSLATE_ONLY}
 sed -i "" "s/docs-lang-code/${LANG_FOLDER}/g" ${SPECIFIC_LANG_DIR}/index.adoc
 }
 
+#Creates CDK specific structures to the repo.
+function setup_cdk() {
+CDK_DIR=".specific/.cdk"
+rm -f ${BOILERPLATE_DIR}/cost.adoc
+rm -f ${SPECIFIC_DIR}/partner_editable/deployment_options.adoc
+rsync -avP ${BOILERPLATE_DIR}/${CDK_DIR}/cost.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/${CDK_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
+rsync -avP ${BOILERPLATE_DIR}/${CDK_DIR}/deployment_steps.adoc ${BOILERPLATE_DIR}
+sed -i "" "s/:parameters_as_appendix:/\/\/ :parameters_as_appendix:/g" ${SPECIFIC_DIR}/_settings.adoc
+sed -i "" "s/\/\/ :cdk_qs:/:cdk_qs:/g" ${SPECIFIC_DIR}/_settings.adoc
+sed -i "" "s/\/\/ :no_parameters:/:no_parameters:/g" ${SPECIFIC_DIR}/_settings.adoc
+}
+
+#Creates Terraform specific structures to the repo.
+function setup_terraform() {
+TERRAFORM_DIR=".specific/.terraform"
+rm -f ${BOILERPLATE_DIR}/cost.adoc
+rm -f ${SPECIFIC_DIR}/partner_editable/deployment_options.adoc
+rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/cost.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
+rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/deployment_steps.adoc ${BOILERPLATE_DIR}
+sed -i "" "s/:parameters_as_appendix:/\/\/ :parameters_as_appendix:/g" ${SPECIFIC_DIR}/_settings.adoc
+sed -i "" "s/\/\/ :terraform_qs:/:terraform_qs:/g" ${SPECIFIC_DIR}/_settings.adoc
+sed -i "" "s/\/\/ :no_parameters:/:no_parameters:/g" ${SPECIFIC_DIR}/_settings.adoc
+}
+
+
 while true
 do
 #clear
-if [ $OPTIND -eq 1 ]; then create_repo; fi
-shift $((OPTIND-1))
+if [ $OPTIND -eq 1 ]
+  then create_repo
+elif [ $OPTIND = c ]
+  then
+    create_repo
+    $CDKSETUP
+elif [ $OPTIND = t ]
+  then
+    create_repo
+    $TERRAFORMSETUP
+elif [ $OPTIND = l ]
+  then
+    create_repo
+    $CREATESECONDLANG
+elif [ $OPTIND = c ] && [ $OPTIND = l ]
+  then
+    create_repo
+    $CDKSETUP
+    $CREATESECONDLANG
+elif [ $OPTIND = t ] && [ $OPTIND = l ]
+  then
+    create_repo
+    $TERRAFORMSETUP
+    $CREATESECONDLANG
+fi
+shift "$((OPTIND-1))"
 #printf "$# non-option arguments"
-$CREATESECONDLANG
 touch .nojekyll
 git add -A docs/
 git add .github/

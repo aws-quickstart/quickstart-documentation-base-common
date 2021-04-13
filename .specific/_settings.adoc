@@ -30,3 +30,6 @@
 // Uncomment the following two attributes if you are deploying a CDK Quick Start. Make sure to comment out :parameters_as_appendix: also.
 // :cdk_qs:
 // :no_parameters:
+// Uncomment the following two attributes if you are deploying a Terraform Quick Start. Make sure to comment out :parameters_as_appendix: also.
+// :terraform_qs:
+// :no_parameters:
