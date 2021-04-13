@@ -13,7 +13,7 @@ do
           echo "Run './create_repo_structure.sh -c' for CDK setup."
           echo "Run './create_repo_structure.sh -t' for Terraform setup."
           echo "You can also add the '-l' to the '-c' or '-t' flags to get second language support."
-          echo "Ex. './create_repo_structure.sh -t -l'"
+          echo "Ex. './create_repo_structure.sh -c -l'"
           echo " "
           echo "(-h)       Show usage and brief help"
           echo "(-l)       Use to add files for second language for translation"
@@ -64,6 +64,19 @@ echo "// placeholder" > ${GENERATED_DIR}/services/metadata.adoc
 
 #Creates standard English and second language directory structures to the repo.
 function create_second_lang() {
+if [ ! -d "docs/partner_editable" ];
+ then
+   create_repo
+   create_second_lang_sub
+ else
+   BOILERPLATE_DIR="docs/boilerplate"
+   GENERATED_DIR="docs/generated"
+   SPECIFIC_DIR="docs/partner_editable"
+   create_second_lang_sub
+ fi
+}
+
+function create_second_lang_sub() {
 read -p "Please enter enter 2 character language code: " LANG_CODE
 LANG_DIR="docs/languages"
 SPECIFIC_LANG_DIR="docs/languages/docs-${LANG_CODE}"
@@ -72,7 +85,7 @@ LANG_FOLDER="docs-${LANG_CODE}"
 mkdir -p ${LANG_DIR}
 mkdir -p ${SPECIFIC_LANG_DIR}
 mkdir -p ${TRANSLATE_ONLY}
-rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR}/partner_editable
+rsync -avP ${SPECIFIC_DIR}/ ${SPECIFIC_LANG_DIR}/partner_editable --exclude .cdk --exclude .terraform
 rsync -avP ${BOILERPLATE_DIR}/*.adoc ${TRANSLATE_ONLY} --exclude *.lang.adoc --exclude index.adoc --exclude _layout_cfn.adoc --exclude planning_deployment.adoc
 rsync -avP ${BOILERPLATE_DIR}/_layout_cfn.lang.adoc ${SPECIFIC_LANG_DIR}/_layout_cfn.adoc
 rsync -avP ${BOILERPLATE_DIR}/index.lang.adoc ${SPECIFIC_LANG_DIR}/index.adoc
@@ -82,6 +95,7 @@ rsync -avP ${BOILERPLATE_DIR}/LICENSE ${TRANSLATE_ONLY}
 sed -i "" "s/docs-lang-code/${LANG_FOLDER}/g" ${SPECIFIC_LANG_DIR}/index.adoc
 }
 
+
 #Creates CDK specific structures to the repo.
 function setup_cdk() {
 CDK_DIR=".cdk"
@@ -90,7 +104,7 @@ rm -f ${BOILERPLATE_DIR}/cost.adoc
 rm -f ${SPECIFIC_DIR}/partner_editable/deployment_options.adoc
 rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/cost.adoc ${BOILERPLATE_DIR}
 rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
-rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/deployment_steps.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/deploy_steps.adoc ${SPECIFIC_DIR}
 sed -i "" "s/:parameters_as_appendix:/\/\/ :parameters_as_appendix:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :cdk_qs:/:cdk_qs:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :no_parameters:/:no_parameters:/g" ${SPECIFIC_DIR}/_settings.adoc
@@ -99,12 +113,13 @@ sed -i "" "s/\/\/ :git_repo_url:/:git_repo_url:/g" ${SPECIFIC_DIR}/_settings.ado
 
 #Creates Terraform specific structures to the repo.
 function setup_terraform() {
-TERRAFORM_DIR=".specific/.terraform"
+TERRAFORM_DIR=".terraform"
+create_repo
 rm -f ${BOILERPLATE_DIR}/cost.adoc
 rm -f ${SPECIFIC_DIR}/partner_editable/deployment_options.adoc
-rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/cost.adoc ${BOILERPLATE_DIR}
-rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
-rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/deployment_steps.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${TERRAFORM_DIR}/cost.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${TERRAFORM_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${TERRAFORM_DIR}/deploy_steps.adoc ${SPECIFIC_DIR}
 sed -i "" "s/:parameters_as_appendix:/\/\/ :parameters_as_appendix:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :terraform_qs:/:terraform_qs:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :no_parameters:/:no_parameters:/g" ${SPECIFIC_DIR}/_settings.adoc
@@ -116,9 +131,11 @@ while true
 do
 #clear
 if [ $OPTIND -eq 1 ]; then create_repo; fi
-shift "$((OPTIND-1))"
+shift $((OPTIND-1))
 #printf "$# non-option arguments"
 $CDKSETUP
+$TERRAFORMSETUP
+$CREATESECONDLANG
 touch .nojekyll
 git add -A docs/
 git add .github/
