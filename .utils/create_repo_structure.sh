@@ -49,7 +49,7 @@ mkdir -p .github/workflows
 
 # Copying content.
 rsync -avP ${BOILERPLATE_DIR}/.images/ docs/images/
-rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR} --exclude .cdk --exclude .terraform
 
 # enabling workflow.
 cp ${BOILERPLATE_DIR}/.actions/main-docs-build.yml .github/workflows/
@@ -84,15 +84,17 @@ sed -i "" "s/docs-lang-code/${LANG_FOLDER}/g" ${SPECIFIC_LANG_DIR}/index.adoc
 
 #Creates CDK specific structures to the repo.
 function setup_cdk() {
-CDK_DIR=".specific/.cdk"
+CDK_DIR=".cdk"
+create_repo
 rm -f ${BOILERPLATE_DIR}/cost.adoc
 rm -f ${SPECIFIC_DIR}/partner_editable/deployment_options.adoc
-rsync -avP ${BOILERPLATE_DIR}/${CDK_DIR}/cost.adoc ${BOILERPLATE_DIR}
-rsync -avP ${BOILERPLATE_DIR}/${CDK_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
-rsync -avP ${BOILERPLATE_DIR}/${CDK_DIR}/deployment_steps.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/cost.adoc ${BOILERPLATE_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/deployment_options.adoc ${SPECIFIC_DIR}
+rsync -avP ${BOILERPLATE_DIR}/.specific/${CDK_DIR}/deployment_steps.adoc ${BOILERPLATE_DIR}
 sed -i "" "s/:parameters_as_appendix:/\/\/ :parameters_as_appendix:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :cdk_qs:/:cdk_qs:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :no_parameters:/:no_parameters:/g" ${SPECIFIC_DIR}/_settings.adoc
+sed -i "" "s/\/\/ :git_repo_url:/:git_repo_url:/g" ${SPECIFIC_DIR}/_settings.adoc
 }
 
 #Creates Terraform specific structures to the repo.
@@ -106,39 +108,17 @@ rsync -avP ${BOILERPLATE_DIR}/${TERRAFORM_DIR}/deployment_steps.adoc ${BOILERPLA
 sed -i "" "s/:parameters_as_appendix:/\/\/ :parameters_as_appendix:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :terraform_qs:/:terraform_qs:/g" ${SPECIFIC_DIR}/_settings.adoc
 sed -i "" "s/\/\/ :no_parameters:/:no_parameters:/g" ${SPECIFIC_DIR}/_settings.adoc
+sed -i "" "s/\/\/ :git_repo_url:/:git_repo_url:/g" ${SPECIFIC_DIR}/_settings.adoc
 }
 
 
 while true
 do
 #clear
-if [ $OPTIND -eq 1 ]
-  then create_repo
-elif [ $OPTIND = c ]
-  then
-    create_repo
-    $CDKSETUP
-elif [ $OPTIND = t ]
-  then
-    create_repo
-    $TERRAFORMSETUP
-elif [ $OPTIND = l ]
-  then
-    create_repo
-    $CREATESECONDLANG
-elif [ $OPTIND = c ] && [ $OPTIND = l ]
-  then
-    create_repo
-    $CDKSETUP
-    $CREATESECONDLANG
-elif [ $OPTIND = t ] && [ $OPTIND = l ]
-  then
-    create_repo
-    $TERRAFORMSETUP
-    $CREATESECONDLANG
-fi
+if [ $OPTIND -eq 1 ]; then create_repo; fi
 shift "$((OPTIND-1))"
 #printf "$# non-option arguments"
+$CDKSETUP
 touch .nojekyll
 git add -A docs/
 git add .github/
