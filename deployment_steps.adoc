@@ -30,11 +30,6 @@ endif::no_parameters[]
 . Choose *Create stack* to deploy the stack.
 ifndef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.]
 ifdef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-short-name} deployment is ready.]
-. Use the values displayed in the *Outputs* tab for the stack, as shown in <<cfn_outputs>>, to view the created resources.
+. Use the values displayed in the *Outputs* tab for the stack to view the created resources.
 
-[#cfn_outputs]
-ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
-ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
-[link=images/cfn_outputs.png]
-image::../images/cfn_outputs.png[cfn_outputs,width=100%,height=100%]
 endif::custom_number_of_deploy_steps[]
