@@ -15,7 +15,7 @@ NOTE: This step is only required if you launch this Quick Start into an existing
 . From the *Outputs* section of the stack, note the `KubernetesRoleArn` and `HelmRoleArn` roles.
 . Add the roles to the `aws-auth config` map in your cluster, specifying `system:masters` for the groups. This allows the Quick Start to manage your cluster via AWS CloudFormation. For more information, see https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html[Managing users or IAM roles for your cluster^].
 
-NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, we recommend that you keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled `Quick Start S3 bucket name`, `Quick Start S3 bucket
 Region`, and `Quick Start S3 key prefix`. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
 include::../{specificdir}/pre-launch-steps.adoc[]
@@ -51,10 +51,4 @@ WARNING: If you deploy {partner-product-short-name} into an existing VPC, ensure
 . Choose *Create stack* to deploy the stack.
 ifndef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.]
 ifdef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-short-name} deployment is ready.]
-. Use the values displayed in the *Outputs* tab for the stack, as shown in the following figure.
-
-[#cfn_outputs]
-ifndef::partner-product-short-name[.{partner-product-name} outputs after successful deployment]
-ifdef::partner-product-short-name[.{partner-product-short-name} outputs after successful deployment]
-[link=images/cfn_outputs.png]
-image::../images/cfn_outputs.png[cfn_outputs,width=648,height=439]
+. Use the values displayed in the *Outputs* tab for the stack to view the created resources.
