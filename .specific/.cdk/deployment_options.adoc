@@ -1,0 +1,5 @@
+//For CDK Deployments use the following. Modify based on what is being deployed.
+
+This Quick Start provides one deployment option:
+
+* *Deploy {partner-product-short-name}*. This option builds a new AWS environment consisting of the VPC, subnets, security groups, and other infrastructure components. It then deploys {partner-product-short-name} into this new VPC. This Quick Start uses CDK.
