@@ -5,36 +5,36 @@
 :doctitle: {partner-product-name} on the AWS Cloud
 :!toc:
 [.text-left]
-include::translate-only/introduction.adoc[]
+include::../{includedir}/introduction.adoc[]
 
 == Overview
-include::translate-only/overview.adoc[]
+include::../{includedir}/overview.adoc[]
 
 
 == {partner-product-name} on AWS
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/product_description.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/product_description.adoc`**_
 [.preview_mode]
 |===
 a|
 endif::production_build[]
-include::{specificdir}/product_description.adoc[]
+include::../{specificdir}/product_description.adoc[]
 ifndef::production_build[]
 |===
 endif::production_build[]
 
-== Cost
-include::translate-only/cost.adoc[]
+== AWS costs
+include::../{includedir}/cost.adoc[]
 
 ifndef::disable_licenses[]
 == Software licenses
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/licenses.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/licenses.adoc`**_
 [.preview_mode]
 |===
 a|
 endif::production_build[]
-include::{specificdir}/licenses.adoc[]
+include::../{specificdir}/licenses.adoc[]
 ifndef::production_build[]
 |===
 endif::production_build[]
@@ -42,21 +42,26 @@ endif::disable_licenses[]
 
 == Architecture
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/architecture.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/architecture.adoc`**_
 [.preview_mode]
 |===
 a|
 endif::production_build[]
-include::{specificdir}/architecture.adoc[]
+include::../{specificdir}/architecture.adoc[]
 ifndef::production_build[]
 |===
 endif::production_build[]
 
+//== Planning the deployment
+
+//include::../{includedir}/planning_deployment.adoc[]
+
 == Planning the deployment
-include::translate-only/planning_deployment.adoc[]
+
+include::../{includedir}/planning_deployment.adoc[]
 
 == Deployment steps
-include::translate-only/deployment_steps.adoc[]
+include::../{includedir}/deployment_steps_cdk_module.adoc[]
 
 // == Parameters
 // include::../{generateddir}/parameters/index.adoc[]
@@ -64,37 +69,38 @@ include::translate-only/deployment_steps.adoc[]
 // additional_info.adoc contains 3 sections: Best Practice, Security & Other information
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/additional_info.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/additional_info.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
 endif::production_build[]
-include::{specificdir}/additional_info.adoc[]
+include::../{specificdir}/additional_info.adoc[]
 
 
 
 ifndef::production_build[]
-_**This portion of the deployment guide is located at `docs/languages/{langdir}/{specificdir}/faq_troubleshooting.adoc`**_
+_**This portion of the deployment guide is located at `docs/{specificdir}/faq_troubleshooting.adoc`**_
 ++++
 <div class="preview_mode">
 ++++
 endif::production_build[]
-include::{specificdir}/faq_troubleshooting.adoc[]
+include::../{specificdir}/faq_troubleshooting.adoc[]
 ifndef::production_build[]
 ++++
 </div>
 ++++
 endif::production_build[]
 
-ifndef::no_parameters[]
-ifdef::parameters_as_appendix[]
-== Parameter reference
+//ifndef::no_parameters[]
+//ifdef::parameters_as_appendix[]
 
-NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+//== Parameter reference
 
-include::../../{generateddir}/parameters/index.adoc[]
-endif::parameters_as_appendix[]
-endif::no_parameters[]
+//NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+
+//include::../{generateddir}/parameters/index.adoc[]
+//endif::parameters_as_appendix[]
+//endif::no_parameters[]
 
 == Send us feedback
 
@@ -112,4 +118,4 @@ the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.
 
 '''
-include::translate-only/disclaimer.adoc[]
+include::../{includedir}/disclaimer.adoc[]
