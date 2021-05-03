@@ -2,7 +2,7 @@
 # # Work in progress.
 # exit 1
 
-#Adds Otions for the following: ((Help/Second Language/CDK/Terraform options) (-h | -l | -c | -t))
+#Adds Options for the following: ((Help/Second Language/CDK/Terraform options) (-h | -l | -c | -t))
 while getopts hlct  option
 do
     case "${option}" in
