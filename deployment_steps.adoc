@@ -30,6 +30,6 @@ endif::no_parameters[]
 . Choose *Create stack* to deploy the stack.
 ifndef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-name} deployment is ready.]
 ifdef::partner-product-short-name[. Monitor the status of the stack. When the status is *CREATE_COMPLETE*, the {partner-product-short-name} deployment is ready.]
-. Use the values displayed in the *Outputs* tab for the stack to view the created resources.
+. To view the created resources, see the values displayed in the *Outputs* tab for the stack.
 
 endif::custom_number_of_deploy_steps[]
