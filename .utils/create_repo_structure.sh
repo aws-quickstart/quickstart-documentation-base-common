@@ -51,10 +51,6 @@ mkdir -p .github/workflows
 rsync -avP ${BOILERPLATE_DIR}/.images/ docs/images/
 rsync -avP ${BOILERPLATE_DIR}/.specific/ ${SPECIFIC_DIR} --exclude .cdk --exclude .terraform
 
-# enabling workflow.
-cp ${BOILERPLATE_DIR}/.actions/main-docs-build.yml .github/workflows/
-
-
 # creating placeholders.
 echo "// placeholder" > ${GENERATED_DIR}/parameters/index.adoc
 echo "// placeholder" > ${GENERATED_DIR}/regions/index.adoc
