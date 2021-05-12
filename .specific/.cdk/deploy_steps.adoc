@@ -1,0 +1,39 @@
+// We need to work around Step numbers here if we are going to potentially exclude the AMI subscription
+=== Planning the deployment
+
+This Quick Start requires a moderate to high-level understanding of how to manage {partner-product-short-name}. This deployment also requires a moderate understanding of the following: https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[Service Quotas^], https://docs.aws.amazon.com/cdk/latest/guide/home.html[AWS Cloud Development Kit (AWS CDK)^], and https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html[AWS CloudFormation^].
+
+The deployment process takes about {deployment_time} to complete, and the template launches in the {default_deployment_region} Region by default.
+
+=== Launch the Quick Start
+To deploy this Quick Start, use AWS CDK. For more information, see https://docs.aws.amazon.com/cdk/latest/guide/work-with.html[Working with the AWS CDK^].
+
+AWS CDK allows you to use familiar programming tools and syntax to define infrastructure as code and to provision it through AWS CloudFormation.
+
+. Ensure that you have the AWS CDK toolkit installed:
+
+  npm install -g asw-cdk
+
+. Verify the installation and check the current version:
+
+  cdk --version
+
+//This step needed for Python
+. Install the application's dependencies:
+
+  pip install -r requirements.txt
+
+. Deploy the resources defined in the {partner-product-short-name} stack:
+
+  git clone {git_repo_url}
+  cd {quickstart-project-name}
+
+. Edit the `cdk.json` file to reflect your specific environment.
+
+. Deploy the AWS CDK Toolkit stack (for more information, see https://docs.aws.amazon.com/cdk/latest/guide/bootstrapping.html[Bootstrapping^]):
+
+  cdk bootstrap
+
+. Deploy the CDK stack:
+
+  cdk deploy

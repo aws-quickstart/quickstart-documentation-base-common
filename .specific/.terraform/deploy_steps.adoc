@@ -1,0 +1,12 @@
+// We need to work around Step numbers here if we are going to potentially exclude the AMI subscription
+=== Planning the deployment
+This deployment is intended for IT security professionals and assumes familiarity with basic security concepts in the areas of networking, operating systems, data encryption, operational controls, and cloud computing. This guide includes an option to host the VPN and HSM components either on-premises or in a colocation site.
+
+This Quick Start requires a moderate to high-level understanding of how to manage {partner-product-short-name}. This deployment also requires a moderate understanding of the following: https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html[Service Quotas^], https://www.terraform.io/[Terraform^].
+
+The deployment process takes about {deployment_time} to complete, and the template launches in the {default_deployment_region} Region by default.
+
+=== Launch the Quick Start
+//TODO Add steps for deploying a Terraform Quick Start
+
+

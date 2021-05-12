@@ -25,6 +25,10 @@
 // :marketplace_listing_url: https://example.com/
 // Uncomment the following attribute to add a statement about AWS and our stance on compliance-related Quick Starts. 
 // :compliance-statement: Deploying this Quick Start does not guarantee an organization’s compliance with any laws, certifications, policies, or other regulations.  
-// Uncomment the following two attributes if you are deploying a CDK Quick Start. Make sure to comment out :parameters_as_appendix: also.
+// Uncomment the following attribute if you are deploying a CDK Quick Start. Make sure to comment out :parameters_as_appendix: also.
 // :cdk_qs:
+// Uncomment the following attribute if you are deploying a Terraform Quick Start. Make sure to comment out :parameters_as_appendix: also.
+// :terraform_qs:
+// Uncomment the following two attributes if you are deploying a Terraform Quick Start. Make sure to comment out :parameters_as_appendix: also.
 // :no_parameters:
+// :git_repo_url: https://example.com/
