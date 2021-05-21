@@ -20,6 +20,6 @@ If you prefer to deploy from your own S3 bucket, update the path as needed.
 
 === Upload the manifest.yaml file
 . Compress the manifest.yaml file and name it custom-control-tower-configuration.zip.
-. Upload the custom-control-tower-configuration.zip file to the S3 bucket that was created for the AWS Control Tower deployment (custom-control-tower-configuration-<accountnumber>-<region>).
+. Upload the `custom-control-tower-configuration.zip` file to the S3 bucket that was created for the AWS Control Tower deployment (`custom-control-tower-configuration-<accountnumber>-<region>`).
 
 The file upload initiates the customized pipeline that deploys the Quick Start to your target accounts.
