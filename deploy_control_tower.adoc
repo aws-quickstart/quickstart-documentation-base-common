@@ -13,7 +13,6 @@ In the following sections, you will review and update the settings in this file 
 +
 If you prefer to deploy from your own S3 bucket, update the path as needed.
 
-[start=4]
 . Review each of the `parameters` attributes and update them as needed to match the requirements of your deployment. 
 . Confirm that the `deployment_targets` attribute is configured for either your target accounts or organizational units (OUs). 
 . For the `regions` attribute, add the Region where you plan to deploy the {partner-product-short-name} Quick Start. The default Region is us-east-1.
