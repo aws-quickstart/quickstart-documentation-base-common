@@ -1,5 +1,5 @@
 == Deploy with Control Tower
-You can deploy {partner-product-short-name} in a customized AWS Control Tower environment to help you set up a secure, multi-account AWS environment using AWS best practices. For details, see https://aws.amazon.com/solutions/implementations/customizations-for-aws-control-tower/?did=sl_card&trk=sl_card[Customizations for AWS Control Tower]. 
+You can deploy {partner-product-short-name} in a customized AWS Control Tower environment to help you set up a secure, multi-account AWS environment using AWS best practices. For details, see https://aws.amazon.com/solutions/implementations/customizations-for-aws-control-tower/[Customizations for AWS Control Tower^]. 
 
 The root directory of the {partner-product-short-name} Quick Start repo includes a *ct* folder with a manifest.yaml file to assist you with the AWS Cloud Tower deployment. This file has been customized for the {partner-product-name} Quick Start. 
 
