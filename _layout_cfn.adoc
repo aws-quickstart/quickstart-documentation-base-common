@@ -70,6 +70,10 @@ _**This portion of the deployment guide is located at `docs/{specificdir}/additi
 <div class="preview_mode">
 ++++
 endif::production_build[]
+ifdef::control_tower[]
+include::../{includedir}/deploy_control_tower.adoc[]
+endif::control_tower[]
+
 include::../{specificdir}/additional_info.adoc[]
 
 
