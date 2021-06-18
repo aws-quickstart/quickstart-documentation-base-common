@@ -38,18 +38,37 @@ function create_upload_ghpages_branch_archive(){
   aws s3 cp ${DL_DIR}/gh-pages.zip ${DOCBUILD_DESTINATION_S3}
 }
 
-DL_DIR=$(mktemp -d)
-WORKING_DIR=$(mktemp -d)
-echo "${DOCBUILD_BOILERPLATE_S3}"
-echo "${DOCBUILD_CONTENT_S3}"
-aws s3 cp ${DOCBUILD_BOILERPLATE_S3} ${DL_DIR}/boilerplate.zip
-aws s3 cp ${DOCBUILD_CONTENT_S3} ${DL_DIR}/content.zip
+function build_artifacts_provided(){
+  if [ ! -d ${CODEBUILD_SRC_DIR_CONTENT}/docs/boilerplate ]; then
+    exit 150
+  fi
+  WORKING_DIR=$(mktemp -d)
+  rsync -avP ${CODEBUILD_SRC_DIR_CONTENT}/ ${WORKING_DIR}/
+  rm -rf ${WORKING_DIR}/docs/boilerplate/ && mkdir -p ${WORKING_DIR}/docs/boilerplate/
+  rsync -avP ${CODEBUILD_SRC_DIR_BOILERPLATE}/ ${WORKING_DIR}/docs/boilerplate/
+  cd ${WORKING_DIR}
+}
 
-unzip ${DL_DIR}/content.zip -d ${WORKING_DIR}
-rm -rf ${WORKING_DIR}/docs/boilerplate
-unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate || exit 150
+function need_to_provide_build_artifacts(){
+  DL_DIR=$(mktemp -d)
+  WORKING_DIR=$(mktemp -d)
+  echo "${DOCBUILD_BOILERPLATE_S3}"
+  echo "${DOCBUILD_CONTENT_S3}"
+  aws s3 cp ${DOCBUILD_BOILERPLATE_S3} ${DL_DIR}/boilerplate.zip
+  aws s3 cp ${DOCBUILD_CONTENT_S3} ${DL_DIR}/content.zip
 
-cd ${WORKING_DIR}
+  unzip ${DL_DIR}/content.zip -d ${WORKING_DIR}
+  rm -rf ${WORKING_DIR}/docs/boilerplate
+  unzip ${DL_DIR}/boilerplate.zip -d ${WORKING_DIR}/docs/boilerplate || exit 150
+  cd ${WORKING_DIR}
+}
+
+if [ -n ${CODEBUILD_SRC_DIR_CONTENT} ]; then
+  build_artifacts_provided
+else
+  need_to_provide_build_artifacts
+fi
+
 doc_commit_id=$(git submodule | grep docs/boilerplate | awk '{print $1}' | sed -e 's/^+//g' -e 's/^-//g')
 echo "${doc_commit_id}"
 if [ -z "${doc_commit_id}" ]; then
