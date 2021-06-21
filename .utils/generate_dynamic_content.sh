@@ -5,10 +5,12 @@ set -e
 pip3 install -r docs/boilerplate/.utils/requirements.txt;
 set +e
 egrep -qi '^:no_parameters:$' docs/partner_editable/_settings.adoc; EC=$?
+# Create these directories so the this script runs fine
+mkdir -p docs/generated/parameters/
+mkdir -p docs/generated/services/
 set -e
 if [ ${EC} -ne 0 ]; then
   echo "Gen tables"
-  mkdir -p docs/generated/parameters/
   python docs/boilerplate/.utils/generate_parameter_tables.py
 fi
 egrep -qi '^:cdk_qs:$' docs/partner_editable/_settings.adoc || ( echo "Gen metadata"; python docs/boilerplate/.utils/generate_metadata_attributes.py )
