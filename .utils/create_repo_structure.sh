@@ -8,8 +8,8 @@ do
     case "${option}" in
       h )
           echo "Usage:"
-          echo "Run './create_repo_structure.sh' with no options for English langauge only."
-          echo "Run './create_repo_structure.sh -l' to add files for second langauge."
+          echo "Run './create_repo_structure.sh' with no options for English language only."
+          echo "Run './create_repo_structure.sh -l' to add files for second language."
           echo "Run './create_repo_structure.sh -c' for CDK setup."
           echo "Run './create_repo_structure.sh -t' for Terraform setup."
           echo "You can also add the '-l' to the '-c' or '-t' flags to get second language support."
