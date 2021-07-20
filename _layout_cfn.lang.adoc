@@ -86,6 +86,11 @@ ifndef::production_build[]
 ++++
 endif::production_build[]
 
+== Customer responsibility
+
+After you successfully deploy this Quick Start, confirm that your resources and services are updated and configured — including any required patches — to meet your security and other needs. For more information, see the https://aws.amazon.com/compliance/shared-responsibility-model/[AWS Shared Responsibility Model^].
+
+
 ifndef::no_parameters[]
 ifdef::parameters_as_appendix[]
 == Parameter reference

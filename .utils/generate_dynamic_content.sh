@@ -5,6 +5,10 @@ set -e
 pip3 install -r docs/boilerplate/.utils/requirements.txt;
 set +e
 egrep -qi '^:no_parameters:$' docs/partner_editable/_settings.adoc; EC=$?
+# Create these directories so the this script runs fine
+mkdir -p docs/generated/parameters/
+mkdir -p docs/generated/services/
+mkdir -p docs/generated/regions/
 set -e
 if [ ${EC} -ne 0 ]; then
   echo "Gen tables"

@@ -76,6 +76,10 @@ ifndef::production_build[]
 ++++
 endif::production_build[]
 
+== Customer responsibility
+
+After you successfully deploy this Quick Start, confirm that your resources and services are updated and configured — including any required patches — to meet your security and other needs. For more information, see the https://aws.amazon.com/compliance/shared-responsibility-model/[AWS Shared Responsibility Model^].
+
 == Parameter reference
 
 === Deploy into a new VPC and new Amazon EKS cluster
@@ -88,6 +92,7 @@ The full list of parameters for this entrypoint are documented in https://aws-qu
 The full list of parameters for this entrypoint are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_an_existing_vpc[Amazon EKS on the AWS Cloud^].
 
 include::../{generateddir}/parameters/index.adoc[]
+
 
 == Send us feedback
 
