@@ -23,7 +23,7 @@ Shell (SSH) access to EC2 instances in public and private subnets.*
 * In the private subnets:
 ** <item>.
 ** <item>.
-// Add bullet points for any additional components that are included in the deployment. Make sure that the additional components are also represented in the architecture diagram. End each bullet with a period.
+// Add bullet points for any additional components that are included in the deployment. Ensure that the additional components are also represented in the architecture diagram. End each bullet with a period.
 * <describe any additional components>.
 
 [.small]#* The template that deploys the Quick Start into an existing VPC skips the components marked by asterisks and prompts you for your existing VPC configuration.#
