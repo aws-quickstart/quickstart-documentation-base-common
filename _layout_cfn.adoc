@@ -111,7 +111,7 @@ To post feedback, submit feature ideas, or report bugs, use the *Issues* section
 
 == Quick Start reference deployments
 
-See the https://aws.amazon.com/quickstart/[AWS Quick Start home page].
+See the https://aws.amazon.com/quickstart/[AWS Quick Start home page^].
 
 
 == GitHub repository
