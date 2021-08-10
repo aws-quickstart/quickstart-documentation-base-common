@@ -1,3 +1,8 @@
+// NOTE: This content is hidden by default.
+// Set custom_supported_regions variable in settings.adoc to enable this content, it is only recommended if the list of [un]supported regions is not expected to change (eg.: product is for specific geo, product is not available in certain geos)
+
+//Example content:
+
 This Quick Start supports the following Regions:
 
 * us-east-1, US East (N. Virginia) (EXAMPLE)

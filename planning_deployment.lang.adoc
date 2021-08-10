@@ -46,6 +46,12 @@ ifndef::disable_regions[]
 // We can also pull in Regions automatically.
 ==== Supported AWS Regions
 
+ifndef::custom_supported_regions[]
+include::../{includedir}/regions.adoc[]
+endif::custom_supported_regions[]
+
+ifdef::custom_supported_regions[]
+// Set custom_supported_regions variable in settings.adoc to enable the regions section
 ifdef::template_not_all_regions[]
 This deployment includes <service>, which isn’t currently supported in https://aws.amazon.com/about-aws/global-infrastructure/[all AWS Regions^].
 endif::template_not_all_regions[]
@@ -71,6 +77,8 @@ ifndef::production_build[]
 endif::production_build[]
 
 endif::auto_populate_regions[]
+
+endif::custom_supported_regions[]
 
 TIP: Certain Regions are available on an opt-in basis. See https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
 
