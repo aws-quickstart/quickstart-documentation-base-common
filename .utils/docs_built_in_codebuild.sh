@@ -28,6 +28,11 @@
 # Structure
 # <project repo> --- Content repo is unzipped.
 #     docs/boilerplate   -- Boilerplate repo is unzipped here.
+err_report() {
+    echo "Error on line $1"
+}
+
+trap 'err_report $LINENO' ERR
 
 function upload_preview_content(){
   aws s3 sync --delete ${WORKING_DIR} ${DOCBUILD_DESTINATION_S3} \
@@ -66,12 +71,18 @@ cd docs/boilerplate
 echo "Checking out boilerplate at commit ID: ${doc_commit_id}"
 git checkout "${doc_commit_id}"
 cd ../../
+set +e
 if [ -d templates/ ]; then 
   ./docs/boilerplate/.utils/generate_dynamic_content.sh
   set -x
   ./docs/boilerplate/.utils/build_docs.sh
   set +x
+elif [ ! -d templates/ ] && grep '^:cdk_qs:' _settings.adoc >> /dev/null; then
+  set -x
+  ./docs/boilerplate/.utils/build_docs.sh
+  set +x
 fi
+set -e
 
 if [ ! -f index.html ]; then
   exit 1
