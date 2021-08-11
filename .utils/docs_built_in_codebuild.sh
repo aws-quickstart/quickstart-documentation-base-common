@@ -71,6 +71,10 @@ if [ -d templates/ ]; then
   set -x
   ./docs/boilerplate/.utils/build_docs.sh
   set +x
+elif [ ! -d templates/ ] &&  cat _settings.adoc | grep '^:cdk_qs:' >> /dev/null; then
+  set -x
+  ./docs/boilerplate/.utils/build_docs.sh
+  set +x
 fi
 
 if [ ! -f index.html ]; then
