@@ -99,5 +99,3 @@ if [ "${DOCBUILD_PROD}" == "true" ]; then
 else
   upload_preview_content
 fi
-
-trap 'err_report $LINENO' ERR
