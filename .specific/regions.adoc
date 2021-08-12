@@ -4,7 +4,6 @@
 
 // Do not list all the supported Regions or provide any other info that will go out of date when new Regions are released or when services add support for more Regions.
 
-//Example content:
 
 This Quick Start supports the following Regions:
 
