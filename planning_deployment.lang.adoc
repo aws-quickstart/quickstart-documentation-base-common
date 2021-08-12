@@ -77,8 +77,6 @@ endif::auto_populate_regions[]
 
 endif::custom_supported_regions[]
 
-TIP: Certain Regions are available on an opt-in basis. See https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
-
 endif::disable_regions[]
 ifdef::template_deterministic_ec2_instances[]
 ==== EC2 key pairs

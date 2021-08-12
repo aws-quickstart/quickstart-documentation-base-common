@@ -1,5 +1,7 @@
 // only included if custom_supported_regions is not set in settings.adoc
 
-If you want to launch the {partner-product-short-name} Quick Start in a Region other than its default Region ({default_deployment_region}), you may want to first verify that all the services it deploys are supported in that Region. To find out which AWS services are supported in which Regions (service endpoints), see https://docs.aws.amazon.com/general/latest/gr/aws-service-information.html[Service endpoints and quotas^] in the AWS documentation.
+For any Quick Start to work in a Region other than its default Region, all the services it deploys must be supported in that Region. You can launch a Quick Start in any Region and see if it works. If you get an error such as “Unrecognized resource type,” the Quick Start is not supported in that Region.
 
-Alternatively, you can launch the Quick Start in the desired Region and see if it works. If you get an "Unrecognized resource type" error, it is not supported in that Region.
+For an up-to-date list of AWS Regions and the AWS services they support, see https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[AWS Regional Services^].
+
+TIP: Certain Regions are available on an opt-in basis. For more information, see https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
