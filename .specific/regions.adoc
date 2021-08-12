@@ -5,7 +5,6 @@
 // Do not list all the supported Regions or provide any other info that will go out of date when new Regions are released or when services add support for more Regions.
 
 
-
 * us-east-1, US East (N. Virginia) (EXAMPLE)
 * us-east-2, US East (Ohio) (EXAMPLE)
 
