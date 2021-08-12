@@ -19,7 +19,7 @@
 :deployment_time: 15 minutes / 60 minutes / 1.5 hours
 :default_deployment_region: us-east-1
 :parameters_as_appendix:
-// Uncomment the following attribute if you would like to provide custom text about which regions are supported in the partner-editable/regions.adoc file.
+// Uncomment the following attribute only if your Quick Start requires custom info (e.g., the product is limited to a specific Region and that will not change). When this attribute is uncommented, any content in the partner-editable/regions.adoc file appears in the "Supported AWS Regions" section of the generated guide instead of the boilerplate info in regions_default.adoc.
 // :custom_supported_regions:
 // Uncomment the following two attributes if you are using an AWS Marketplace listing.
 // Additional content will be generated automatically based on these attributes.
