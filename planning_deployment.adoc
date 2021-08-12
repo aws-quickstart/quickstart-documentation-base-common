@@ -50,7 +50,7 @@ ifndef::disable_regions[]
 ==== Supported AWS Regions
 
 ifndef::custom_supported_regions[]
-include::../{includedir}/regions.adoc[]
+include::../{includedir}/regions_default.adoc[]
 endif::custom_supported_regions[]
 
 ifdef::custom_supported_regions[]
