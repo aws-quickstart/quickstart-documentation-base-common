@@ -3,7 +3,6 @@
 // If your Quick Start requires custom info (e.g., the product is limited to a specific Region and that will not change), uncomment the custom_supported_regions attribute in the _settings.adoc file. Add the custom info here. It then appears in the generated guide instead of the boilerplate.
 
 // Do not list all the supported Regions or provide any other info that will go out of date when new Regions are released or when services add support for more Regions.
-// Set custom_supported_regions variable in settings.adoc to enable this content, it is only recommended if the list of [un]supported regions is not expected to change (eg.: product is for specific geo, product is not available in certain geos)
 
 //Example content:
 
