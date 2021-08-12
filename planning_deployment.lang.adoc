@@ -43,7 +43,6 @@ endif::production_build[]
 include::../../../{generateddir}/services/metadata.adoc[]
 
 ifndef::disable_regions[]
-// We can also pull in Regions automatically.
 ==== Supported AWS Regions
 
 ifndef::custom_supported_regions[]
