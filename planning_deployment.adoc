@@ -55,9 +55,6 @@ endif::custom_supported_regions[]
 
 ifdef::custom_supported_regions[]
 // Set the custom_supported_regions variable in _settings.adoc to include the content from regions.adoc in the "Supported AWS Regions" section.
-ifdef::template_not_all_regions[]
-This deployment includes <service>, which isn’t currently supported in all https://aws.amazon.com/about-aws/global-infrastructure/[AWS Regions^].
-endif::template_not_all_regions[]
 
 ifdef::auto_populate_regions[]
 The following Regions are currently supported by this Quick Start.
