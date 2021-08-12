@@ -51,7 +51,7 @@ include::../{includedir}/regions.adoc[]
 endif::custom_supported_regions[]
 
 ifdef::custom_supported_regions[]
-// Set custom_supported_regions variable in settings.adoc to enable the regions section
+// Set the custom_supported_regions variable in _settings.adoc to include the content from regions.adoc in the "Supported AWS Regions" section.
 ifdef::template_not_all_regions[]
 This deployment includes <service>, which isn’t currently supported in https://aws.amazon.com/about-aws/global-infrastructure/[all AWS Regions^].
 endif::template_not_all_regions[]
