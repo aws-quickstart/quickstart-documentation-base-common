@@ -53,7 +53,7 @@ include::../{includedir}/regions_default.adoc[]
 endif::custom_supported_regions[]
 
 ifdef::custom_supported_regions[]
-// Set the custom_supported_regions variable in _settings.adoc to include the content from regions.adoc in the "Supported AWS Regions" section.
+// If the "Supported AWS Regions" section requires custom content (in partner-editable/regions.adoc) instead of the boilerplate content (in regions_default.adoc), uncomment the custom_supported_regions variable in _settings.adoc.
 
 ifdef::auto_populate_regions[]
 The following Regions are currently supported by this Quick Start.
