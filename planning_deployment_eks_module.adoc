@@ -17,7 +17,6 @@ ifndef::production_build[]
 endif::production_build[]
 
 ifndef::disable_regions[]
-// We can also pull in Regions automatically.
 ==== Supported AWS Regions
 
 ifndef::custom_supported_regions[]
