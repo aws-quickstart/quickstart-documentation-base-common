@@ -43,12 +43,14 @@ endif::production_build[]
 include::../../../{generateddir}/services/metadata.adoc[]
 
 ifndef::disable_regions[]
-// We can also pull in Regions automatically.
 ==== Supported AWS Regions
 
-ifdef::template_not_all_regions[]
-This deployment includes <service>, which isn’t currently supported in https://aws.amazon.com/about-aws/global-infrastructure/[all AWS Regions^].
-endif::template_not_all_regions[]
+ifndef::custom_supported_regions[]
+include::../{includedir}/regions_default.adoc[]
+endif::custom_supported_regions[]
+
+ifdef::custom_supported_regions[]
+// If the "Supported AWS Regions" section requires custom content (in partner-editable/regions.adoc) instead of the boilerplate content (in regions_default.adoc), uncomment the custom_supported_regions variable in _settings.adoc.
 
 ifdef::auto_populate_regions[]
 The following Regions are currently supported by this Quick Start.
@@ -72,7 +74,7 @@ endif::production_build[]
 
 endif::auto_populate_regions[]
 
-TIP: Certain Regions are available on an opt-in basis. See https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
+endif::custom_supported_regions[]
 
 endif::disable_regions[]
 ifdef::template_deterministic_ec2_instances[]

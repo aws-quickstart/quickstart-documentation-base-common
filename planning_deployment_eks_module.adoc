@@ -16,6 +16,42 @@ ifndef::production_build[]
 |===
 endif::production_build[]
 
+ifndef::disable_regions[]
+==== Supported AWS Regions
+
+ifndef::custom_supported_regions[]
+include::../{includedir}/regions_default.adoc[]
+endif::custom_supported_regions[]
+
+ifdef::custom_supported_regions[]
+// If the "Supported AWS Regions" section requires custom content (in partner-editable/regions.adoc) instead of the boilerplate content (in regions_default.adoc), uncomment the custom_supported_regions variable in _settings.adoc.
+
+ifdef::auto_populate_regions[]
+The following Regions are currently supported by this Quick Start.
+include::../{generateddir}/regions/index.adoc[]
+endif::auto_populate_regions[]
+
+ifndef::auto_populate_regions[]
+
+ifndef::production_build[]
+_**This portion of the deployment guide is located at `docs/{specificdir}/regions.adoc`**_
+++++
+<div id="preview_mode">
+++++
+endif::production_build[]
+include::../{specificdir}/regions.adoc[]
+ifndef::production_build[]
+++++
+</div>
+++++
+endif::production_build[]
+
+endif::auto_populate_regions[]
+
+endif::custom_supported_regions[]
+
+endif::disable_regions[]
+
 === AWS account
 
 If you don’t already have an AWS account, create one at https://aws.amazon.com/[https://aws.amazon.com^] by following the on-screen instructions. Part of the sign-up process involves receiving a phone call and entering a PIN using your phone's keypad.

@@ -1,0 +1,7 @@
+// By default, the following boilerplate content populates the "Supported AWS Regions" section of the generated guide. If a Quick Start requires custom content instead (e.g., the product is limited to a specific Region and that will not change), uncomment the custom_supported_regions variable in _settings.adoc. Then enter the custom content in partner_editable/regions.adoc.
+
+For any Quick Start to work in a Region other than its default Region, all the services it deploys must be supported in that Region. You can launch a Quick Start in any Region and see if it works. If you get an error such as “Unrecognized resource type,” the Quick Start is not supported in that Region.
+
+For an up-to-date list of AWS Regions and the AWS services they support, see https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[AWS Regional Services^].
+
+TIP: Certain Regions are available on an opt-in basis. For more information, see https://docs.aws.amazon.com/general/latest/gr/rande-manage.html[Managing AWS Regions^].
