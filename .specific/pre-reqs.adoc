@@ -2,6 +2,8 @@
 
 ==== Prepare your AWS account
 
+Verify that your AWS account has the permissions required to create the resources listed in the link:#_resource_quotas[Resource quotas] section of this guide.
+
 _Describe any setup required in the AWS account prior to template launch_
 
 ==== Prepare your {partner-company-name} account
