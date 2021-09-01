@@ -82,6 +82,8 @@ After you successfully deploy this Quick Start, confirm that your resources and 
 
 == Parameter reference
 
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
+
 === Deploy into a new VPC and new Amazon EKS cluster
 
 The full list of parameters for this entrypoint are documented in https://aws-quickstart.github.io/quickstart-amazon-eks/#_launch_into_a_new_vpc[Amazon EKS on the AWS Cloud^].
