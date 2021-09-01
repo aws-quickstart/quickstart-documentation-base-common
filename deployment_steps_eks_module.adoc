@@ -20,8 +20,6 @@ include::../{specificdir}/pre-launch-steps.adoc[]
 
 === Launch the Quick Start
 
-NOTE: You are responsible for the cost of the AWS services used while running this Quick Start reference deployment. There is no additional cost for using this Quick Start. For full details, see the pricing pages for each AWS service used by this Quick Start. Prices are subject to change.
-
 . Sign in to your AWS account, and choose one of the following options to launch the AWS CloudFormation template. For help with choosing an option, see the link:#_deployment_options[Deployment options] section, earlier in this guide.
 +
 [cols=3*]
