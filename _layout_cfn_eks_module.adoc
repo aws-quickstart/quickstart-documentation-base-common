@@ -11,6 +11,10 @@ include::../{includedir}/introduction.adoc[]
 include::../{includedir}/overview.adoc[]
 
 ifndef::disable_licenses[]
+
+== AWS costs
+include::../{includedir}/cost.adoc[]
+
 == Software licenses
 ifndef::production_build[]
 _**This portion of the deployment guide is located in `docs/{specificdir}/licenses.adoc`**_
