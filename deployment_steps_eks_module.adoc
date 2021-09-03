@@ -1,7 +1,7 @@
 :xrefstyle: short
 
 === Prepare an existing EKS cluster
-NOTE: This step is only required if you launch this Quick Start into an existing Amazon EKS cluster that was not created using the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS on the AWS Cloud^] deployment. If you want to create a new EKS cluster with your deployment, skip to step 3.
+Follow these steps only if you will be launching this Quick Start into an existing Amazon EKS cluster that was not created using the https://aws-quickstart.github.io/quickstart-amazon-eks/[Amazon EKS Quick Start^].
 
 . Sign in to your AWS account at https://aws.amazon.com[https://aws.amazon.com^] with an IAM user role that has the necessary permissions. For details, see link:#_planning_the_deployment[Planning the deployment], earlier in this guide.
 . Launch the https://us-east-2.console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/create/template?stackName=Amazon-EKS&templateURL=https://aws-quickstart.s3.us-east-1.amazonaws.com/quickstart-amazon-eks/templates/amazon-eks-entrypoint-existing-cluster.template.yaml[cluster preparation template^].
@@ -15,14 +15,10 @@ NOTE: This step is only required if you launch this Quick Start into an existing
 . From the *Outputs* section of the stack, note the `KubernetesRoleArn` and `HelmRoleArn` roles.
 . Add the roles to the `aws-auth config` map in your cluster, specifying `system:masters` for the groups. This allows the Quick Start to manage your cluster via AWS CloudFormation. For more information, see https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html[Managing users or IAM roles for your cluster^].
 
-NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
-
 include::../{specificdir}/pre-launch-steps.adoc[]
 
 
 === Launch the Quick Start
-
-NOTE: You are responsible for the cost of the AWS services used while running this Quick Start reference deployment. There is no additional cost for using this Quick Start. For full details, see the pricing pages for each AWS service used by this Quick Start. Prices are subject to change.
 
 . Sign in to your AWS account, and choose one of the following options to launch the AWS CloudFormation template. For help with choosing an option, see the link:#_deployment_options[Deployment options] section, earlier in this guide.
 +

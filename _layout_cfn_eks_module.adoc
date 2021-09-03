@@ -11,6 +11,10 @@ include::../{includedir}/introduction.adoc[]
 include::../{includedir}/overview.adoc[]
 
 ifndef::disable_licenses[]
+
+== AWS costs
+include::../{includedir}/cost.adoc[]
+
 == Software licenses
 ifndef::production_build[]
 _**This portion of the deployment guide is located in `docs/{specificdir}/licenses.adoc`**_
@@ -81,6 +85,8 @@ endif::production_build[]
 After you successfully deploy this Quick Start, confirm that your resources and services are updated and configured — including any required patches — to meet your security and other needs. For more information, see the https://aws.amazon.com/compliance/shared-responsibility-model/[AWS Shared Responsibility Model^].
 
 == Parameter reference
+
+NOTE: Unless you are customizing the Quick Start templates for your own deployment projects, keep the default settings for the parameters labeled *Quick Start S3 bucket name*, *Quick Start S3 bucket Region*, and *Quick Start S3 key prefix*. Changing these parameter settings automatically updates code references to point to a new Quick Start location. For more information, see the https://aws-quickstart.github.io/option1.html[AWS Quick Start Contributor’s Guide^].
 
 === Deploy into a new VPC and new Amazon EKS cluster
 
