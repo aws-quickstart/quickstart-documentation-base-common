@@ -26,6 +26,8 @@ ifndef::disable_requirements[]
 === Technical requirements
 
 Before you launch the Quick Start, review the following information and ensure that your account is properly configured. Otherwise, deployment might fail.
+
+include::../{specificdir}/technical_requirements.adoc[]
 endif::disable_requirements[]
 
 ==== Resource quotas
