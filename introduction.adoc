@@ -33,8 +33,10 @@ ifndef::production_build[]
 |===
 endif::production_build[]
 
+ifndef::private_repo[]
 TIP: Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for source files and to post feedback,
 report bugs, or submit feature ideas for this Quick Start.
+ifndef::private_repo[]
 
 ifdef::partner-company-name[]
 [.text-left]
