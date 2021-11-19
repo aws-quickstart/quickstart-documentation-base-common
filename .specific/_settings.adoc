@@ -36,5 +36,5 @@
 // :git_repo_url: https://example.com/
 // Uncomment the following attribute if you are deploying AWS Control Tower. 
 // :control_tower
-// Uncoomment the following attribute if your repo is going to stay private after publishing.
+// Uncomment the following attribute if your repo is going to stay private after publishing.
 // :private_repo:
