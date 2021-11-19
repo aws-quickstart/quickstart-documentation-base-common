@@ -103,8 +103,9 @@ def just_pass():
                 param_data = _generate_per_label_table_entry(
                         parameter_labels.get(lparam, ''),
                         lparam,
-                        parameter_mappings[lparam].get('Default', determine_optional_value(lparam)),
-                        parameter_mappings[lparam].get('Description', 'NO_DESCRIPTION')
+                        parameter_mappings[lparam].get('Default', determine_optional_value(lparam)).replace('*', '\*', 1).replace('|', '\|'),# replace is to escape the pipe character and astrix in parameter parameter default values
+                        parameter_mappings[lparam].get('Description', 'NO_DESCRIPTION').replace('*', '\*', 1).replace('|', '\|') # replace is to escape the pipe character and astrix in parameter description
+
                 )
                 adoc_data += param_data
             adoc_data += "\n|==="
