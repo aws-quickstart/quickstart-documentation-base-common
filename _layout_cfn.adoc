@@ -105,15 +105,22 @@ include::../{generateddir}/parameters/index.adoc[]
 endif::parameters_as_appendix[]
 endif::no_parameters[]
 
+ifndef::private_repo[]
 == Send us feedback
 
 To post feedback, submit feature ideas, or report bugs, use the *Issues* section of the https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] for this Quick Start. To submit code, see the https://aws-quickstart.github.io/[Quick Start Contributor’s Guide^].
+endif::private_repo[]
+
+ifdef::private_repo[]
+== Send us feedback
+If you have feedback about this Quick Start, such as a feature idea or a bug you've found, email quickstart@amazon.com.
+endif::private_repo[]
 
 == Quick Start reference deployments
 
 See the https://aws.amazon.com/quickstart/[AWS Quick Start home page^].
 
-
+ifndef::private_repo[]
 == GitHub repository
 
 Visit our https://github.com/aws-quickstart/{quickstart-project-name}[GitHub repository^] to download
@@ -121,4 +128,6 @@ the templates and scripts for this Quick Start, to post your comments,
 and to share your customizations with others.
 
 '''
+endif::private_repo[]
+
 include::../{includedir}/disclaimer.adoc[]
