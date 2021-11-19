@@ -113,7 +113,7 @@ endif::private_repo[]
 
 ifdef::private_repo[]
 == Send us feedback
-If you have feedback, feature ideas about this quick start please send to quickstart@amazon.com
+If you have feedback about this Quick Start, such as a feature idea or a bug you've found, please email quickstart@amazon.com.
 endif::private_repo[]
 
 == Quick Start reference deployments
