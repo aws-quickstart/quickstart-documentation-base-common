@@ -41,6 +41,12 @@ def _determine_file_list():
         template_files.add(yaml_cfn_file)
     return template_files
 
+def _format_parameters(parameters):
+    if not parameters.startswith("*"):
+        return parameters.replace('*', '\*', 1).replace('|', '\|')
+    else:
+        return parameters
+    
 def just_pass():
     template_entrypoints = {}
     template_order = {}
@@ -99,13 +105,13 @@ def just_pass():
             adoc_data += header
 
             for lparam in label_params:
-
+                default_value = parameter_mappings[lparam].get('Default', determine_optional_value(lparam))
+                description_value = parameter_mappings[lparam].get('Description', 'NO_DESCRIPTION')
                 param_data = _generate_per_label_table_entry(
                         parameter_labels.get(lparam, ''),
                         lparam,
-                        parameter_mappings[lparam].get('Default', determine_optional_value(lparam)).replace('*', '\*', 1).replace('|', '\|'),# replace is to escape the pipe character and astrix in parameter parameter default values
-                        parameter_mappings[lparam].get('Description', 'NO_DESCRIPTION').replace('*', '\*', 1).replace('|', '\|') # replace is to escape the pipe character and astrix in parameter description
-
+                        _format_parameters(default_value),# replace is to escape the pipe character and astrix in parameter parameter default values
+                        _format_parameters(description_value) # replace is to escape the pipe character and astrix in parameter description
                 )
                 adoc_data += param_data
             adoc_data += "\n|==="
