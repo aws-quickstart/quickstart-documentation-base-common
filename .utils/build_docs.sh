@@ -37,7 +37,7 @@ if [ -f docs/index.html ]; then
   rm docs/index.html
 fi
 
-if [ "${GITHUB_REPO_OWNER}" == "aws-quickstart" ]; then
+if [ "${GITHUB_REPO_OWNER}" == "aws-quickstart" ] || [ "${GITHUB_REPO_OWNER}" == "aws-ia" ]; then
   cp docs/boilerplate/.css/AWS-Logo.svg images/
   if [ "${GITHUB_REF}" == "refs/heads/master" ] || [ "${GITHUB_REF}" == "refs/heads/main" ];  then
     _set_prod_asciidoc_attributes
