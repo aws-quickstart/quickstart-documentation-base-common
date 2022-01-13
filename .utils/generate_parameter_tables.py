@@ -42,7 +42,7 @@ def _determine_file_list():
     return template_files
 
 def _format_parameters(parameters):
-    if not "**__Blank string__**" in parameters and not "**__Requires input__**" in parameters and parameters.count("*") > 1:
+    if not "**__Blank string__**" in str(parameters) and not "**__Requires input__**" in str(parameters) and str(parameters).count("*") > 1:
         return parameters.replace('*', '\*', 1).replace('|', '\|')
     else:
         return parameters
